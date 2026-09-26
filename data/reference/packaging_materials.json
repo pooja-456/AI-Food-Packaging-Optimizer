@@ -1,0 +1,339 @@
+[
+  {
+    "material_id": "MAT-LDPE-50UM",
+    "material_name": "Low-Density Polyethylene Monolayer Film (50 µm)",
+    "material_category": "mono_polymer",
+    "structure_type": "monolayer_film",
+    "total_thickness_um": 50.0,
+    "layers": [
+      {
+        "material_type": "LDPE",
+        "thickness_um": 50.0,
+        "density_g_cm3": 0.922,
+        "function": "bulk_and_sealant",
+        "notes": "Blown film grade, general purpose packaging."
+      }
+    ],
+    "coatings": null,
+    "active_functionalities": null,
+    "properties": {
+      "oxygen_transmission_rate": [
+        {
+          "property": "oxygen_transmission_rate",
+          "value": 7000.0,
+          "unit": "cc/(m^2·day·atm)",
+          "value_type": "range",
+          "minimum_value": 6000.0,
+          "maximum_value": 8000.0,
+          "test_temperature_c": 23.0,
+          "test_relative_humidity_percent": 0.0,
+          "test_standard": "ASTM D3985",
+          "source_title": "Polymer Permeability (Comyn, J., Chapman & Hall)",
+          "publication_year": 1985,
+          "DOI": null,
+          "URL": null,
+          "source_type": "handbook",
+          "status": "literature",
+          "notes": "High gas permeability; suitable for respiring produce EMAP, unsuitable for oxygen-sensitive foods."
+        }
+      ],
+      "water_vapor_transmission_rate": [
+        {
+          "property": "water_vapor_transmission_rate",
+          "value": 18.0,
+          "unit": "g/(m^2·day)",
+          "value_type": "range",
+          "minimum_value": 15.0,
+          "maximum_value": 22.0,
+          "test_temperature_c": 38.0,
+          "test_relative_humidity_percent": 90.0,
+          "test_standard": "ASTM F1249",
+          "source_title": "Polymer Permeability (Comyn, J., Chapman & Hall)",
+          "publication_year": 1985,
+          "DOI": null,
+          "URL": null,
+          "source_type": "handbook",
+          "status": "literature",
+          "notes": "Moderate moisture barrier due to non-polar polyolefin backbone."
+        }
+      ]
+    },
+    "food_contact_status": "FDA_21CFR_177_1520_compliant",
+    "recyclability_class": "RIC_4_LDPE_recyclable",
+    "biodegradability_certified": false,
+    "compostability_standard": null,
+    "notes": "Standard flexible packaging film."
+  },
+  {
+    "material_id": "MAT-BOPET-12UM",
+    "material_name": "Biaxially-Oriented Polyethylene Terephthalate Film (12 µm)",
+    "material_category": "mono_polymer",
+    "structure_type": "monolayer_film",
+    "total_thickness_um": 12.0,
+    "layers": [
+      {
+        "material_type": "PET",
+        "thickness_um": 12.0,
+        "density_g_cm3": 1.4,
+        "function": "print_and_mechanical_strength",
+        "notes": "Biaxially oriented for high tensile modulus and thermal stability."
+      }
+    ],
+    "coatings": null,
+    "active_functionalities": null,
+    "properties": {
+      "oxygen_transmission_rate": [
+        {
+          "property": "oxygen_transmission_rate",
+          "value": 110.0,
+          "unit": "cc/(m^2·day·atm)",
+          "value_type": "range",
+          "minimum_value": 90.0,
+          "maximum_value": 130.0,
+          "test_temperature_c": 23.0,
+          "test_relative_humidity_percent": 0.0,
+          "test_standard": "ASTM D3985",
+          "source_title": "Handbook of Package Engineering (4th Ed.)",
+          "publication_year": 2013,
+          "DOI": null,
+          "URL": null,
+          "source_type": "handbook",
+          "status": "literature",
+          "notes": "Medium oxygen barrier; excellent clarity and dimensional stability."
+        }
+      ],
+      "water_vapor_transmission_rate": [
+        {
+          "property": "water_vapor_transmission_rate",
+          "value": 25.0,
+          "unit": "g/(m^2·day)",
+          "value_type": "range",
+          "minimum_value": 20.0,
+          "maximum_value": 30.0,
+          "test_temperature_c": 38.0,
+          "test_relative_humidity_percent": 90.0,
+          "test_standard": "ASTM F1249",
+          "source_title": "Handbook of Package Engineering (4th Ed.)",
+          "publication_year": 2013,
+          "DOI": null,
+          "URL": null,
+          "source_type": "handbook",
+          "status": "literature",
+          "notes": "Moderate moisture transmission."
+        }
+      ]
+    },
+    "food_contact_status": "FDA_21CFR_177_1630_compliant",
+    "recyclability_class": "RIC_1_PET",
+    "biodegradability_certified": false,
+    "compostability_standard": null,
+    "notes": "Commonly used as the outer printing web in laminates."
+  },
+  {
+    "material_id": "MAT-EVOH-15UM",
+    "material_name": "Ethylene Vinyl Alcohol Copolymer Film (15 µm, 32 mol% ethylene)",
+    "material_category": "mono_polymer",
+    "structure_type": "monolayer_film",
+    "total_thickness_um": 15.0,
+    "layers": [
+      {
+        "material_type": "EVOH",
+        "thickness_um": 15.0,
+        "density_g_cm3": 1.19,
+        "function": "ultra_high_gas_barrier",
+        "notes": "32 mol% ethylene copolymer."
+      }
+    ],
+    "coatings": null,
+    "active_functionalities": null,
+    "properties": {
+      "oxygen_transmission_rate": [
+        {
+          "property": "oxygen_transmission_rate",
+          "value": 0.4,
+          "unit": "cc/(m^2·day·atm)",
+          "value_type": "point_estimate",
+          "minimum_value": 0.2,
+          "maximum_value": 0.6,
+          "test_temperature_c": 23.0,
+          "test_relative_humidity_percent": 0.0,
+          "test_standard": "ASTM D3985",
+          "source_title": "EVAL EVOH Resins Technical Bulletin",
+          "publication_year": 2020,
+          "DOI": null,
+          "URL": null,
+          "source_type": "technical_datasheet",
+          "status": "literature",
+          "notes": "Ultra-high oxygen barrier under dry conditions."
+        },
+        {
+          "property": "oxygen_transmission_rate",
+          "value": 5.2,
+          "unit": "cc/(m^2·day·atm)",
+          "value_type": "range",
+          "minimum_value": 4.0,
+          "maximum_value": 7.0,
+          "test_temperature_c": 23.0,
+          "test_relative_humidity_percent": 85.0,
+          "test_standard": "ASTM D3985",
+          "source_title": "EVAL EVOH Resins Technical Bulletin",
+          "publication_year": 2020,
+          "DOI": null,
+          "URL": null,
+          "source_type": "technical_datasheet",
+          "status": "literature",
+          "notes": "Demonstrates critical RH sensitivity: OTR increases by >10x at 85% RH due to moisture plasticization of hydroxyl groups."
+        }
+      ]
+    },
+    "food_contact_status": "FDA_21CFR_177_1360_compliant",
+    "recyclability_class": "requires_compatibilizer_in_pe_stream",
+    "biodegradability_certified": false,
+    "compostability_standard": null,
+    "notes": "Almost universally sandwiched inside hydrophobic layers (e.g. PE/EVOH/PE) to protect from moisture."
+  },
+  {
+    "material_id": "MAT-TRIPLEX-PET-ALU-PE",
+    "material_name": "High-Barrier Triplex Foil Laminate (PET 12µm / Aluminium 9µm / LDPE 50µm)",
+    "material_category": "foil_laminate",
+    "structure_type": "laminated_multilayer",
+    "total_thickness_um": 71.0,
+    "layers": [
+      {
+        "material_type": "BOPET",
+        "thickness_um": 12.0,
+        "density_g_cm3": 1.4,
+        "function": "outer_protective_and_print",
+        "notes": "Provides puncture resistance and printability."
+      },
+      {
+        "material_type": "Aluminium",
+        "thickness_um": 9.0,
+        "density_g_cm3": 2.7,
+        "function": "absolute_barrier_core",
+        "notes": "Provides near-zero gas, moisture, and light transmission."
+      },
+      {
+        "material_type": "LDPE",
+        "thickness_um": 50.0,
+        "density_g_cm3": 0.922,
+        "function": "hermetic_sealant_layer",
+        "notes": "Heat-sealable inner contact layer."
+      }
+    ],
+    "coatings": null,
+    "active_functionalities": null,
+    "properties": {
+      "oxygen_transmission_rate": [
+        {
+          "property": "oxygen_transmission_rate",
+          "value": 0.01,
+          "unit": "cc/(m^2·day·atm)",
+          "value_type": "maximum",
+          "minimum_value": 0.0,
+          "maximum_value": 0.05,
+          "test_temperature_c": 23.0,
+          "test_relative_humidity_percent": 50.0,
+          "test_standard": "ASTM D3985",
+          "source_title": "Packaging Materials and Processing for Food, Pharmaceuticals and Cosmetics",
+          "publication_year": 2021,
+          "DOI": "10.1007/978-981-16-4609-6",
+          "URL": null,
+          "source_type": "book_chapter",
+          "status": "literature",
+          "notes": "Near-hermetic gas barrier provided by continuous pinhole-free aluminum layer."
+        }
+      ],
+      "water_vapor_transmission_rate": [
+        {
+          "property": "water_vapor_transmission_rate",
+          "value": 0.01,
+          "unit": "g/(m^2·day)",
+          "value_type": "maximum",
+          "minimum_value": 0.0,
+          "maximum_value": 0.05,
+          "test_temperature_c": 38.0,
+          "test_relative_humidity_percent": 90.0,
+          "test_standard": "ASTM F1249",
+          "source_title": "Packaging Materials and Processing for Food, Pharmaceuticals and Cosmetics",
+          "publication_year": 2021,
+          "DOI": "10.1007/978-981-16-4609-6",
+          "URL": null,
+          "source_type": "book_chapter",
+          "status": "literature",
+          "notes": "Complete moisture barrier."
+        }
+      ]
+    },
+    "food_contact_status": "FDA_21CFR_compliant",
+    "recyclability_class": "multi_material_non_recyclable",
+    "biodegradability_certified": false,
+    "compostability_standard": null,
+    "notes": "Gold standard for shelf-stable retort and long shelf-life oxidation-sensitive foods."
+  },
+  {
+    "material_id": "MAT-PLA-30UM",
+    "material_name": "Polylactic Acid Bio-Based Compostable Film (30 µm)",
+    "material_category": "biodegradable_polymer",
+    "structure_type": "monolayer_film",
+    "total_thickness_um": 30.0,
+    "layers": [
+      {
+        "material_type": "PLA",
+        "thickness_um": 30.0,
+        "density_g_cm3": 1.24,
+        "function": "monolayer_film",
+        "notes": "100% bio-based corn-derived poly(lactic acid)."
+      }
+    ],
+    "coatings": null,
+    "active_functionalities": null,
+    "properties": {
+      "oxygen_transmission_rate": [
+        {
+          "property": "oxygen_transmission_rate",
+          "value": 650.0,
+          "unit": "cc/(m^2·day·atm)",
+          "value_type": "range",
+          "minimum_value": 500.0,
+          "maximum_value": 800.0,
+          "test_temperature_c": 23.0,
+          "test_relative_humidity_percent": 0.0,
+          "test_standard": "ASTM D3985",
+          "source_title": "NatureWorks Ingeo Technical Data Sheet",
+          "publication_year": 2019,
+          "DOI": null,
+          "URL": null,
+          "source_type": "technical_datasheet",
+          "status": "literature",
+          "notes": "Medium gas barrier; high clarity, biodegradable under industrial composting."
+        }
+      ],
+      "water_vapor_transmission_rate": [
+        {
+          "property": "water_vapor_transmission_rate",
+          "value": 350.0,
+          "unit": "g/(m^2·day)",
+          "value_type": "range",
+          "minimum_value": 300.0,
+          "maximum_value": 400.0,
+          "test_temperature_c": 38.0,
+          "test_relative_humidity_percent": 90.0,
+          "test_standard": "ASTM F1249",
+          "source_title": "NatureWorks Ingeo Technical Data Sheet",
+          "publication_year": 2019,
+          "DOI": null,
+          "URL": null,
+          "source_type": "technical_datasheet",
+          "status": "literature",
+          "notes": "High water vapor permeability; prevents condensation for high-transpiration produce."
+        }
+      ]
+    },
+    "food_contact_status": "FDA_21CFR_175_300_compliant",
+    "recyclability_class": "RIC_7_other_compostable_stream",
+    "biodegradability_certified": true,
+    "compostability_standard": "ASTM_D6400_EN_13432",
+    "notes": "Compostable in commercial composting facilities."
+  }
+]
