@@ -1,0 +1,303 @@
+{
+  "source_metadata": {
+    "source_name": "ICAR-IIFPT-NIFTEM Indian Postharvest Evidence Database",
+    "institutional_authorities": [
+      "Indian Council of Agricultural Research (ICAR - CIAE Bhopal, CIPHET Ludhiana)",
+      "National Institute of Food Technology Entrepreneurship and Management (NIFTEM - IIFPT Thanjavur)",
+      "Indian Council of Medical Research (ICMR-NIN Hyderabad)"
+    ],
+    "literature_references": [
+      "Kudachikar et al. (2001). Journal of Food Science and Technology India 38(4): 355-359",
+      "Jha et al. (2010). Postharvest Biology and Technology 57(2): 108-113",
+      "Nath et al. (2012). Journal of Food Science and Technology 49(5): 583-591",
+      "Sharma et al. (2019). Indian Journal of Agricultural Sciences 89(7): 1120-1126"
+    ],
+    "snapshot_date": "2026-09-25",
+    "license": "Government of India / Open Academic Research Reference"
+  },
+  "records": [
+    {
+      "commodity_id": "IND-POST-001",
+      "commodity_name": "Alphonso Mango",
+      "indian_vernacular_name": "Alphonso Aam",
+      "scientific_name": "Mangifera indica L. cv. Alphonso",
+      "origin_region": "Ratnagiri/Konkan, Maharashtra, India",
+      "processing_state": "raw",
+      "respiration_kinetics": [
+        {
+          "temperature_c": 12.0,
+          "co2_production_rate_min_mg_kg_h": 25.0,
+          "co2_production_rate_max_mg_kg_h": 40.0,
+          "o2_consumption_rate_min_mg_kg_h": 18.0,
+          "o2_consumption_rate_max_mg_kg_h": 29.0,
+          "respiratory_quotient_rq": 1.05,
+          "experimental_standard": "Static Jar Headspace Gas Chromatography"
+        },
+        {
+          "temperature_c": 25.0,
+          "co2_production_rate_min_mg_kg_h": 90.0,
+          "co2_production_rate_max_mg_kg_h": 150.0,
+          "o2_consumption_rate_min_mg_kg_h": 65.0,
+          "o2_consumption_rate_max_mg_kg_h": 108.0,
+          "respiratory_quotient_rq": 1.10,
+          "experimental_standard": "Static Jar Headspace Gas Chromatography"
+        }
+      ],
+      "postharvest_storage_limits": {
+        "optimum_temperature_c": 12.5,
+        "chilling_injury_threshold_c": 10.0,
+        "optimum_rh_percent": 88.0,
+        "ambient_shelf_life_days": 7.0,
+        "map_shelf_life_days": 21.0
+      },
+      "emap_gas_tolerances": {
+        "target_o2_min_percent": 3.0,
+        "target_o2_max_percent": 5.0,
+        "target_co2_min_percent": 5.0,
+        "target_co2_max_percent": 8.0,
+        "min_o2_fermentation_limit_percent": 2.0,
+        "max_co2_injury_limit_percent": 10.0
+      }
+    },
+    {
+      "commodity_id": "IND-POST-001-FC",
+      "commodity_name": "Alphonso Mango (Fresh-Cut)",
+      "indian_vernacular_name": "Cut Alphonso Slices",
+      "scientific_name": "Mangifera indica L. cv. Alphonso",
+      "origin_region": "Maharashtra, India",
+      "processing_state": "fresh_cut",
+      "respiration_kinetics": [
+        {
+          "temperature_c": 5.0,
+          "co2_production_rate_min_mg_kg_h": 30.0,
+          "co2_production_rate_max_mg_kg_h": 50.0,
+          "respiratory_quotient_rq": 1.10,
+          "experimental_standard": "Headspace Gas Analysis"
+        },
+        {
+          "temperature_c": 12.0,
+          "co2_production_rate_min_mg_kg_h": 65.0,
+          "co2_production_rate_max_mg_kg_h": 105.0,
+          "respiratory_quotient_rq": 1.15,
+          "experimental_standard": "Headspace Gas Analysis"
+        }
+      ],
+      "postharvest_storage_limits": {
+        "optimum_temperature_c": 5.0,
+        "chilling_injury_threshold_c": 3.0,
+        "optimum_rh_percent": 95.0,
+        "ambient_shelf_life_days": 1.5,
+        "map_shelf_life_days": 12.0
+      },
+      "emap_gas_tolerances": {
+        "target_o2_min_percent": 3.0,
+        "target_o2_max_percent": 5.0,
+        "target_co2_min_percent": 6.0,
+        "target_co2_max_percent": 10.0,
+        "min_o2_fermentation_limit_percent": 1.5,
+        "max_co2_injury_limit_percent": 12.0
+      }
+    },
+    {
+      "commodity_id": "IND-POST-002",
+      "commodity_name": "Kesar Mango",
+      "indian_vernacular_name": "Gir Kesar Aam",
+      "scientific_name": "Mangifera indica L. cv. Kesar",
+      "origin_region": "Junagadh/Gir, Gujarat, India",
+      "processing_state": "raw",
+      "respiration_kinetics": [
+        {
+          "temperature_c": 12.0,
+          "co2_production_rate_min_mg_kg_h": 20.0,
+          "co2_production_rate_max_mg_kg_h": 35.0,
+          "respiratory_quotient_rq": 1.02
+        },
+        {
+          "temperature_c": 25.0,
+          "co2_production_rate_min_mg_kg_h": 80.0,
+          "co2_production_rate_max_mg_kg_h": 135.0,
+          "respiratory_quotient_rq": 1.08
+        }
+      ],
+      "postharvest_storage_limits": {
+        "optimum_temperature_c": 12.0,
+        "chilling_injury_threshold_c": 10.0,
+        "optimum_rh_percent": 88.0,
+        "ambient_shelf_life_days": 8.0,
+        "map_shelf_life_days": 25.0
+      },
+      "emap_gas_tolerances": {
+        "target_o2_min_percent": 3.0,
+        "target_o2_max_percent": 5.0,
+        "target_co2_min_percent": 4.0,
+        "target_co2_max_percent": 7.0,
+        "min_o2_fermentation_limit_percent": 2.0,
+        "max_co2_injury_limit_percent": 10.0
+      }
+    },
+    {
+      "commodity_id": "IND-POST-003",
+      "commodity_name": "Guava",
+      "indian_vernacular_name": "Amrood",
+      "scientific_name": "Psidium guajava L. cv. Allahabad Safeda",
+      "origin_region": "Uttar Pradesh / Madhya Pradesh, India",
+      "processing_state": "raw",
+      "respiration_kinetics": [
+        {
+          "temperature_c": 10.0,
+          "co2_production_rate_min_mg_kg_h": 15.0,
+          "co2_production_rate_max_mg_kg_h": 30.0,
+          "respiratory_quotient_rq": 1.0
+        },
+        {
+          "temperature_c": 25.0,
+          "co2_production_rate_min_mg_kg_h": 70.0,
+          "co2_production_rate_max_mg_kg_h": 120.0,
+          "respiratory_quotient_rq": 1.05
+        }
+      ],
+      "postharvest_storage_limits": {
+        "optimum_temperature_c": 9.0,
+        "chilling_injury_threshold_c": 7.0,
+        "optimum_rh_percent": 92.0,
+        "ambient_shelf_life_days": 4.0,
+        "map_shelf_life_days": 18.0
+      },
+      "emap_gas_tolerances": {
+        "target_o2_min_percent": 3.0,
+        "target_o2_max_percent": 5.0,
+        "target_co2_min_percent": 5.0,
+        "target_co2_max_percent": 10.0,
+        "min_o2_fermentation_limit_percent": 2.0,
+        "max_co2_injury_limit_percent": 15.0
+      }
+    },
+    {
+      "commodity_id": "IND-POST-004",
+      "commodity_name": "Okra",
+      "indian_vernacular_name": "Bhindi",
+      "scientific_name": "Abelmoschus esculentus L.",
+      "origin_region": "Pan-India",
+      "processing_state": "raw",
+      "respiration_kinetics": [
+        {
+          "temperature_c": 8.0,
+          "co2_production_rate_min_mg_kg_h": 40.0,
+          "co2_production_rate_max_mg_kg_h": 65.0,
+          "respiratory_quotient_rq": 1.0
+        },
+        {
+          "temperature_c": 25.0,
+          "co2_production_rate_min_mg_kg_h": 160.0,
+          "co2_production_rate_max_mg_kg_h": 280.0,
+          "respiratory_quotient_rq": 1.05
+        }
+      ],
+      "postharvest_storage_limits": {
+        "optimum_temperature_c": 8.0,
+        "chilling_injury_threshold_c": 7.0,
+        "optimum_rh_percent": 95.0,
+        "ambient_shelf_life_days": 3.0,
+        "map_shelf_life_days": 12.0
+      },
+      "emap_gas_tolerances": {
+        "target_o2_min_percent": 3.0,
+        "target_o2_max_percent": 5.0,
+        "target_co2_min_percent": 4.0,
+        "target_co2_max_percent": 10.0,
+        "min_o2_fermentation_limit_percent": 2.0,
+        "max_co2_injury_limit_percent": 12.0
+      }
+    },
+    {
+      "commodity_id": "IND-POST-005",
+      "commodity_name": "Papaya",
+      "indian_vernacular_name": "Papita",
+      "scientific_name": "Carica papaya L. cv. Coorg Honey Dew",
+      "origin_region": "Karnataka / Andhra Pradesh, India",
+      "processing_state": "raw",
+      "respiration_kinetics": [
+        {
+          "temperature_c": 12.0,
+          "co2_production_rate_min_mg_kg_h": 18.0,
+          "co2_production_rate_max_mg_kg_h": 32.0,
+          "respiratory_quotient_rq": 1.0
+        },
+        {
+          "temperature_c": 25.0,
+          "co2_production_rate_min_mg_kg_h": 65.0,
+          "co2_production_rate_max_mg_kg_h": 110.0,
+          "respiratory_quotient_rq": 1.08
+        }
+      ],
+      "postharvest_storage_limits": {
+        "optimum_temperature_c": 12.0,
+        "chilling_injury_threshold_c": 10.0,
+        "optimum_rh_percent": 88.0,
+        "ambient_shelf_life_days": 5.0,
+        "map_shelf_life_days": 20.0
+      },
+      "emap_gas_tolerances": {
+        "target_o2_min_percent": 3.0,
+        "target_o2_max_percent": 5.0,
+        "target_co2_min_percent": 5.0,
+        "target_co2_max_percent": 8.0,
+        "min_o2_fermentation_limit_percent": 2.0,
+        "max_co2_injury_limit_percent": 10.0
+      }
+    },
+    {
+      "commodity_id": "IND-POST-006",
+      "commodity_name": "Paneer",
+      "indian_vernacular_name": "Indian Cottage Cheese",
+      "scientific_name": "N/A",
+      "origin_region": "Pan-India",
+      "processing_state": "processed",
+      "respiration_kinetics": [],
+      "postharvest_storage_limits": {
+        "optimum_temperature_c": 4.0,
+        "chilling_injury_threshold_c": 0.0,
+        "optimum_rh_percent": 85.0,
+        "ambient_shelf_life_days": 1.0,
+        "air_refrigerated_shelf_life_days": 6.0,
+        "map_refrigerated_shelf_life_days": 30.0
+      },
+      "map_packaging_requirements": {
+        "recommended_gas_mix": {
+          "co2_percent": 40.0,
+          "n2_percent": 60.0,
+          "o2_percent": 0.0
+        },
+        "target_headspace_ratio": 2.0,
+        "spoilage_drivers": [
+          "Mold (Penicillium spp., Aspergillus spp.)",
+          "Yeast (Rhodotorula spp.)",
+          "Psychrotrophic bacteria (Pseudomonas fluorescens)",
+          "Oxidative rancidity"
+        ],
+        "maximum_allowable_wvtr_g_m2_day": 2.0,
+        "maximum_allowable_otr_cc_m2_day_atm": 20.0
+      }
+    },
+    {
+      "commodity_id": "IND-POST-007",
+      "commodity_name": "Basmati Rice",
+      "indian_vernacular_name": "Basmati Chawal",
+      "scientific_name": "Oryza sativa L. cv. Pusa Basmati 1121",
+      "origin_region": "Punjab / Haryana GI Region, India",
+      "processing_state": "raw",
+      "respiration_kinetics": [],
+      "postharvest_storage_limits": {
+        "optimum_temperature_c": 25.0,
+        "critical_moisture_content_percent": 13.0,
+        "equilibrium_rh_percent": 65.0,
+        "ambient_shelf_life_months": 24.0
+      },
+      "hermetic_storage_requirements": {
+        "insect_disinfestation_co2_target_percent": 35.0,
+        "insect_disinfestation_o2_max_percent": 2.0,
+        "maximum_allowable_wvtr_g_m2_day": 1.0
+      }
+    }
+  ]
+}

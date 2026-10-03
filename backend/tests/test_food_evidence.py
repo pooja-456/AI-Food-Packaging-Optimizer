@@ -309,3 +309,129 @@ def test_reference_food_evidence_json_validity() -> None:
     assert "strawberry" in commodities
     assert "durian" in commodities
     assert "salmon" in commodities
+
+
+# ---------------------------------------------------------------------------
+# Test 10: DV4 - FOOD-7 and FOOD-8 volumetric respiration rate unit correction
+# ---------------------------------------------------------------------------
+
+def test_dv4_food_7_and_food_8_volumetric_unit_correction() -> None:
+    ref_path = Path(__file__).resolve().parent.parent.parent / "data" / "reference" / "food_evidence.json"
+    with open(ref_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Index 6 is FOOD-7 (Strawberry respiration rate at 0°C)
+    food_7 = data[6]
+    assert food_7["commodity"] == "strawberry"
+    assert food_7["temperature"] == 0.0
+    assert food_7["property"] == "respiration_rate"
+    assert food_7["unit"] == "mL CO2/kg/hr"
+    assert food_7["minimum_value"] == 6.0
+    assert food_7["maximum_value"] == 9.0
+    assert food_7["value"] == 7.5
+    assert food_7["uncertainty_range"] == [6.0, 9.0]
+    assert "DV4 CONTROLLED CORRECTION" in food_7["notes"]
+
+    # Index 7 is FOOD-8 (Strawberry respiration rate at 20°C)
+    food_8 = data[7]
+    assert food_8["commodity"] == "strawberry"
+    assert food_8["temperature"] == 20.0
+    assert food_8["property"] == "respiration_rate"
+    assert food_8["unit"] == "mL CO2/kg/hr"
+    assert food_8["minimum_value"] == 50.0
+    assert food_8["maximum_value"] == 100.0
+    assert food_8["value"] == 75.0
+    assert food_8["uncertainty_range"] == [50.0, 100.0]
+    assert "DV4 CONTROLLED CORRECTION" in food_8["notes"]
+
+
+# ---------------------------------------------------------------------------
+# Test 11: DV5-C - FOOD-7 volumetric respiration safety guard regression
+# ---------------------------------------------------------------------------
+
+def test_dv5c_food_7_safety_guard_regression() -> None:
+    from app.schemas.packaging_request import PackagingRequest
+    from app.schemas.physics import CalculationStatus
+    from scientific_engine.inference.engine import infer_commodity_properties
+    from scientific_engine.physics.respiration import RespirationKineticsModel
+
+    req = PackagingRequest(
+        commodity="strawberry",
+        product_form="whole",
+        ripeness_stage="ripe",
+        target_shelf_life_days=7,
+        storage_type="chilled",
+        storage_temperature_c=0.0,
+    )
+    profile = infer_commodity_properties(req)
+
+    # 1. Evidence retrieved
+    resp_prop = profile.properties["respiration_rate"]
+    assert resp_prop.value == 7.5
+
+    # 2. CO2 unit unchanged
+    assert resp_prop.unit == "mL CO2/kg/hr"
+
+    # 3. Range unchanged
+    assert resp_prop.uncertainty_range == (6.0, 9.0)
+
+    # 4. Source attached
+    assert any("Kader" in cit for cit in resp_prop.citations)
+
+    # 5. Physics model calculation
+    model = RespirationKineticsModel()
+    res = model.calculate_respiration(inferred_respiration=resp_prop, temperature_c=0.0)
+
+    # 6. Result is UNKNOWN where O2 consumption rate is required without authorized RQ
+    assert res.status == CalculationStatus.UNKNOWN
+
+    # 7. No numeric O2 value is fabricated
+    assert res.value is None
+    assert res.uncertainty_range == (6.0, 9.0)
+
+
+# ---------------------------------------------------------------------------
+# Test 12: DV5-C - FOOD-8 volumetric respiration safety guard regression
+# ---------------------------------------------------------------------------
+
+def test_dv5c_food_8_safety_guard_regression() -> None:
+    from app.schemas.packaging_request import PackagingRequest
+    from app.schemas.physics import CalculationStatus
+    from scientific_engine.inference.engine import infer_commodity_properties
+    from scientific_engine.physics.respiration import RespirationKineticsModel
+
+    req = PackagingRequest(
+        commodity="strawberry",
+        product_form="whole",
+        ripeness_stage="ripe",
+        target_shelf_life_days=2,
+        storage_type="ambient",
+        storage_temperature_c=20.0,
+    )
+    profile = infer_commodity_properties(req)
+
+    # 1. Evidence retrieved
+    resp_prop = profile.properties["respiration_rate"]
+    assert resp_prop.value == 75.0
+
+    # 2. CO2 unit unchanged
+    assert resp_prop.unit == "mL CO2/kg/hr"
+
+    # 3. Range unchanged
+    assert resp_prop.uncertainty_range == (50.0, 100.0)
+
+    # 4. Source attached
+    assert any("Kader" in cit for cit in resp_prop.citations)
+
+    # 5. Physics model calculation
+    model = RespirationKineticsModel()
+    res = model.calculate_respiration(inferred_respiration=resp_prop, temperature_c=20.0)
+
+    # 6. Result is UNKNOWN where O2 consumption rate is required without authorized RQ
+    assert res.status == CalculationStatus.UNKNOWN
+
+    # 7. No numeric O2 value is fabricated
+    assert res.value is None
+    assert res.uncertainty_range == (50.0, 100.0)
+
+

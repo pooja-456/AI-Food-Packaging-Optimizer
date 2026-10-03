@@ -1,0 +1,195 @@
+{
+  "source_metadata": {
+    "source_name": "Commercial Polymer Manufacturer Technical Datasheets (TDS)",
+    "manufacturers": [
+      "Kuraray Co., Ltd. (EVAL EVOH Resins)",
+      "NatureWorks LLC (Ingeo Biopolymers)",
+      "DuPont Specialty Products",
+      "Amcor Flexibles"
+    ],
+    "snapshot_date": "2026-09-25",
+    "license": "Publicly Distributed Commercial Technical Datasheets"
+  },
+  "datasheets": [
+    {
+      "datasheet_id": "TDS-KURARAY-EVAL-F101B",
+      "manufacturer": "Kuraray Co., Ltd.",
+      "brand_grade": "EVAL F101B",
+      "polymer_type": "Ethylene Vinyl Alcohol Copolymer (EVOH)",
+      "ethylene_content_mol_percent": 32.0,
+      "structure_type": "monolayer",
+      "nominal_thickness_um": 15.0,
+      "density_g_cm3": 1.19,
+      "barrier_profiles": [
+        {
+          "property": "OTR",
+          "value": 0.4,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D3985",
+          "notes": "Dry gas condition"
+        },
+        {
+          "property": "OTR",
+          "value": 1.2,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 65.0,
+          "test_standard": "ASTM D3985",
+          "notes": "Medium RH condition"
+        },
+        {
+          "property": "OTR",
+          "value": 4.5,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 85.0,
+          "test_standard": "ASTM D3985",
+          "notes": "High RH condition showing moisture sensitivity"
+        },
+        {
+          "property": "WVTR",
+          "value": 30.0,
+          "unit": "g/m2-day",
+          "test_temperature_c": 38.0,
+          "test_rh_percent": 90.0,
+          "test_standard": "ASTM F1249"
+        }
+      ],
+      "sustainability_profile": {
+        "recyclable": true,
+        "recycling_category": "Co-extruded barrier component",
+        "bio_based": false,
+        "compostable": false
+      }
+    },
+    {
+      "datasheet_id": "TDS-KURARAY-EVAL-E105B",
+      "manufacturer": "Kuraray Co., Ltd.",
+      "brand_grade": "EVAL E105B",
+      "polymer_type": "Ethylene Vinyl Alcohol Copolymer (EVOH)",
+      "ethylene_content_mol_percent": 44.0,
+      "structure_type": "monolayer",
+      "nominal_thickness_um": 15.0,
+      "density_g_cm3": 1.14,
+      "barrier_profiles": [
+        {
+          "property": "OTR",
+          "value": 1.5,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D3985"
+        },
+        {
+          "property": "OTR",
+          "value": 2.2,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 65.0,
+          "test_standard": "ASTM D3985"
+        },
+        {
+          "property": "OTR",
+          "value": 5.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 85.0,
+          "test_standard": "ASTM D3985"
+        },
+        {
+          "property": "WVTR",
+          "value": 22.0,
+          "unit": "g/m2-day",
+          "test_temperature_c": 38.0,
+          "test_rh_percent": 90.0,
+          "test_standard": "ASTM F1249"
+        }
+      ],
+      "sustainability_profile": {
+        "recyclable": true,
+        "recycling_category": "Co-extruded barrier component",
+        "bio_based": false,
+        "compostable": false
+      }
+    },
+    {
+      "datasheet_id": "TDS-NATUREWORKS-INGEO-4032D",
+      "manufacturer": "NatureWorks LLC",
+      "brand_grade": "Ingeo Biopolymer 4032D",
+      "polymer_type": "Polylactic Acid (PLA)",
+      "structure_type": "monolayer",
+      "nominal_thickness_um": 30.0,
+      "density_g_cm3": 1.24,
+      "barrier_profiles": [
+        {
+          "property": "OTR",
+          "value": 650.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D3985"
+        },
+        {
+          "property": "WVTR",
+          "value": 22.0,
+          "unit": "g/m2-day",
+          "test_temperature_c": 38.0,
+          "test_rh_percent": 90.0,
+          "test_standard": "ASTM F1249"
+        }
+      ],
+      "sustainability_profile": {
+        "recyclable": true,
+        "recycling_code": "PLA-07",
+        "bio_based": true,
+        "bio_based_content_percent": 100.0,
+        "compostable": true,
+        "composting_standards": ["EN 13432", "ASTM D6400"]
+      }
+    },
+    {
+      "datasheet_id": "TDS-AMCOR-LAMINATE-70UM",
+      "manufacturer": "Amcor Flexibles",
+      "brand_grade": "High-Barrier MAP Laminate PET/EVOH/PE",
+      "polymer_type": "Multilayer Laminate (PET 12 µm / EVOH 10 µm / PE 48 µm)",
+      "structure_type": "multilayer",
+      "nominal_thickness_um": 70.0,
+      "layer_sequence": ["BOPET 12µm", "PU Adhesive", "EVOH 10µm", "Tie Layer", "LDPE 48µm"],
+      "density_g_cm3": 1.15,
+      "barrier_profiles": [
+        {
+          "property": "OTR",
+          "value": 1.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 85.0,
+          "test_standard": "ASTM D3985"
+        },
+        {
+          "property": "CO2TR",
+          "value": 4.5,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 85.0,
+          "test_standard": "ASTM D1434"
+        },
+        {
+          "property": "WVTR",
+          "value": 0.8,
+          "unit": "g/m2-day",
+          "test_temperature_c": 38.0,
+          "test_rh_percent": 90.0,
+          "test_standard": "ASTM F1249"
+        }
+      ],
+      "sustainability_profile": {
+        "recyclable": false,
+        "recycling_code": "OTHER-07",
+        "bio_based": false,
+        "compostable": false
+      }
+    }
+  ]
+}

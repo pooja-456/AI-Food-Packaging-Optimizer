@@ -59,12 +59,12 @@ def test_exact_context_match_retrieval() -> None:
     assert moisture.uncertainty_range == (84.1, 86.5)
     assert any("USDA FoodData Central" in cit for cit in moisture.citations)
 
-    # 2. Respiration rate at 20°C from Kader (2002)
+    # 2. Respiration rate at 20°C from Kader (2002) (Reclassified in DV2 to generic apple, causing Gala request to fall back to generic commodity evidence)
     resp = profile.properties["respiration_rate"]
     assert resp.value == 35.0
     assert resp.uncertainty_range == (25.0, 50.0)
-    assert resp.status == PropertyStatusEnum.literature
-    assert resp.resolution_level == InferenceResolutionLevel.TEMPERATURE_MATCH
+    assert resp.status == PropertyStatusEnum.inferred
+    assert resp.resolution_level == InferenceResolutionLevel.VARIETY_FALLBACK
 
 
 # ---------------------------------------------------------------------------

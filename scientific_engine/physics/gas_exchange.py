@@ -56,7 +56,7 @@ class GasExchangeModel:
         target_co2_range: Optional[Tuple[float, float]] = (3.0, 8.0),
         product_mass_kg: Optional[float] = None,
         package_area_m2: Optional[float] = None,
-        rq: float = 1.0,
+        rq: Optional[float] = None,
     ) -> GasExchangeRequirement:
         """
         Calculate required OTR, CO2TR, and ideal Beta ratio.
@@ -107,26 +107,38 @@ class GasExchangeModel:
             )
 
         # 3. Calculate ideal Beta ratio (independent of product mass and area!)
-        ideal_beta = rq * (delta_y_o2 / delta_y_co2)
-        beta_trace = make_traceability(
-            model_name=self.MODEL_NAME,
-            equation_form="Beta = RQ * (y_O2,ext - y_O2,target) / (y_CO2,target - y_CO2,ext)",
-            equation_reference="Exama et al. (1993) J. Food Sci. 58:1365-1370",
-            inputs_used={
-                "target_o2_percent": target_o2_percent,
-                "target_co2_percent": target_co2_percent,
-                "ambient_o2_percent": AMBIENT_O2_PERCENT,
-                "ambient_co2_percent": AMBIENT_CO2_PERCENT,
-            },
-            parameters_used={"RQ": rq},
-            assumptions=["Steady-state gas exchange equilibrium (influx = consumption; efflux = generation)."],
-        )
-        beta_result = ScientificResult(
-            status=CalculationStatus.CALCULATED,
-            value=round(ideal_beta, 2),
-            unit="dimensionless (CO2TR / OTR)",
-            traceability=beta_trace,
-        )
+        if rq is not None:
+            ideal_beta = rq * (delta_y_o2 / delta_y_co2)
+            beta_trace = make_traceability(
+                model_name=self.MODEL_NAME,
+                equation_form="Beta = RQ * (y_O2,ext - y_O2,target) / (y_CO2,target - y_CO2,ext)",
+                equation_reference="Exama et al. (1993) J. Food Sci. 58:1365-1370",
+                inputs_used={
+                    "target_o2_percent": target_o2_percent,
+                    "target_co2_percent": target_co2_percent,
+                    "ambient_o2_percent": AMBIENT_O2_PERCENT,
+                    "ambient_co2_percent": AMBIENT_CO2_PERCENT,
+                },
+                parameters_used={"RQ": rq},
+                assumptions=["Steady-state gas exchange equilibrium (influx = consumption; efflux = generation)."],
+            )
+            beta_result = ScientificResult(
+                status=CalculationStatus.CALCULATED,
+                value=round(ideal_beta, 2),
+                unit="dimensionless (CO2TR / OTR)",
+                traceability=beta_trace,
+            )
+        else:
+            beta_result = ScientificResult(
+                status=CalculationStatus.UNKNOWN,
+                value=None,
+                unit="dimensionless (CO2TR / OTR)",
+                traceability=make_traceability(
+                    model_name=self.MODEL_NAME,
+                    equation_form="Beta = UNKNOWN (Requires explicit RQ)",
+                    failure_or_unknown_reason="Respiratory Quotient (RQ) not supplied; ideal Beta ratio cannot be calculated.",
+                ),
+            )
 
         # 4. Convert respiration rate from mg O2/kg/hr to mL O2/kg/day
         # Note: If respiration unit was mg O2/kg/hr:
@@ -144,7 +156,7 @@ class GasExchangeModel:
         if product_mass_kg is None or product_mass_kg <= 0:
             # PARTIALLY_CALCULATED: We know required OTR per kg, but not absolute whole-package OTR
             otr_per_kg = round(r_o2_ml_kg_day / delta_y_o2, 1)
-            co2tr_per_kg = round((rq * r_o2_ml_kg_day) / delta_y_co2, 1)
+            co2tr_per_kg = round((rq * r_o2_ml_kg_day) / delta_y_co2, 1) if rq is not None else None
 
             otr_pkg_trace = make_traceability(
                 model_name=self.MODEL_NAME,
@@ -168,7 +180,7 @@ class GasExchangeModel:
                 traceability=otr_pkg_trace,
             )
             co2tr_pkg_result = ScientificResult(
-                status=CalculationStatus.PARTIALLY_CALCULATED,
+                status=CalculationStatus.PARTIALLY_CALCULATED if rq is not None else CalculationStatus.UNKNOWN,
                 value=co2tr_per_kg,
                 unit="cc CO2 / (kg product · day)",
                 traceability=otr_pkg_trace,
@@ -189,10 +201,10 @@ class GasExchangeModel:
 
         # 6. Complete calculation with product mass
         total_o2_consumption_ml_day = r_o2_ml_kg_day * product_mass_kg
-        total_co2_evolution_ml_day = rq * total_o2_consumption_ml_day
+        total_co2_evolution_ml_day = rq * total_o2_consumption_ml_day if rq is not None else None
 
         required_otr_pkg = total_o2_consumption_ml_day / delta_y_o2
-        required_co2tr_pkg = total_co2_evolution_ml_day / delta_y_co2
+        required_co2tr_pkg = total_co2_evolution_ml_day / delta_y_co2 if total_co2_evolution_ml_day is not None else None
 
         otr_unc_pkg = None
         if r_unc_ml_day:
@@ -235,8 +247,8 @@ class GasExchangeModel:
         )
 
         co2tr_pkg_result = ScientificResult(
-            status=CalculationStatus.CALCULATED,
-            value=round(required_co2tr_pkg, 1),
+            status=CalculationStatus.CALCULATED if required_co2tr_pkg is not None else CalculationStatus.UNKNOWN,
+            value=round(required_co2tr_pkg, 1) if required_co2tr_pkg is not None else None,
             unit="cc CO2 / package / day",
             traceability=otr_trace,
         )
@@ -246,7 +258,7 @@ class GasExchangeModel:
         co2tr_area_result = None
         if package_area_m2 is not None and package_area_m2 > 0:
             normalized_otr = required_otr_pkg / package_area_m2
-            normalized_co2tr = required_co2tr_pkg / package_area_m2
+            normalized_co2tr = required_co2tr_pkg / package_area_m2 if required_co2tr_pkg is not None else None
             otr_area_result = ScientificResult(
                 status=CalculationStatus.CALCULATED,
                 value=round(normalized_otr, 1),
@@ -254,8 +266,8 @@ class GasExchangeModel:
                 traceability=otr_trace,
             )
             co2tr_area_result = ScientificResult(
-                status=CalculationStatus.CALCULATED,
-                value=round(normalized_co2tr, 1),
+                status=CalculationStatus.CALCULATED if normalized_co2tr is not None else CalculationStatus.UNKNOWN,
+                value=round(normalized_co2tr, 1) if normalized_co2tr is not None else None,
                 unit="cc / (m² · day · atm)",
                 traceability=otr_trace,
             )

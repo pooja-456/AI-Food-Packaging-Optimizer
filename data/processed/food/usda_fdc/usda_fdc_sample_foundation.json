@@ -1,0 +1,228 @@
+{
+  "source_metadata": {
+    "source_name": "USDA FoodData Central (FDC)",
+    "institution": "United States Department of Agriculture - Agricultural Research Service",
+    "url": "https://fdc.nal.usda.gov/",
+    "snapshot_date": "2026-09-25",
+    "dataset_type": "Foundation Foods & SR Legacy Nutrients",
+    "license": "US Public Domain / Creative Commons CC0"
+  },
+  "records": [
+    {
+      "fdc_id": 171688,
+      "commodity_name": "Apple",
+      "scientific_name": "Malus domestica",
+      "food_category": "Fruits and Fruit Juices",
+      "processing_state": "RAW",
+      "proximate_composition": {
+        "moisture_percent": 85.56,
+        "total_lipid_fat_percent": 0.17,
+        "protein_percent": 0.26,
+        "ash_percent": 0.19,
+        "carbohydrate_by_difference_percent": 13.81,
+        "total_sugars_percent": 10.39,
+        "fiber_dietary_percent": 2.4
+      },
+      "physicochemical_properties": {
+        "ph_typical": 3.7,
+        "water_activity_aw": 0.98,
+        "ph_typical_parsed": {
+          "original_value": 3.7,
+          "value": 3.7,
+          "value_min": 3.7,
+          "value_max": 3.7,
+          "operator": "=",
+          "is_range": false
+        },
+        "water_activity_aw_parsed": {
+          "original_value": 0.98,
+          "value": 0.98,
+          "value_min": 0.98,
+          "value_max": 0.98,
+          "operator": "=",
+          "is_range": false
+        }
+      }
+    },
+    {
+      "fdc_id": 167762,
+      "commodity_name": "Strawberry",
+      "scientific_name": "Fragaria x ananassa",
+      "food_category": "Fruits and Fruit Juices",
+      "processing_state": "RAW",
+      "proximate_composition": {
+        "moisture_percent": 90.95,
+        "total_lipid_fat_percent": 0.3,
+        "protein_percent": 0.67,
+        "ash_percent": 0.4,
+        "carbohydrate_by_difference_percent": 7.68,
+        "total_sugars_percent": 4.89,
+        "fiber_dietary_percent": 2.0
+      },
+      "physicochemical_properties": {
+        "ph_typical": 3.4,
+        "water_activity_aw": 0.99,
+        "ph_typical_parsed": {
+          "original_value": 3.4,
+          "value": 3.4,
+          "value_min": 3.4,
+          "value_max": 3.4,
+          "operator": "=",
+          "is_range": false
+        },
+        "water_activity_aw_parsed": {
+          "original_value": 0.99,
+          "value": 0.99,
+          "value_min": 0.99,
+          "value_max": 0.99,
+          "operator": "=",
+          "is_range": false
+        }
+      }
+    },
+    {
+      "fdc_id": 175167,
+      "commodity_name": "Atlantic Salmon",
+      "scientific_name": "Salmo salar",
+      "food_category": "Finfish and Shellfish Products",
+      "processing_state": "RAW",
+      "proximate_composition": {
+        "moisture_percent": 68.5,
+        "total_lipid_fat_percent": 13.42,
+        "protein_percent": 20.42,
+        "ash_percent": 1.22,
+        "carbohydrate_by_difference_percent": 0.0,
+        "total_sugars_percent": 0.0,
+        "fiber_dietary_percent": 0.0
+      },
+      "physicochemical_properties": {
+        "ph_typical": 6.2,
+        "water_activity_aw": 0.98,
+        "ph_typical_parsed": {
+          "original_value": 6.2,
+          "value": 6.2,
+          "value_min": 6.2,
+          "value_max": 6.2,
+          "operator": "=",
+          "is_range": false
+        },
+        "water_activity_aw_parsed": {
+          "original_value": 0.98,
+          "value": 0.98,
+          "value_min": 0.98,
+          "value_max": 0.98,
+          "operator": "=",
+          "is_range": false
+        }
+      }
+    },
+    {
+      "fdc_id": 199964,
+      "commodity_name": "Spinach",
+      "scientific_name": "Spinacia oleracea",
+      "food_category": "Vegetables and Vegetable Products",
+      "processing_state": "RAW",
+      "proximate_composition": {
+        "moisture_percent": 91.4,
+        "total_lipid_fat_percent": 0.39,
+        "protein_percent": 2.86,
+        "ash_percent": 1.72,
+        "carbohydrate_by_difference_percent": 3.63,
+        "total_sugars_percent": 0.42,
+        "fiber_dietary_percent": 2.2
+      },
+      "physicochemical_properties": {
+        "ph_typical": 6.8,
+        "water_activity_aw": 0.99,
+        "ph_typical_parsed": {
+          "original_value": 6.8,
+          "value": 6.8,
+          "value_min": 6.8,
+          "value_max": 6.8,
+          "operator": "=",
+          "is_range": false
+        },
+        "water_activity_aw_parsed": {
+          "original_value": 0.99,
+          "value": 0.99,
+          "value_min": 0.99,
+          "value_max": 0.99,
+          "operator": "=",
+          "is_range": false
+        }
+      }
+    },
+    {
+      "fdc_id": 170457,
+      "commodity_name": "Tomato",
+      "scientific_name": "Solanum lycopersicum",
+      "food_category": "Vegetables and Vegetable Products",
+      "processing_state": "RAW",
+      "proximate_composition": {
+        "moisture_percent": 94.52,
+        "total_lipid_fat_percent": 0.2,
+        "protein_percent": 0.88,
+        "ash_percent": 0.5,
+        "carbohydrate_by_difference_percent": 3.89,
+        "total_sugars_percent": 2.63,
+        "fiber_dietary_percent": 1.2
+      },
+      "physicochemical_properties": {
+        "ph_typical": 4.3,
+        "water_activity_aw": 0.99,
+        "ph_typical_parsed": {
+          "original_value": 4.3,
+          "value": 4.3,
+          "value_min": 4.3,
+          "value_max": 4.3,
+          "operator": "=",
+          "is_range": false
+        },
+        "water_activity_aw_parsed": {
+          "original_value": 0.99,
+          "value": 0.99,
+          "value_min": 0.99,
+          "value_max": 0.99,
+          "operator": "=",
+          "is_range": false
+        }
+      }
+    },
+    {
+      "fdc_id": 173418,
+      "commodity_name": "Cheddar Cheese",
+      "scientific_name": "N/A",
+      "food_category": "Dairy and Egg Products",
+      "processing_state": "PROCESSED",
+      "proximate_composition": {
+        "moisture_percent": 36.75,
+        "total_lipid_fat_percent": 33.14,
+        "protein_percent": 24.9,
+        "ash_percent": 3.93,
+        "carbohydrate_by_difference_percent": 1.28,
+        "total_sugars_percent": 0.52,
+        "fiber_dietary_percent": 0.0
+      },
+      "physicochemical_properties": {
+        "ph_typical": 5.2,
+        "water_activity_aw": 0.95,
+        "ph_typical_parsed": {
+          "original_value": 5.2,
+          "value": 5.2,
+          "value_min": 5.2,
+          "value_max": 5.2,
+          "operator": "=",
+          "is_range": false
+        },
+        "water_activity_aw_parsed": {
+          "original_value": 0.95,
+          "value": 0.95,
+          "value_min": 0.95,
+          "value_max": 0.95,
+          "operator": "=",
+          "is_range": false
+        }
+      }
+    }
+  ]
+}

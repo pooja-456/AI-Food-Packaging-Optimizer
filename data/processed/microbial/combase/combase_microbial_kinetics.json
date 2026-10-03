@@ -1,0 +1,168 @@
+{
+  "source_metadata": {
+    "source_name": "ComBase Predictive Microbiology Database",
+    "institutions": [
+      "USDA Agricultural Research Service (USDA-ARS, USA)",
+      "Quadram Institute Bioscience (UK)",
+      "University of Tasmania (Australia)"
+    ],
+    "url": "https://www.combase.cc/",
+    "snapshot_date": "2026-09-25",
+    "license": "ComBase Partnership Open Educational/Research Data"
+  },
+  "records": [
+    {
+      "combase_id": "CB-ORG-001",
+      "organism_name": "Listeria monocytogenes",
+      "organism_type": "Psychrotrophic Pathogenic Bacteria",
+      "cardinal_parameters": {
+        "temperature_min_c": -0.4,
+        "temperature_opt_c": 37.0,
+        "temperature_max_c": 45.0,
+        "water_activity_aw_min": 0.92,
+        "ph_min": 4.39,
+        "ph_opt": 7.0,
+        "ph_max": 9.4
+      },
+      "growth_kinetics": [
+        {
+          "temperature_c": 4.0,
+          "ph": 6.2,
+          "water_activity_aw": 0.98,
+          "specific_growth_rate_mu_max_1_h": 0.015,
+          "lag_time_lambda_h": 18.0,
+          "atmosphere": "aerobic"
+        },
+        {
+          "temperature_c": 10.0,
+          "ph": 6.2,
+          "water_activity_aw": 0.98,
+          "specific_growth_rate_mu_max_1_h": 0.065,
+          "lag_time_lambda_h": 8.0,
+          "atmosphere": "aerobic"
+        }
+      ],
+      "gas_inhibition_responses": {
+        "co2_sensitivity": "moderate",
+        "minimum_co2_inhibition_percent": 20.0,
+        "notes": "Facultative anaerobe; growth retarded by high CO2 (40-60%) combined with refrigeration."
+      }
+    },
+    {
+      "combase_id": "CB-ORG-002",
+      "organism_name": "Pseudomonas fluorescens",
+      "organism_type": "Psychrotrophic Spoilage Bacteria",
+      "cardinal_parameters": {
+        "temperature_min_c": 0.0,
+        "temperature_opt_c": 28.0,
+        "temperature_max_c": 35.0,
+        "water_activity_aw_min": 0.97,
+        "ph_min": 5.0,
+        "ph_opt": 7.0,
+        "ph_max": 9.0
+      },
+      "growth_kinetics": [
+        {
+          "temperature_c": 5.0,
+          "ph": 6.5,
+          "water_activity_aw": 0.99,
+          "specific_growth_rate_mu_max_1_h": 0.085,
+          "lag_time_lambda_h": 6.0,
+          "atmosphere": "aerobic"
+        }
+      ],
+      "gas_inhibition_responses": {
+        "co2_sensitivity": "high",
+        "minimum_co2_inhibition_percent": 20.0,
+        "notes": "Strict aerobe; primary spoilage organism in fresh produce/meat; strongly inhibited by CO2 > 20% and O2 < 1%."
+      }
+    },
+    {
+      "combase_id": "CB-ORG-003",
+      "organism_name": "Botrytis cinerea",
+      "organism_type": "Fungal Spoilage Mold (Gray Mold)",
+      "cardinal_parameters": {
+        "temperature_min_c": 0.0,
+        "temperature_opt_c": 22.0,
+        "temperature_max_c": 30.0,
+        "water_activity_aw_min": 0.93,
+        "ph_min": 3.0,
+        "ph_opt": 5.5,
+        "ph_max": 8.0
+      },
+      "growth_kinetics": [
+        {
+          "temperature_c": 12.0,
+          "ph": 4.5,
+          "water_activity_aw": 0.98,
+          "specific_growth_rate_mu_max_1_h": 0.042,
+          "lag_time_lambda_h": 12.0,
+          "atmosphere": "aerobic"
+        }
+      ],
+      "gas_inhibition_responses": {
+        "co2_sensitivity": "high",
+        "minimum_co2_inhibition_percent": 10.0,
+        "notes": "Primary postharvest fungal pathogen in berries/grapes; inhibited by elevated CO2 (10-15%)."
+      }
+    },
+    {
+      "combase_id": "CB-ORG-004",
+      "organism_name": "Salmonella enterica",
+      "organism_type": "Mesophilic Foodborne Pathogenic Bacteria",
+      "cardinal_parameters": {
+        "temperature_min_c": 5.2,
+        "temperature_opt_c": 37.0,
+        "temperature_max_c": 47.0,
+        "water_activity_aw_min": 0.94,
+        "ph_min": 3.8,
+        "ph_opt": 7.0,
+        "ph_max": 9.5
+      },
+      "growth_kinetics": [
+        {
+          "temperature_c": 12.0,
+          "ph": 6.0,
+          "water_activity_aw": 0.98,
+          "specific_growth_rate_mu_max_1_h": 0.025,
+          "lag_time_lambda_h": 14.0,
+          "atmosphere": "aerobic"
+        }
+      ],
+      "gas_inhibition_responses": {
+        "co2_sensitivity": "moderate",
+        "minimum_co2_inhibition_percent": 30.0,
+        "notes": "Mesophilic pathogen; growth arrested at T < 5.2\u00b0C."
+      }
+    },
+    {
+      "combase_id": "CB-ORG-005",
+      "organism_name": "Aspergillus flavus",
+      "organism_type": "Mycotoxigenic Fungal Mold",
+      "cardinal_parameters": {
+        "temperature_min_c": 12.0,
+        "temperature_opt_c": 33.0,
+        "temperature_max_c": 42.0,
+        "water_activity_aw_min": 0.8,
+        "ph_min": 3.5,
+        "ph_opt": 6.0,
+        "ph_max": 8.0
+      },
+      "growth_kinetics": [
+        {
+          "temperature_c": 25.0,
+          "ph": 6.0,
+          "water_activity_aw": 0.85,
+          "specific_growth_rate_mu_max_1_h": 0.018,
+          "lag_time_lambda_h": 24.0,
+          "atmosphere": "aerobic"
+        }
+      ],
+      "gas_inhibition_responses": {
+        "co2_sensitivity": "high",
+        "minimum_co2_inhibition_percent": 25.0,
+        "notes": "Aflatoxin producer in stored grains/nuts; controlled by hermetic sealed storage maintaining low O2 (<2%) or aw < 0.70."
+      }
+    }
+  ]
+}

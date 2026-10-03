@@ -1,0 +1,195 @@
+{
+  "source_metadata": {
+    "source_name": "Indian Food Composition Tables (IFCT 2017)",
+    "institution": "ICMR - National Institute of Nutrition (NIN), Hyderabad, India",
+    "url": "https://www.ifct2017.com/",
+    "snapshot_date": "2026-09-25",
+    "dataset_type": "National Food Composition Database (528 Indian Foods)",
+    "license": "ICMR-NIN Institutional Research Reference / Open Academic Use"
+  },
+  "records": [
+    {
+      "ifct_code": "A005",
+      "commodity_name": "Alphonso Mango",
+      "indian_name": "Alphonso Aam",
+      "scientific_name": "Mangifera indica L.",
+      "food_category": "Fruits and Fruit Products",
+      "processing_state": "raw",
+      "origin_region": "Ratnagiri/Konkan, Maharashtra, India",
+      "proximate_composition": {
+        "moisture_percent": 83.20,
+        "total_lipid_fat_percent": 0.40,
+        "protein_percent": 0.70,
+        "ash_percent": 0.50,
+        "carbohydrate_by_difference_percent": 14.90,
+        "total_sugars_percent": 11.50,
+        "fiber_dietary_percent": 1.80
+      },
+      "physicochemical_properties": {
+        "ph_typical": 4.20,
+        "titratable_acidity_percent": 0.45,
+        "water_activity_aw": 0.98
+      }
+    },
+    {
+      "ifct_code": "A005-FC",
+      "commodity_name": "Alphonso Mango (Fresh-Cut)",
+      "indian_name": "Cut Alphonso Slices",
+      "scientific_name": "Mangifera indica L.",
+      "food_category": "Fresh-Cut Fruits",
+      "processing_state": "fresh_cut",
+      "origin_region": "Maharashtra, India",
+      "proximate_composition": {
+        "moisture_percent": 83.20,
+        "total_lipid_fat_percent": 0.40,
+        "protein_percent": 0.70,
+        "ash_percent": 0.50,
+        "carbohydrate_by_difference_percent": 14.90,
+        "total_sugars_percent": 11.50,
+        "fiber_dietary_percent": 1.80
+      },
+      "physicochemical_properties": {
+        "ph_typical": 4.10,
+        "titratable_acidity_percent": 0.48,
+        "water_activity_aw": 0.98
+      }
+    },
+    {
+      "ifct_code": "A006",
+      "commodity_name": "Kesar Mango",
+      "indian_name": "Gir Kesar Aam",
+      "scientific_name": "Mangifera indica L.",
+      "food_category": "Fruits and Fruit Products",
+      "processing_state": "raw",
+      "origin_region": "Junagadh/Gir, Gujarat, India",
+      "proximate_composition": {
+        "moisture_percent": 82.50,
+        "total_lipid_fat_percent": 0.30,
+        "protein_percent": 0.80,
+        "ash_percent": 0.50,
+        "carbohydrate_by_difference_percent": 15.60,
+        "total_sugars_percent": 12.10,
+        "fiber_dietary_percent": 1.70
+      },
+      "physicochemical_properties": {
+        "ph_typical": 4.35,
+        "titratable_acidity_percent": 0.38,
+        "water_activity_aw": 0.98
+      }
+    },
+    {
+      "ifct_code": "A012",
+      "commodity_name": "Guava",
+      "indian_name": "Amrood",
+      "scientific_name": "Psidium guajava L.",
+      "food_category": "Fruits and Fruit Products",
+      "processing_state": "raw",
+      "origin_region": "Allahabad/Uttar Pradesh, India",
+      "proximate_composition": {
+        "moisture_percent": 85.30,
+        "total_lipid_fat_percent": 0.20,
+        "protein_percent": 0.90,
+        "ash_percent": 0.70,
+        "carbohydrate_by_difference_percent": 12.20,
+        "total_sugars_percent": 6.80,
+        "fiber_dietary_percent": 5.20
+      },
+      "physicochemical_properties": {
+        "ph_typical": 4.80,
+        "titratable_acidity_percent": 0.32,
+        "water_activity_aw": 0.98
+      }
+    },
+    {
+      "ifct_code": "B008",
+      "commodity_name": "Okra",
+      "indian_name": "Bhindi",
+      "scientific_name": "Abelmoschus esculentus L.",
+      "food_category": "Vegetables and Vegetable Products",
+      "processing_state": "raw",
+      "origin_region": "Pan-India",
+      "proximate_composition": {
+        "moisture_percent": 89.60,
+        "total_lipid_fat_percent": 0.20,
+        "protein_percent": 1.90,
+        "ash_percent": 0.80,
+        "carbohydrate_by_difference_percent": 6.40,
+        "total_sugars_percent": 1.20,
+        "fiber_dietary_percent": 3.60
+      },
+      "physicochemical_properties": {
+        "ph_typical": 6.30,
+        "titratable_acidity_percent": 0.12,
+        "water_activity_aw": 0.99
+      }
+    },
+    {
+      "ifct_code": "A021",
+      "commodity_name": "Papaya",
+      "indian_name": "Papita",
+      "scientific_name": "Carica papaya L.",
+      "food_category": "Fruits and Fruit Products",
+      "processing_state": "raw",
+      "origin_region": "Andhra Pradesh/Karnataka, India",
+      "proximate_composition": {
+        "moisture_percent": 88.80,
+        "total_lipid_fat_percent": 0.10,
+        "protein_percent": 0.60,
+        "ash_percent": 0.50,
+        "carbohydrate_by_difference_percent": 9.80,
+        "total_sugars_percent": 7.10,
+        "fiber_dietary_percent": 1.80
+      },
+      "physicochemical_properties": {
+        "ph_typical": 5.40,
+        "titratable_acidity_percent": 0.15,
+        "water_activity_aw": 0.99
+      }
+    },
+    {
+      "ifct_code": "C001",
+      "commodity_name": "Basmati Rice",
+      "indian_name": "Basmati Chawal",
+      "scientific_name": "Oryza sativa L.",
+      "food_category": "Cereals and Cereal Products",
+      "processing_state": "raw",
+      "origin_region": "Punjab/Haryana, GI Region, India",
+      "proximate_composition": {
+        "moisture_percent": 12.10,
+        "total_lipid_fat_percent": 0.50,
+        "protein_percent": 7.90,
+        "ash_percent": 0.60,
+        "carbohydrate_by_difference_percent": 78.20,
+        "total_sugars_percent": 0.10,
+        "fiber_dietary_percent": 1.40
+      },
+      "physicochemical_properties": {
+        "ph_typical": 6.50,
+        "water_activity_aw": 0.62
+      }
+    },
+    {
+      "ifct_code": "D004",
+      "commodity_name": "Paneer",
+      "indian_name": "Indian Cottage Cheese",
+      "scientific_name": "N/A",
+      "food_category": "Dairy Products",
+      "processing_state": "processed",
+      "origin_region": "Pan-India",
+      "proximate_composition": {
+        "moisture_percent": 54.00,
+        "total_lipid_fat_percent": 23.50,
+        "protein_percent": 18.30,
+        "ash_percent": 2.10,
+        "carbohydrate_by_difference_percent": 2.10,
+        "total_sugars_percent": 1.50,
+        "fiber_dietary_percent": 0.00
+      },
+      "physicochemical_properties": {
+        "ph_typical": 5.70,
+        "titratable_acidity_percent": 0.25,
+        "water_activity_aw": 0.96
+      }
+    }
+  ]
+}

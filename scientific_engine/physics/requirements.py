@@ -55,6 +55,7 @@ class PackagingRequirementEngine:
         inference_profile: PropertyInferenceProfile,
         product_mass_kg: Optional[float] = None,
         package_area_m2: Optional[float] = None,
+        rq: Optional[float] = None,
         dry_mass_g: Optional[float] = None,
         critical_water_activity: Optional[float] = None,
         critical_moisture_percent: Optional[float] = None,
@@ -90,6 +91,7 @@ class PackagingRequirementEngine:
         respiration_result = self.respiration_model.calculate_respiration(
             inferred_respiration=resp_prop,
             temperature_c=temp_c,
+            rq=rq,
         )
         traceability_log.append(respiration_result.traceability)
         all_assumptions.extend(respiration_result.traceability.assumptions)

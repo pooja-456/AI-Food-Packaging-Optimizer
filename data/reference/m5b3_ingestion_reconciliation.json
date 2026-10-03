@@ -1,0 +1,81 @@
+{
+  "datasets_processed": 9,
+  "total_input_records": 47,
+  "total_inserted": 47,
+  "total_skipped": 0,
+  "validation_results_ingested": 9,
+  "data_transformations_ingested": 14,
+  "dataset_details": {
+    "india_ifct_2017_composition": {
+      "source_count": 8,
+      "inserted_count": 8,
+      "duplicate_count": 0,
+      "issues": []
+    },
+    "usda_fdc_sample_foundation": {
+      "source_count": 6,
+      "inserted_count": 6,
+      "duplicate_count": 0,
+      "issues": []
+    },
+    "cirad_wur_packaging_dataset": {
+      "source_count": 5,
+      "inserted_count": 5,
+      "duplicate_count": 0,
+      "issues": []
+    },
+    "manufacturer_tds_datasheets": {
+      "source_count": 4,
+      "inserted_count": 4,
+      "duplicate_count": 0,
+      "issues": []
+    },
+    "polyid_experimental_vs_predicted": {
+      "source_count": 4,
+      "inserted_count": 4,
+      "duplicate_count": 0,
+      "issues": []
+    },
+    "combase_microbial_kinetics": {
+      "source_count": 5,
+      "inserted_count": 5,
+      "duplicate_count": 0,
+      "issues": []
+    },
+    "icar_iifpt_indian_postharvest": {
+      "source_count": 8,
+      "inserted_count": 8,
+      "duplicate_count": 0,
+      "issues": []
+    },
+    "uc_davis_produce_facts": {
+      "source_count": 3,
+      "inserted_count": 3,
+      "duplicate_count": 0,
+      "issues": []
+    },
+    "usda_handbook_66_respiration": {
+      "source_count": 4,
+      "inserted_count": 4,
+      "duplicate_count": 0,
+      "issues": []
+    }
+  },
+  "entity_counts": {
+    "Source": 9,
+    "EvidenceRecord": 47,
+    "ValidationResult": 9,
+    "DataTransformation": 14,
+    "FoodCommodity": 17,
+    "FoodObservation": 20,
+    "RespirationObservation": 38,
+    "PostharvestStorageLimits": 15,
+    "PostharvestGasTolerances": 13,
+    "PackagingMaterial": 11,
+    "MaterialBarrierObservation": 34,
+    "MicrobialOrganism": 5,
+    "MicrobialCardinalParameters": 5,
+    "MicrobialGrowthKinetics": 6,
+    "MicrobialGasInhibitionResponse": 5
+  }
+}

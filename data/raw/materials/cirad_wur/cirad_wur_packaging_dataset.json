@@ -1,0 +1,229 @@
+{
+  "source_metadata": {
+    "source_name": "CIRAD / Wageningen University (WUR) Packaging Barrier Database",
+    "institutions": [
+      "CIRAD - Agricultural Research for Development (France)",
+      "Wageningen University & Research - Food & Biobased Research (Netherlands)"
+    ],
+    "url": "https://www.cirad.fr/",
+    "snapshot_date": "2026-09-25",
+    "license": "Academic Open Research Dataset"
+  },
+  "materials": [
+    {
+      "material_id": "MAT-RAW-LDPE-50UM",
+      "material_name": "Low-Density Polyethylene (LDPE 50 µm)",
+      "polymer_code": "LDPE",
+      "structure_type": "monolayer",
+      "measured_thickness_um": 50.0,
+      "density_g_cm3": 0.92,
+      "barrier_measurements": [
+        {
+          "property": "OTR",
+          "value": 4000.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D3985",
+          "measurement_type": "experimental"
+        },
+        {
+          "property": "CO2TR",
+          "value": 18000.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D1434",
+          "measurement_type": "experimental"
+        },
+        {
+          "property": "WVTR",
+          "value": 1.2,
+          "unit": "g/m2-day",
+          "test_temperature_c": 38.0,
+          "test_rh_percent": 90.0,
+          "test_standard": "ASTM F1249",
+          "measurement_type": "experimental"
+        }
+      ],
+      "sustainability_profile": {
+        "recyclable": true,
+        "recycling_code": "LDPE-04",
+        "bio_based": false,
+        "compostable": false
+      }
+    },
+    {
+      "material_id": "MAT-RAW-HDPE-40UM",
+      "material_name": "High-Density Polyethylene (HDPE 40 µm)",
+      "polymer_code": "HDPE",
+      "structure_type": "monolayer",
+      "measured_thickness_um": 40.0,
+      "density_g_cm3": 0.95,
+      "barrier_measurements": [
+        {
+          "property": "OTR",
+          "value": 1800.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D3985",
+          "measurement_type": "experimental"
+        },
+        {
+          "property": "CO2TR",
+          "value": 7000.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D1434",
+          "measurement_type": "experimental"
+        },
+        {
+          "property": "WVTR",
+          "value": 0.4,
+          "unit": "g/m2-day",
+          "test_temperature_c": 38.0,
+          "test_rh_percent": 90.0,
+          "test_standard": "ASTM F1249",
+          "measurement_type": "experimental"
+        }
+      ],
+      "sustainability_profile": {
+        "recyclable": true,
+        "recycling_code": "HDPE-02",
+        "bio_based": false,
+        "compostable": false
+      }
+    },
+    {
+      "material_id": "MAT-RAW-BOPP-30UM",
+      "material_name": "Biaxially Oriented Polypropylene (BOPP 30 µm)",
+      "polymer_code": "BOPP",
+      "structure_type": "monolayer",
+      "measured_thickness_um": 30.0,
+      "density_g_cm3": 0.90,
+      "barrier_measurements": [
+        {
+          "property": "OTR",
+          "value": 1500.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D3985",
+          "measurement_type": "experimental"
+        },
+        {
+          "property": "CO2TR",
+          "value": 5500.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D1434",
+          "measurement_type": "experimental"
+        },
+        {
+          "property": "WVTR",
+          "value": 0.5,
+          "unit": "g/m2-day",
+          "test_temperature_c": 38.0,
+          "test_rh_percent": 90.0,
+          "test_standard": "ASTM F1249",
+          "measurement_type": "experimental"
+        }
+      ],
+      "sustainability_profile": {
+        "recyclable": true,
+        "recycling_code": "PP-05",
+        "bio_based": false,
+        "compostable": false
+      }
+    },
+    {
+      "material_id": "MAT-RAW-BOPET-12UM",
+      "material_name": "Biaxially Oriented Polyethylene Terephthalate (BOPET 12 µm)",
+      "polymer_code": "BOPET",
+      "structure_type": "monolayer",
+      "measured_thickness_um": 12.0,
+      "density_g_cm3": 1.40,
+      "barrier_measurements": [
+        {
+          "property": "OTR",
+          "value": 110.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D3985",
+          "measurement_type": "experimental"
+        },
+        {
+          "property": "CO2TR",
+          "value": 400.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D1434",
+          "measurement_type": "experimental"
+        },
+        {
+          "property": "WVTR",
+          "value": 20.0,
+          "unit": "g/m2-day",
+          "test_temperature_c": 38.0,
+          "test_rh_percent": 90.0,
+          "test_standard": "ASTM F1249",
+          "measurement_type": "experimental"
+        }
+      ],
+      "sustainability_profile": {
+        "recyclable": true,
+        "recycling_code": "PET-01",
+        "bio_based": false,
+        "compostable": false
+      }
+    },
+    {
+      "material_id": "MAT-RAW-BOPA-15UM",
+      "material_name": "Biaxially Oriented Polyamide 6 (BOPA 15 µm)",
+      "polymer_code": "BOPA",
+      "structure_type": "monolayer",
+      "measured_thickness_um": 15.0,
+      "density_g_cm3": 1.14,
+      "barrier_measurements": [
+        {
+          "property": "OTR",
+          "value": 35.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D3985",
+          "measurement_type": "experimental"
+        },
+        {
+          "property": "CO2TR",
+          "value": 110.0,
+          "unit": "cc/m2-day-atm",
+          "test_temperature_c": 23.0,
+          "test_rh_percent": 0.0,
+          "test_standard": "ASTM D1434",
+          "measurement_type": "experimental"
+        },
+        {
+          "property": "WVTR",
+          "value": 25.0,
+          "unit": "g/m2-day",
+          "test_temperature_c": 38.0,
+          "test_rh_percent": 90.0,
+          "test_standard": "ASTM F1249",
+          "measurement_type": "experimental"
+        }
+      ],
+      "sustainability_profile": {
+        "recyclable": true,
+        "recycling_code": "OTHER-07",
+        "bio_based": false,
+        "compostable": false
+      }
+    }
+  ]
+}

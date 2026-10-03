@@ -61,6 +61,15 @@ Data requirements
 
 ---
 
+## Data Collection & Evidence Sources
+
+The system relies on evidence-backed scientific sources for food composition, postharvest respiration kinetics, predictive microbiology, packaging barrier measurements, and thermophysical constants.
+
+For the detailed source catalog, official URLs, group classifications (Actual Data Sources, Test-Method Sources, Discovery Sources), data extraction fields, and source priority tiers, see:  
+[docs/data_collection_sources.md](docs/data_collection_sources.md)
+
+---
+
 ## Core Principles
 
 - **RULES FIRST. PHYSICS FIRST. AI ONLY WHERE IT ADDS REAL VALUE.**

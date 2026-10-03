@@ -1,0 +1,378 @@
+{
+  "milestone": "M6-A",
+  "artifact_name": "Optimization Data Availability Matrix",
+  "description": "Comprehensive audit of all candidate decision variables, hard constraints, and multi-objective criteria against the verified M4/M5 canonical database state (47 records, 15 entities, 34 barrier observations, 11 packaging materials).",
+  "generated_at": "2026-09-28T21:35:00Z",
+  "summary": {
+    "total_evaluated_parameters": 24,
+    "available_now_count": 14,
+    "partially_available_count": 3,
+    "data_gap_count": 7,
+    "deferred_count": 7
+  },
+  "parameters": [
+    {
+      "identifier": "material_selection",
+      "category": "DECISION_VARIABLE",
+      "name": "Discrete Packaging Material Identity",
+      "target_entity": "PackagingMaterial",
+      "data_type": "string (UUID / Polymer Name)",
+      "units": null,
+      "status": "AVAILABLE NOW",
+      "current_coverage": "11 distinct packaging materials (10 experimental/commercial, 1 QSAR model predicted).",
+      "verified_sources": [
+        "CIRAD / WUR Packaging Barrier Database",
+        "Commercial Polymer Manufacturer TDS (Kuraray, NatureWorks, DuPont, Amcor)",
+        "PolyID Polymer Property Database"
+      ],
+      "mathematical_usage": "Primary discrete categorical decision variable x_mat in {1, ..., 11}.",
+      "rationale": "Directly queryable in M5 database; represents real commercial films and resins."
+    },
+    {
+      "identifier": "structure_type",
+      "category": "DECISION_VARIABLE",
+      "name": "Material Structure Morphology",
+      "target_entity": "PackagingMaterial",
+      "data_type": "enum (StructureType)",
+      "units": null,
+      "status": "AVAILABLE NOW",
+      "current_coverage": "11 materials classified as MONOLAYER (8) or MULTILAYER (3).",
+      "verified_sources": [
+        "CIRAD / WUR Packaging Barrier Database",
+        "Commercial Polymer Manufacturer TDS"
+      ],
+      "mathematical_usage": "Structural constraint and discrete design parameter.",
+      "rationale": "Explicitly represented in M5 canonical schema as StructureType enum."
+    },
+    {
+      "identifier": "layer_sequence",
+      "category": "DECISION_VARIABLE",
+      "name": "Multilayer Polymer Sequence",
+      "target_entity": "PackagingMaterial",
+      "data_type": "list of strings (JSONB)",
+      "units": null,
+      "status": "AVAILABLE NOW",
+      "current_coverage": "Populated for all multilayer materials (e.g., ['PP', 'EVOH', 'PP'], ['PET', 'Alu', 'PE']).",
+      "verified_sources": [
+        "Commercial Polymer Manufacturer TDS"
+      ],
+      "mathematical_usage": "Permutation constraint for multilayer laminate configurations.",
+      "rationale": "Preserved in M5 PackagingMaterial.layer_sequence JSONB column."
+    },
+    {
+      "identifier": "material_thickness_discrete",
+      "category": "DECISION_VARIABLE",
+      "name": "Measured Film Gauge / Thickness",
+      "target_entity": "MaterialBarrierObservation",
+      "data_type": "float",
+      "units": "um (micrometers)",
+      "status": "AVAILABLE NOW",
+      "current_coverage": "100% of material observations have explicit thickness. Global observed values: 12, 15, 25, 30, 40, 50, 70 um. Each material currently has a single evidenced thickness; material-specific candidate eligibility requires evidence-level mapping.",
+      "verified_sources": [
+        "CIRAD / WUR Packaging Barrier Database",
+        "PolyID Polymer Property Database",
+        "Commercial Polymer Manufacturer TDS"
+      ],
+      "mathematical_usage": "Discrete thickness selection in primary catalog search mode.",
+      "rationale": "Directly populated in MaterialBarrierObservation.thickness_value."
+    },
+    {
+      "identifier": "material_thickness_continuous",
+      "category": "DECISION_VARIABLE",
+      "name": "Continuous Film Gauge Scaling",
+      "target_entity": "MaterialBarrierObservation",
+      "data_type": "float",
+      "units": "um (micrometers)",
+      "status": "PARTIALLY AVAILABLE",
+      "current_coverage": "Supported only for isotropic monolayers via P/t scaling; NOT supported for complex coextruded multilayers.",
+      "verified_sources": [
+        "Classical polymer permeation physics (Phase 4)"
+      ],
+      "mathematical_usage": "Continuous bounded variable t in [t_min, t_max] for exploratory optimization.",
+      "rationale": "M5 project governance restricts unverified continuous normalization on multilayers. Monolayers can scale if tagged."
+    },
+    {
+      "identifier": "package_surface_area",
+      "category": "OPERATIONAL_PARAMETER",
+      "name": "Package Surface Area",
+      "target_entity": "PackagingRequest",
+      "data_type": "float",
+      "units": "m2",
+      "status": "AVAILABLE NOW",
+      "current_coverage": "Specified in user request or defaulted to 0.06 m2 (Phase 4/5 contract).",
+      "verified_sources": [
+        "Phase 4 Physics & Packaging Engine",
+        "Phase 5 Candidate Feasibility Filter"
+      ],
+      "mathematical_usage": "Converts per-package transmission demands to normalized areal flux: TR_areal = TR_pkg / A_pkg.",
+      "rationale": "Fully integrated in Phase 4 and Phase 5 request schemas."
+    },
+    {
+      "identifier": "package_headspace_volume",
+      "category": "OPERATIONAL_PARAMETER",
+      "name": "Headspace Gas Volume",
+      "target_entity": "PackagingRequest",
+      "data_type": "float",
+      "units": "cm3",
+      "status": "AVAILABLE NOW",
+      "current_coverage": "Specified in user request or defaulted via package volume / fill ratio.",
+      "verified_sources": [
+        "Phase 4 Gas Exchange Model"
+      ],
+      "mathematical_usage": "Transient headspace gas mass balance for MAP flush design.",
+      "rationale": "Supported in Phase 4 GasExchangeRequirement."
+    },
+    {
+      "identifier": "active_oxygen_scavenger_capacity",
+      "category": "DECISION_VARIABLE",
+      "name": "Active O2 Scavenger Sachet / Layer Capacity",
+      "target_entity": "None",
+      "data_type": "float",
+      "units": "cc O2",
+      "status": "DEFERRED",
+      "current_coverage": "0 records in M4/M5 database.",
+      "verified_sources": [],
+      "mathematical_usage": "Would add a non-permeation gas sink term to headspace mass balance.",
+      "rationale": "DATA GAP: No empirical scavenger absorption kinetics or commercial sachet ratings exist in current verified evidence."
+    },
+    {
+      "identifier": "active_moisture_desiccant_capacity",
+      "category": "DECISION_VARIABLE",
+      "name": "Active Desiccant Sachet Capacity",
+      "target_entity": "None",
+      "data_type": "float",
+      "units": "g H2O",
+      "status": "DEFERRED",
+      "current_coverage": "0 records in M4/M5 database.",
+      "verified_sources": [],
+      "mathematical_usage": "Would add a moisture absorption buffer term to water vapor balance.",
+      "rationale": "DATA GAP: No verified silica gel or molecular sieve adsorption isotherms in database."
+    },
+    {
+      "identifier": "active_antimicrobial_coating",
+      "category": "DECISION_VARIABLE",
+      "name": "Antimicrobial Active Coating Release Rate",
+      "target_entity": "None",
+      "data_type": "string",
+      "units": "mg / (cm2 * day)",
+      "status": "DEFERRED",
+      "current_coverage": "0 records in M4/M5 database.",
+      "verified_sources": [],
+      "mathematical_usage": "Would modify microbial specific growth rate mu_max via chemical hurdle.",
+      "rationale": "DATA GAP: No verified active antimicrobial release data in database."
+    },
+    {
+      "identifier": "hard_constraint_wvtr",
+      "category": "HARD_CONSTRAINT",
+      "name": "Water Vapor Transmission Rate Upper Bound",
+      "target_entity": "MaterialBarrierObservation / MoistureRequirement",
+      "data_type": "float",
+      "units": "g / (m2 * day)",
+      "status": "AVAILABLE NOW",
+      "current_coverage": "100% computable from Phase 4 sorption balance; evaluated across all M5 materials.",
+      "verified_sources": [
+        "ASTM F1249 / ASTM E96 in M5 database",
+        "Phase 4 MoistureRequirement"
+      ],
+      "mathematical_usage": "WVTR_mat <= WVTR_allowable.",
+      "rationale": "Primary food safety / moisture preservation gate."
+    },
+    {
+      "identifier": "hard_constraint_otr",
+      "category": "HARD_CONSTRAINT",
+      "name": "Oxygen Transmission Rate Feasibility Window",
+      "target_entity": "MaterialBarrierObservation / GasExchangeRequirement",
+      "data_type": "float",
+      "units": "cc / (m2 * day * atm)",
+      "status": "AVAILABLE NOW",
+      "current_coverage": "100% computable from Phase 4 respiration balance; evaluated across all M5 materials.",
+      "verified_sources": [
+        "ASTM D3985 in M5 database",
+        "Phase 4 GasExchangeRequirement"
+      ],
+      "mathematical_usage": "OTR_min <= OTR_mat <= OTR_max (respiring) or OTR_mat <= OTR_max (non-respiring).",
+      "rationale": "Prevents anaerobic fermentation or oxidative rancidity."
+    },
+    {
+      "identifier": "hard_constraint_co2tr",
+      "category": "HARD_CONSTRAINT",
+      "name": "Carbon Dioxide Transmission Rate Target / Tolerance",
+      "target_entity": "MaterialBarrierObservation / GasExchangeRequirement",
+      "data_type": "float",
+      "units": "cc / (m2 * day * atm)",
+      "status": "AVAILABLE NOW",
+      "current_coverage": "Present in 12 M5 barrier observations (CIRAD, Manufacturer TDS).",
+      "verified_sources": [
+        "ASTM F2476 in M5 database",
+        "Phase 4 GasExchangeRequirement"
+      ],
+      "mathematical_usage": "CO2TR_mat >= CO2TR_min_injury_prevention.",
+      "rationale": "Protects produce from CO2 injury while maintaining microbial inhibition."
+    },
+    {
+      "identifier": "hard_constraint_condition_match",
+      "category": "HARD_CONSTRAINT",
+      "name": "Environmental Test Condition Compatibility",
+      "target_entity": "ConstraintEvaluation",
+      "data_type": "enum (ConditionMatchLevel)",
+      "units": null,
+      "status": "AVAILABLE NOW",
+      "current_coverage": "100% of barrier observations record test temperature; 100% record test RH.",
+      "verified_sources": [
+        "M5 MaterialBarrierObservation test conditions",
+        "Phase 5 ConstraintEvaluation logic"
+      ],
+      "mathematical_usage": "ConditionMatch in {EXACT, SUPPORTED}; INCOMPATIBLE or UNKNOWN excludes candidate from P*.",
+      "rationale": "Strictly enforces UNKNOWN != FEASIBLE."
+    },
+    {
+      "identifier": "objective_thickness",
+      "category": "OBJECTIVE",
+      "name": "Total Material Thickness Minimization",
+      "target_entity": "MaterialBarrierObservation",
+      "data_type": "float",
+      "units": "um (micrometers)",
+      "status": "AVAILABLE NOW",
+      "current_coverage": "Populated for all 34 barrier observations in M5 database.",
+      "verified_sources": [
+        "CIRAD / WUR Database",
+        "PolyID Database",
+        "Manufacturer Technical Datasheets"
+      ],
+      "mathematical_usage": "Minimize f_1(x) = t_total.",
+      "rationale": "Represents source reduction and packaging tare weight minimization."
+    },
+    {
+      "identifier": "objective_moisture_margin",
+      "category": "OBJECTIVE",
+      "name": "Moisture Barrier Safety Margin",
+      "target_entity": "MaterialBarrierObservation / MoistureRequirement",
+      "data_type": "float",
+      "units": "dimensionless ratio",
+      "status": "AVAILABLE NOW",
+      "current_coverage": "Computable for all candidates passing WVTR hard constraint.",
+      "verified_sources": [
+        "Phase 4 MoistureRequirement",
+        "M5 WVTR observations"
+      ],
+      "mathematical_usage": "Maximize f_2(x) = (WVTR_allowable - WVTR_mat) / WVTR_allowable.",
+      "rationale": "Quantifies barrier buffer against ambient humidity spikes."
+    },
+    {
+      "identifier": "objective_gas_alignment",
+      "category": "OBJECTIVE",
+      "name": "Gas Transmission Target Alignment",
+      "target_entity": "MaterialBarrierObservation / GasExchangeRequirement",
+      "data_type": "float",
+      "units": "dimensionless penalty",
+      "status": "AVAILABLE NOW",
+      "current_coverage": "Computable for all candidates with OTR and CO2TR data.",
+      "verified_sources": [
+        "Phase 4 GasExchangeRequirement",
+        "M5 OTR/CO2TR observations"
+      ],
+      "mathematical_usage": "Minimize f_3(x) = |OTR_mat - OTR_target| / OTR_target + 0.5 * |beta_mat - beta_ideal| / beta_ideal.",
+      "rationale": "Prevents produce senescence while avoiding fermentation."
+    },
+    {
+      "identifier": "objective_shelf_life_margin",
+      "category": "OBJECTIVE",
+      "name": "Shelf-Life Extension Margin",
+      "target_entity": "ShelfLifeRequirement",
+      "data_type": "float",
+      "units": "dimensionless ratio",
+      "status": "AVAILABLE NOW",
+      "current_coverage": "Computable from limiting deterioration kinetics in Phase 4.",
+      "verified_sources": [
+        "Phase 4 ShelfLifeRequirement",
+        "M5 Barrier and Kinetic evidence"
+      ],
+      "mathematical_usage": "Maximize f_4(x) = (t_achievable - t_target) / t_target.",
+      "rationale": "Direct commercial value metric indicating retail shelf life headroom."
+    },
+    {
+      "identifier": "objective_economic_cost",
+      "category": "OBJECTIVE",
+      "name": "Packaging Material Economic Cost",
+      "target_entity": "None",
+      "data_type": "float",
+      "units": "$ / package (or INR / package)",
+      "status": "DEFERRED",
+      "current_coverage": "0 records in M4/M5 database.",
+      "verified_sources": [],
+      "mathematical_usage": "Minimize f_cost(x) = Cost_film * Area + Cost_conversion.",
+      "rationale": "DATA GAP: No verified resin pricing or commercial conversion cost streams currently ingested. Fabrication strictly prohibited."
+    },
+    {
+      "identifier": "objective_carbon_footprint",
+      "category": "OBJECTIVE",
+      "name": "Life Cycle Global Warming Potential (GWP)",
+      "target_entity": "None",
+      "data_type": "float",
+      "units": "kg CO2-eq / kg polymer",
+      "status": "DEFERRED",
+      "current_coverage": "0 records in M4/M5 database.",
+      "verified_sources": [],
+      "mathematical_usage": "Minimize f_GWP(x) = sum(m_l * GWP_l).",
+      "rationale": "DATA GAP: No cradle-to-gate Life Cycle Inventory (LCI) emission factors currently ingested. Fabrication strictly prohibited."
+    },
+    {
+      "identifier": "recyclability_categorical",
+      "category": "CATEGORICAL_CONSTRAINT",
+      "name": "Mechanical Recyclability & Resin Identification",
+      "target_entity": "PackagingMaterial",
+      "data_type": "boolean / string",
+      "units": null,
+      "status": "PARTIALLY AVAILABLE",
+      "current_coverage": "Present in manufacturer TDS and CIRAD datasets (e.g. recycling_code: 'LDPE-04', recyclable: true).",
+      "verified_sources": [
+        "Commercial Polymer Manufacturer TDS",
+        "CIRAD / WUR Dataset"
+      ],
+      "mathematical_usage": "Categorical boolean filter: require_recyclable == True or allow_monomaterial_only.",
+      "rationale": "Qualitative sustainability tags exist, but lack continuous circularity scoring. Operates as discrete filter, not continuous Pareto objective."
+    },
+    {
+      "identifier": "bio_based_content",
+      "category": "CATEGORICAL_CONSTRAINT",
+      "name": "Bio-Based Polymer Content",
+      "target_entity": "PackagingMaterial",
+      "data_type": "float / boolean",
+      "units": "% bio-based content",
+      "status": "PARTIALLY AVAILABLE",
+      "current_coverage": "Explicitly recorded for Ingeo PLA (100% bio-based) and PolyID PLA/PHA.",
+      "verified_sources": [
+        "Commercial Polymer Manufacturer TDS (NatureWorks Ingeo)",
+        "PolyID Database"
+      ],
+      "mathematical_usage": "Filter condition: bio_based == True or bio_content >= min_threshold.",
+      "rationale": "Documented on biopolymers; operates as categorical constraint."
+    },
+    {
+      "identifier": "sealing_temperature_window",
+      "category": "MANUFACTURING_CONSTRAINT",
+      "name": "Heat Sealing Initiation & Window",
+      "target_entity": "None",
+      "data_type": "float",
+      "units": "°C",
+      "status": "DEFERRED",
+      "current_coverage": "0 records in M4/M5 database.",
+      "verified_sources": [],
+      "mathematical_usage": "Sealing compatibility constraint for form-fill-seal machinery.",
+      "rationale": "DATA GAP: Sealing initiation temperature (SIT) and hot tack strength not currently in M5 schema."
+    },
+    {
+      "identifier": "tensile_puncture_strength",
+      "category": "MANUFACTURING_CONSTRAINT",
+      "name": "Mechanical Puncture & Tensile Strength",
+      "target_entity": "None",
+      "data_type": "float",
+      "units": "MPa / N",
+      "status": "DEFERRED",
+      "current_coverage": "0 records in M4/M5 database.",
+      "verified_sources": [],
+      "mathematical_usage": "Mechanical resistance constraint for heavy produce or puncture-prone stems.",
+      "rationale": "DATA GAP: Mechanical tensile properties (ASTM D882) not yet ingested into M5 database."
+    }
+  ]
+}

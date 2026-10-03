@@ -1,0 +1,174 @@
+{
+  "source_metadata": {
+    "source_name": "USDA Agricultural Handbook 66",
+    "title": "The Commercial Storage of Fruits, Vegetables, and Florist and Nursery Stocks",
+    "institution": "USDA Agricultural Research Service (ARS)",
+    "url": "https://www.ars.usda.gov/is/np/CommercialStorage/CommercialStorage.pdf",
+    "snapshot_date": "2026-09-25",
+    "license": "US Public Domain"
+  },
+  "records": [
+    {
+      "commodity_name": "Apple",
+      "scientific_name": "Malus domestica",
+      "respiration_measurements": [
+        {
+          "temperature_c": 0.0,
+          "co2_production_rate_min_mg_kg_h": 3.0,
+          "co2_production_rate_max_mg_kg_h": 6.0,
+          "o2_consumption_rate_min_mg_kg_h": 2.2,
+          "o2_consumption_rate_max_mg_kg_h": 4.4,
+          "respiratory_quotient_rq_typical": 1.0
+        },
+        {
+          "temperature_c": 5.0,
+          "co2_production_rate_min_mg_kg_h": 5.0,
+          "co2_production_rate_max_mg_kg_h": 10.0,
+          "o2_consumption_rate_min_mg_kg_h": 3.6,
+          "o2_consumption_rate_max_mg_kg_h": 7.3,
+          "respiratory_quotient_rq_typical": 1.0
+        },
+        {
+          "temperature_c": 20.0,
+          "co2_production_rate_min_mg_kg_h": 15.0,
+          "co2_production_rate_max_mg_kg_h": 30.0,
+          "o2_consumption_rate_min_mg_kg_h": 10.9,
+          "o2_consumption_rate_max_mg_kg_h": 21.8,
+          "respiratory_quotient_rq_typical": 1.0
+        }
+      ],
+      "recommended_storage_conditions": {
+        "storage_temperature_min_c": -1.0,
+        "storage_temperature_max_c": 4.0,
+        "relative_humidity_min_percent": 90.0,
+        "relative_humidity_max_percent": 95.0,
+        "approximate_shelf_life_days": 120.0
+      },
+      "emap_tolerances": {
+        "target_o2_min_percent": 1.5,
+        "target_o2_max_percent": 2.5,
+        "target_co2_min_percent": 1.0,
+        "target_co2_max_percent": 2.0,
+        "min_o2_fermentation_limit_percent": 1.0,
+        "max_co2_injury_limit_percent": 5.0
+      }
+    },
+    {
+      "commodity_name": "Strawberry",
+      "scientific_name": "Fragaria x ananassa",
+      "respiration_measurements": [
+        {
+          "temperature_c": 0.0,
+          "co2_production_rate_min_mg_kg_h": 12.0,
+          "co2_production_rate_max_mg_kg_h": 18.0,
+          "o2_consumption_rate_min_mg_kg_h": 8.7,
+          "o2_consumption_rate_max_mg_kg_h": 13.0,
+          "respiratory_quotient_rq_typical": 1.0
+        },
+        {
+          "temperature_c": 10.0,
+          "co2_production_rate_min_mg_kg_h": 48.0,
+          "co2_production_rate_max_mg_kg_h": 80.0,
+          "o2_consumption_rate_min_mg_kg_h": 34.8,
+          "o2_consumption_rate_max_mg_kg_h": 58.0,
+          "respiratory_quotient_rq_typical": 1.0
+        },
+        {
+          "temperature_c": 20.0,
+          "co2_production_rate_min_mg_kg_h": 150.0,
+          "co2_production_rate_max_mg_kg_h": 250.0,
+          "o2_consumption_rate_min_mg_kg_h": 108.8,
+          "o2_consumption_rate_max_mg_kg_h": 181.3,
+          "respiratory_quotient_rq_typical": 1.0
+        }
+      ],
+      "recommended_storage_conditions": {
+        "storage_temperature_min_c": 0.0,
+        "storage_temperature_max_c": 0.5,
+        "relative_humidity_min_percent": 90.0,
+        "relative_humidity_max_percent": 95.0,
+        "approximate_shelf_life_days": 7.0
+      },
+      "emap_tolerances": {
+        "target_o2_min_percent": 5.0,
+        "target_o2_max_percent": 10.0,
+        "target_co2_min_percent": 15.0,
+        "target_co2_max_percent": 20.0,
+        "min_o2_fermentation_limit_percent": 2.0,
+        "max_co2_injury_limit_percent": 25.0
+      }
+    },
+    {
+      "commodity_name": "Spinach",
+      "scientific_name": "Spinacia oleracea",
+      "respiration_measurements": [
+        {
+          "temperature_c": 0.0,
+          "co2_production_rate_min_mg_kg_h": 20.0,
+          "co2_production_rate_max_mg_kg_h": 30.0,
+          "respiratory_quotient_rq_typical": 1.0
+        },
+        {
+          "temperature_c": 10.0,
+          "co2_production_rate_min_mg_kg_h": 80.0,
+          "co2_production_rate_max_mg_kg_h": 120.0,
+          "respiratory_quotient_rq_typical": 1.0
+        },
+        {
+          "temperature_c": 20.0,
+          "co2_production_rate_min_mg_kg_h": 250.0,
+          "co2_production_rate_max_mg_kg_h": 400.0,
+          "respiratory_quotient_rq_typical": 1.0
+        }
+      ],
+      "recommended_storage_conditions": {
+        "storage_temperature_min_c": 0.0,
+        "storage_temperature_max_c": 1.0,
+        "relative_humidity_min_percent": 95.0,
+        "relative_humidity_max_percent": 100.0,
+        "approximate_shelf_life_days": 14.0
+      },
+      "emap_tolerances": {
+        "target_o2_min_percent": 7.0,
+        "target_o2_max_percent": 10.0,
+        "target_co2_min_percent": 5.0,
+        "target_co2_max_percent": 10.0,
+        "min_o2_fermentation_limit_percent": 2.0,
+        "max_co2_injury_limit_percent": 15.0
+      }
+    },
+    {
+      "commodity_name": "Tomato",
+      "scientific_name": "Solanum lycopersicum",
+      "respiration_measurements": [
+        {
+          "temperature_c": 12.0,
+          "co2_production_rate_min_mg_kg_h": 15.0,
+          "co2_production_rate_max_mg_kg_h": 25.0,
+          "respiratory_quotient_rq_typical": 1.0
+        },
+        {
+          "temperature_c": 20.0,
+          "co2_production_rate_min_mg_kg_h": 35.0,
+          "co2_production_rate_max_mg_kg_h": 60.0,
+          "respiratory_quotient_rq_typical": 1.0
+        }
+      ],
+      "recommended_storage_conditions": {
+        "storage_temperature_min_c": 12.0,
+        "storage_temperature_max_c": 15.0,
+        "relative_humidity_min_percent": 90.0,
+        "relative_humidity_max_percent": 95.0,
+        "approximate_shelf_life_days": 21.0
+      },
+      "emap_tolerances": {
+        "target_o2_min_percent": 3.0,
+        "target_o2_max_percent": 5.0,
+        "target_co2_min_percent": 2.0,
+        "target_co2_max_percent": 3.0,
+        "min_o2_fermentation_limit_percent": 2.0,
+        "max_co2_injury_limit_percent": 5.0
+      }
+    }
+  ]
+}

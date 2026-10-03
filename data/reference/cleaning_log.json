@@ -1,0 +1,156 @@
+[
+  {
+    "dataset": "usda_fdc",
+    "record_id": "171688",
+    "field": "processing_state",
+    "original_value": "raw",
+    "transformed_value": "RAW",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "usda_fdc",
+    "record_id": "167762",
+    "field": "processing_state",
+    "original_value": "raw",
+    "transformed_value": "RAW",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "usda_fdc",
+    "record_id": "175167",
+    "field": "processing_state",
+    "original_value": "raw",
+    "transformed_value": "RAW",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "usda_fdc",
+    "record_id": "199964",
+    "field": "processing_state",
+    "original_value": "raw",
+    "transformed_value": "RAW",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "usda_fdc",
+    "record_id": "170457",
+    "field": "processing_state",
+    "original_value": "raw",
+    "transformed_value": "RAW",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "usda_fdc",
+    "record_id": "173418",
+    "field": "processing_state",
+    "original_value": "processed",
+    "transformed_value": "PROCESSED",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "india_ifct",
+    "record_id": "A005",
+    "field": "processing_state",
+    "original_value": "raw",
+    "transformed_value": "RAW",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "india_ifct",
+    "record_id": "A005-FC",
+    "field": "processing_state",
+    "original_value": "fresh_cut",
+    "transformed_value": "FRESH_CUT",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "india_ifct",
+    "record_id": "A006",
+    "field": "processing_state",
+    "original_value": "raw",
+    "transformed_value": "RAW",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "india_ifct",
+    "record_id": "A012",
+    "field": "processing_state",
+    "original_value": "raw",
+    "transformed_value": "RAW",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "india_ifct",
+    "record_id": "B008",
+    "field": "processing_state",
+    "original_value": "raw",
+    "transformed_value": "RAW",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "india_ifct",
+    "record_id": "A021",
+    "field": "processing_state",
+    "original_value": "raw",
+    "transformed_value": "RAW",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "india_ifct",
+    "record_id": "C001",
+    "field": "processing_state",
+    "original_value": "raw",
+    "transformed_value": "RAW",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  },
+  {
+    "dataset": "india_ifct",
+    "record_id": "D004",
+    "field": "processing_state",
+    "original_value": "processed",
+    "transformed_value": "PROCESSED",
+    "transformation_type": "CATEGORY_STANDARDIZATION",
+    "reason": "Uppercase processing state",
+    "rule_id": "RULE-CAT-01",
+    "source_preserved": true
+  }
+]

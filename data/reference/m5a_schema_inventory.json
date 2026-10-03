@@ -1,0 +1,226 @@
+{
+  "entities": {
+    "Source": {
+      "description": "Root provenance entity tracking the origin of the data.",
+      "fields": {
+        "id": "UUID (PK)",
+        "source_name": "String",
+        "institution": "String",
+        "url": "String",
+        "snapshot_date": "Date",
+        "dataset_type": "String",
+        "license": "String",
+        "governance_rule": "String"
+      }
+    },
+    "EvidenceRecord": {
+      "description": "Record-level wrapper linking an observation to a Source.",
+      "fields": {
+        "id": "UUID (PK)",
+        "source_id": "UUID (FK -> Source)",
+        "record_identifier_in_source": "String",
+        "evidence_classification": "Enum (EXPERIMENTAL_LITERATURE_DATA, MODEL_PREDICTED, SOURCE_MEASURED, etc)",
+        "verification_status": "Enum (VERIFIED_EXTRACT, PARTIALLY_VERIFIED, PREDICTIVE_ONLY)",
+        "literature_references": "JSONB",
+        "outlier_annotation": "JSONB",
+        "synthetic_prediction_warning": "String"
+      }
+    },
+    "ValidationResult": {
+      "description": "Records M4 validation assertions.",
+      "fields": {
+        "id": "UUID (PK)",
+        "evidence_id": "UUID (FK -> EvidenceRecord)",
+        "dataset": "String",
+        "field": "String",
+        "rule": "String",
+        "status": "String",
+        "severity": "String",
+        "message": "String",
+        "original_value": "String/JSONB",
+        "normalized_value": "String/JSONB"
+      }
+    },
+    "FoodCommodity": {
+      "description": "Identifies the food item.",
+      "fields": {
+        "id": "UUID (PK)",
+        "commodity_name": "String",
+        "scientific_name": "String",
+        "vernacular_name": "String",
+        "food_category": "String",
+        "origin_region": "String",
+        "processing_state": "Enum (RAW, FRESH_CUT, PROCESSED)"
+      }
+    },
+    "FoodObservation": {
+      "description": "Compositional and physicochemical properties of food.",
+      "fields": {
+        "id": "UUID (PK)",
+        "evidence_id": "UUID (FK -> EvidenceRecord)",
+        "commodity_id": "UUID (FK -> FoodCommodity)",
+        "property_name": "String",
+        "original_value": "String/Float",
+        "value": "Float",
+        "value_min": "Float",
+        "value_max": "Float",
+        "operator": "String",
+        "is_range": "Boolean",
+        "missingness_status": "Enum (NOT_REPORTED, UNKNOWN, BELOW_DETECTION_LIMIT, NOT_APPLICABLE)",
+        "original_unit": "String",
+        "canonical_unit": "String",
+        "measurement_method": "String"
+      }
+    },
+    "RespirationObservation": {
+      "description": "Respiration kinetics including gas species.",
+      "fields": {
+        "id": "UUID (PK)",
+        "evidence_id": "UUID (FK -> EvidenceRecord)",
+        "commodity_id": "UUID (FK -> FoodCommodity)",
+        "gas_species": "Enum (O2, CO2)",
+        "temperature_c_value": "Float",
+        "temperature_c_min": "Float",
+        "temperature_c_max": "Float",
+        "temperature_c_operator": "String",
+        "original_rate_value": "String/Float",
+        "rate_value": "Float",
+        "rate_min": "Float",
+        "rate_max": "Float",
+        "operator": "String",
+        "is_range": "Boolean",
+        "missingness_status": "Enum (NOT_REPORTED, UNKNOWN)",
+        "original_unit": "String",
+        "canonical_unit": "String",
+        "respiratory_quotient": "Float"
+      }
+    },
+    "PostharvestStorageLimits": {
+      "description": "Environmental tolerances for food commodities.",
+      "fields": {
+        "id": "UUID (PK)",
+        "evidence_id": "UUID (FK -> EvidenceRecord)",
+        "commodity_id": "UUID (FK -> FoodCommodity)",
+        "optimum_temperature_c": "Float",
+        "optimum_rh_percent": "Float",
+        "chilling_injury_threshold_c": "Float",
+        "ambient_shelf_life_days": "Float",
+        "map_shelf_life_days": "Float"
+      }
+    },
+    "PostharvestGasTolerances": {
+      "description": "Gas-specific boundaries for EMAP fermentation and injury.",
+      "fields": {
+        "id": "UUID (PK)",
+        "evidence_id": "UUID (FK -> EvidenceRecord)",
+        "commodity_id": "UUID (FK -> FoodCommodity)",
+        "target_o2_min_percent": "Float",
+        "target_o2_max_percent": "Float",
+        "target_co2_min_percent": "Float",
+        "target_co2_max_percent": "Float",
+        "min_o2_fermentation_limit_percent": "Float",
+        "max_co2_injury_limit_percent": "Float"
+      }
+    },
+    "PackagingMaterial": {
+      "description": "Identifies a packaging material, polymer, or multilayer structure.",
+      "fields": {
+        "id": "UUID (PK)",
+        "material_name": "String",
+        "brand_grade": "String",
+        "structure_type": "Enum (MONOLAYER, MULTILAYER, COATED)",
+        "layer_sequence": "JSONB (Array of layer polymers)"
+      }
+    },
+    "MaterialBarrierObservation": {
+      "description": "Barrier measurements keeping OTR, CO2TR, WVTR distinct.",
+      "fields": {
+        "id": "UUID (PK)",
+        "evidence_id": "UUID (FK -> EvidenceRecord)",
+        "material_id": "UUID (FK -> PackagingMaterial)",
+        "property_type": "Enum (OTR, CO2TR, WVTR)",
+        "original_value": "String/Float",
+        "value": "Float",
+        "value_min": "Float",
+        "value_max": "Float",
+        "operator": "String",
+        "is_range": "Boolean",
+        "missingness_status": "Enum (NOT_REPORTED)",
+        "original_unit": "String",
+        "canonical_unit": "String",
+        "test_temperature_c_value": "Float",
+        "test_temperature_c_operator": "String",
+        "test_rh_percent_value": "Float",
+        "test_rh_percent_operator": "String",
+        "thickness_value": "Float",
+        "thickness_unit": "String",
+        "test_method": "String"
+      }
+    },
+    "MicrobialOrganism": {
+      "description": "Identifies a microbial agent (pathogen or spoiler).",
+      "fields": {
+        "id": "UUID (PK)",
+        "organism_name": "String",
+        "organism_type": "String",
+        "strain": "String"
+      }
+    },
+    "MicrobialCardinalParameters": {
+      "description": "Extreme bounds for microbial growth.",
+      "fields": {
+        "id": "UUID (PK)",
+        "evidence_id": "UUID (FK -> EvidenceRecord)",
+        "organism_id": "UUID (FK -> MicrobialOrganism)",
+        "temperature_min_c": "Float",
+        "temperature_opt_c": "Float",
+        "temperature_max_c": "Float",
+        "water_activity_aw_min": "Float",
+        "ph_min": "Float",
+        "ph_opt": "Float",
+        "ph_max": "Float"
+      }
+    },
+    "MicrobialGrowthKinetics": {
+      "description": "Growth rates at specific environments.",
+      "fields": {
+        "id": "UUID (PK)",
+        "evidence_id": "UUID (FK -> EvidenceRecord)",
+        "organism_id": "UUID (FK -> MicrobialOrganism)",
+        "temperature_c_value": "Float",
+        "temperature_c_operator": "String",
+        "ph_value": "Float",
+        "ph_operator": "String",
+        "water_activity_aw_value": "Float",
+        "water_activity_aw_operator": "String",
+        "specific_growth_rate_mu_max_1_h": "Float",
+        "lag_time_lambda_h": "Float",
+        "atmosphere_condition": "String",
+        "missingness_status": "Enum (NOT_REPORTED, BELOW_DETECTION_LIMIT)"
+      }
+    },
+    "MicrobialGasInhibitionResponse": {
+      "description": "Organism-specific sensitivity to gas environments like CO2.",
+      "fields": {
+        "id": "UUID (PK)",
+        "evidence_id": "UUID (FK -> EvidenceRecord)",
+        "organism_id": "UUID (FK -> MicrobialOrganism)",
+        "co2_sensitivity": "String",
+        "minimum_co2_inhibition_percent": "Float",
+        "notes": "String"
+      }
+    },
+    "DataTransformation": {
+      "description": "Preservation of M4 cleaning log.",
+      "fields": {
+        "id": "UUID (PK)",
+        "evidence_id": "UUID (FK -> EvidenceRecord)",
+        "field": "String",
+        "original_value": "String/JSONB",
+        "transformed_value": "String/JSONB",
+        "transformation_type": "String",
+        "rule_id": "String"
+      }
+    }
+  }
+}

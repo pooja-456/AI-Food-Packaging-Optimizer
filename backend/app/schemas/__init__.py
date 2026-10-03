@@ -65,6 +65,45 @@ from app.schemas.candidate_feasibility import (
     CandidateFeasibility,
     FilteringResult,
 )
+from app.schemas.optimization import (
+    ObjectiveDirection,
+    EvidenceTier,
+    UncertaintyType,
+    OptimizationExecutionTier,
+    CandidateEvidenceReference,
+    BarrierPropertyMetric,
+    CandidateBarrierProperties,
+    PackageGeometry,
+    CandidateDecisionVariables,
+    PackagingCandidate,
+    CandidateScientificEvaluationRequest,
+    CandidateScientificEvaluationResult,
+    ObjectiveValue,
+    CandidateConstraintStatus,
+    UncertaintyProfile,
+    ExplanationPayload,
+    ParetoCandidate,
+    SolverConfiguration,
+    OptimizationInputEnvelope,
+    OptimizationMetadata,
+    ParetoFront,
+    CounterfactualPerturbations,
+    CounterfactualQuery
+)
+
+from backend.app.schemas.feedback import (
+    ObservationOrigin,
+    ValidationStatus,
+    ComparisonStatus,
+    ModelUpdateStatus,
+    PackageConfigurationSchema,
+    StorageConditionsSchema,
+    PredictedOutputSchema,
+    FeedbackSubmission,
+    MeasurementComparison,
+    ModelUpdateCandidateSchema,
+    FeedbackResponse
+)
 
 __all__ = [
     "PropertyStatus",
@@ -107,4 +146,44 @@ __all__ = [
     "ConstraintEvaluation",
     "CandidateFeasibility",
     "FilteringResult",
+    "ObjectiveDirection",
+    "EvidenceTier",
+    "UncertaintyType",
+    "OptimizationExecutionTier",
+    "CandidateEvidenceReference",
+    "BarrierPropertyMetric",
+    "CandidateBarrierProperties",
+    "PackageGeometry",
+    "CandidateDecisionVariables",
+    "PackagingCandidate",
+    "CandidateScientificEvaluationRequest",
+    "CandidateScientificEvaluationResult",
+    "ObjectiveValue",
+    "CandidateConstraintStatus",
+    "UncertaintyProfile",
+    "ExplanationPayload",
+    "ParetoCandidate",
+    "SolverConfiguration",
+    "OptimizationInputEnvelope",
+    "OptimizationMetadata",
+    "ParetoFront",
+    "CounterfactualPerturbations",
+    "CounterfactualQuery",
+    "ObservationOrigin",
+    "ValidationStatus",
+    "ComparisonStatus",
+    "ModelUpdateStatus",
+    "PackageConfigurationSchema",
+    "StorageConditionsSchema",
+    "PredictedOutputSchema",
+    "FeedbackSubmission",
+    "MeasurementComparison",
+    "ModelUpdateCandidateSchema",
+    "FeedbackResponse"
 ]
+
+import sys
+for _k, _v in list(sys.modules.items()):
+    if _k == "app" or _k.startswith("app."):
+        sys.modules["backend." + _k] = _v
+

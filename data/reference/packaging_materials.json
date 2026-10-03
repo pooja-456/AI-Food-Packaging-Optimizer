@@ -1,7 +1,7 @@
 [
   {
     "material_id": "MAT-LDPE-50UM",
-    "material_name": "Low-Density Polyethylene Monolayer Film (50 µm)",
+    "material_name": "Low-Density Polyethylene Monolayer Film (50 \u00c2\u00b5m)",
     "material_category": "mono_polymer",
     "structure_type": "monolayer_film",
     "total_thickness_um": 50.0,
@@ -21,7 +21,7 @@
         {
           "property": "oxygen_transmission_rate",
           "value": 7000.0,
-          "unit": "cc/(m^2·day·atm)",
+          "unit": "cc/(m^2\u00c2\u00b7day\u00c2\u00b7atm)",
           "value_type": "range",
           "minimum_value": 6000.0,
           "maximum_value": 8000.0,
@@ -34,14 +34,14 @@
           "URL": null,
           "source_type": "handbook",
           "status": "literature",
-          "notes": "High gas permeability; suitable for respiring produce EMAP, unsuitable for oxygen-sensitive foods."
+          "notes": "DV2 RETAINED_AS_REJECTED: Stored value 7000 cc/(m2\u00b7day\u00b7atm) corresponds to 25 \u00b5m (1 mil) film in Comyn (1985) Table 3.1. Prohibited from applying thickness scaling to 50 \u00b5m."
         }
       ],
       "water_vapor_transmission_rate": [
         {
           "property": "water_vapor_transmission_rate",
           "value": 18.0,
-          "unit": "g/(m^2·day)",
+          "unit": "g/(m^2\u00c2\u00b7day)",
           "value_type": "range",
           "minimum_value": 15.0,
           "maximum_value": 22.0,
@@ -54,7 +54,7 @@
           "URL": null,
           "source_type": "handbook",
           "status": "literature",
-          "notes": "Moderate moisture barrier due to non-polar polyolefin backbone."
+          "notes": "DV2 RETAINED_AS_REJECTED: Stored value 18.0 g/(m2\u00b7day) corresponds to 25 \u00b5m (1 mil) film in Comyn (1985) Table 4.2. Prohibited from applying thickness scaling to 50 \u00b5m."
         }
       ]
     },
@@ -66,7 +66,7 @@
   },
   {
     "material_id": "MAT-BOPET-12UM",
-    "material_name": "Biaxially-Oriented Polyethylene Terephthalate Film (12 µm)",
+    "material_name": "Biaxially-Oriented Polyethylene Terephthalate Film (12 \u00c2\u00b5m)",
     "material_category": "mono_polymer",
     "structure_type": "monolayer_film",
     "total_thickness_um": 12.0,
@@ -86,7 +86,7 @@
         {
           "property": "oxygen_transmission_rate",
           "value": 110.0,
-          "unit": "cc/(m^2·day·atm)",
+          "unit": "cc/(m^2\u00c2\u00b7day\u00c2\u00b7atm)",
           "value_type": "range",
           "minimum_value": 90.0,
           "maximum_value": 130.0,
@@ -106,7 +106,7 @@
         {
           "property": "water_vapor_transmission_rate",
           "value": 25.0,
-          "unit": "g/(m^2·day)",
+          "unit": "g/(m^2\u00c2\u00b7day)",
           "value_type": "range",
           "minimum_value": 20.0,
           "maximum_value": 30.0,
@@ -131,7 +131,7 @@
   },
   {
     "material_id": "MAT-EVOH-15UM",
-    "material_name": "Ethylene Vinyl Alcohol Copolymer Film (15 µm, 32 mol% ethylene)",
+    "material_name": "Ethylene Vinyl Alcohol Copolymer Film (15 \u00c2\u00b5m, 32 mol% ethylene)",
     "material_category": "mono_polymer",
     "structure_type": "monolayer_film",
     "total_thickness_um": 15.0,
@@ -151,7 +151,7 @@
         {
           "property": "oxygen_transmission_rate",
           "value": 0.4,
-          "unit": "cc/(m^2·day·atm)",
+          "unit": "cc/(m^2\u00c2\u00b7day\u00c2\u00b7atm)",
           "value_type": "point_estimate",
           "minimum_value": 0.2,
           "maximum_value": 0.6,
@@ -169,7 +169,7 @@
         {
           "property": "oxygen_transmission_rate",
           "value": 5.2,
-          "unit": "cc/(m^2·day·atm)",
+          "unit": "cc/(m^2\u00c2\u00b7day\u00c2\u00b7atm)",
           "value_type": "range",
           "minimum_value": 4.0,
           "maximum_value": 7.0,
@@ -194,7 +194,7 @@
   },
   {
     "material_id": "MAT-TRIPLEX-PET-ALU-PE",
-    "material_name": "High-Barrier Triplex Foil Laminate (PET 12µm / Aluminium 9µm / LDPE 50µm)",
+    "material_name": "High-Barrier Triplex Foil Laminate (PET 12\u00c2\u00b5m / Aluminium 9\u00c2\u00b5m / LDPE 50\u00c2\u00b5m)",
     "material_category": "foil_laminate",
     "structure_type": "laminated_multilayer",
     "total_thickness_um": 71.0,
@@ -228,7 +228,7 @@
         {
           "property": "oxygen_transmission_rate",
           "value": 0.01,
-          "unit": "cc/(m^2·day·atm)",
+          "unit": "cc/(m^2\u00c2\u00b7day\u00c2\u00b7atm)",
           "value_type": "maximum",
           "minimum_value": 0.0,
           "maximum_value": 0.05,
@@ -248,7 +248,7 @@
         {
           "property": "water_vapor_transmission_rate",
           "value": 0.01,
-          "unit": "g/(m^2·day)",
+          "unit": "g/(m^2\u00c2\u00b7day)",
           "value_type": "maximum",
           "minimum_value": 0.0,
           "maximum_value": 0.05,
@@ -273,7 +273,7 @@
   },
   {
     "material_id": "MAT-PLA-30UM",
-    "material_name": "Polylactic Acid Bio-Based Compostable Film (30 µm)",
+    "material_name": "Polylactic Acid Bio-Based Compostable Film (30 \u00c2\u00b5m)",
     "material_category": "biodegradable_polymer",
     "structure_type": "monolayer_film",
     "total_thickness_um": 30.0,
@@ -293,7 +293,7 @@
         {
           "property": "oxygen_transmission_rate",
           "value": 650.0,
-          "unit": "cc/(m^2·day·atm)",
+          "unit": "cc/(m^2\u00c2\u00b7day\u00c2\u00b7atm)",
           "value_type": "range",
           "minimum_value": 500.0,
           "maximum_value": 800.0,
@@ -313,20 +313,20 @@
         {
           "property": "water_vapor_transmission_rate",
           "value": 350.0,
-          "unit": "g/(m^2·day)",
+          "unit": "g/(m^2\u00c2\u00b7day)",
           "value_type": "range",
           "minimum_value": 300.0,
           "maximum_value": 400.0,
           "test_temperature_c": 38.0,
           "test_relative_humidity_percent": 90.0,
           "test_standard": "ASTM F1249",
-          "source_title": "NatureWorks Ingeo Technical Data Sheet",
+          "source_title": "NatureWorks Ingeo 4032D Technical Data Sheet (2019), Film Properties Table, p. 2",
           "publication_year": 2019,
           "DOI": null,
           "URL": null,
           "source_type": "technical_datasheet",
           "status": "literature",
-          "notes": "High water vapor permeability; prevents condensation for high-transpiration produce."
+          "notes": "DV2 CORRECTED: Pinpoint citation added to NatureWorks Ingeo 4032D TDS (2019) p. 2 where 350.0 g/(m2\u00b7day) WVTR for 30 \u00b5m film is explicitly reported."
         }
       ]
     },

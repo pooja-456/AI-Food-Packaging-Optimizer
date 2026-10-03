@@ -34,3 +34,8 @@ Thumbs.db
 .ruff_cache/
 .coverage
 htmlcov/
+
+# Temporary & Scratch
+scratch/
+scratch_test*.py
+*.bak

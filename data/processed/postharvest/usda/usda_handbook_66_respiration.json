@@ -1,0 +1,534 @@
+{
+  "source_metadata": {
+    "source_name": "USDA Agricultural Handbook 66",
+    "title": "The Commercial Storage of Fruits, Vegetables, and Florist and Nursery Stocks",
+    "institution": "USDA Agricultural Research Service (ARS)",
+    "url": "https://www.ars.usda.gov/is/np/CommercialStorage/CommercialStorage.pdf",
+    "snapshot_date": "2026-09-25",
+    "license": "US Public Domain"
+  },
+  "records": [
+    {
+      "commodity_name": "Apple",
+      "scientific_name": "Malus domestica",
+      "respiration_measurements": [
+        {
+          "temperature_c": 0.0,
+          "co2_production_rate_min_mg_kg_h": 3.0,
+          "co2_production_rate_max_mg_kg_h": 6.0,
+          "o2_consumption_rate_min_mg_kg_h": 2.2,
+          "o2_consumption_rate_max_mg_kg_h": 4.4,
+          "respiratory_quotient_rq_typical": 1.0,
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 3.0,
+            "value": 3.0,
+            "value_min": 3.0,
+            "value_max": 3.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 6.0,
+            "value": 6.0,
+            "value_min": 6.0,
+            "value_max": 6.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_min_mg_kg_h_parsed": {
+            "original_value": 2.2,
+            "value": 2.2,
+            "value_min": 2.2,
+            "value_max": 2.2,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_max_mg_kg_h_parsed": {
+            "original_value": 4.4,
+            "value": 4.4,
+            "value_min": 4.4,
+            "value_max": 4.4,
+            "operator": "=",
+            "is_range": false
+          },
+          "temperature_c_parsed": {
+            "original_value": 0.0,
+            "value": 0.0,
+            "value_min": 0.0,
+            "value_max": 0.0,
+            "operator": "=",
+            "is_range": false
+          }
+        },
+        {
+          "temperature_c": 5.0,
+          "co2_production_rate_min_mg_kg_h": 5.0,
+          "co2_production_rate_max_mg_kg_h": 10.0,
+          "o2_consumption_rate_min_mg_kg_h": 3.6,
+          "o2_consumption_rate_max_mg_kg_h": 7.3,
+          "respiratory_quotient_rq_typical": 1.0,
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 5.0,
+            "value": 5.0,
+            "value_min": 5.0,
+            "value_max": 5.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 10.0,
+            "value": 10.0,
+            "value_min": 10.0,
+            "value_max": 10.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_min_mg_kg_h_parsed": {
+            "original_value": 3.6,
+            "value": 3.6,
+            "value_min": 3.6,
+            "value_max": 3.6,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_max_mg_kg_h_parsed": {
+            "original_value": 7.3,
+            "value": 7.3,
+            "value_min": 7.3,
+            "value_max": 7.3,
+            "operator": "=",
+            "is_range": false
+          },
+          "temperature_c_parsed": {
+            "original_value": 5.0,
+            "value": 5.0,
+            "value_min": 5.0,
+            "value_max": 5.0,
+            "operator": "=",
+            "is_range": false
+          }
+        },
+        {
+          "temperature_c": 20.0,
+          "co2_production_rate_min_mg_kg_h": 15.0,
+          "co2_production_rate_max_mg_kg_h": 30.0,
+          "o2_consumption_rate_min_mg_kg_h": 10.9,
+          "o2_consumption_rate_max_mg_kg_h": 21.8,
+          "respiratory_quotient_rq_typical": 1.0,
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 15.0,
+            "value": 15.0,
+            "value_min": 15.0,
+            "value_max": 15.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 30.0,
+            "value": 30.0,
+            "value_min": 30.0,
+            "value_max": 30.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_min_mg_kg_h_parsed": {
+            "original_value": 10.9,
+            "value": 10.9,
+            "value_min": 10.9,
+            "value_max": 10.9,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_max_mg_kg_h_parsed": {
+            "original_value": 21.8,
+            "value": 21.8,
+            "value_min": 21.8,
+            "value_max": 21.8,
+            "operator": "=",
+            "is_range": false
+          },
+          "temperature_c_parsed": {
+            "original_value": 20.0,
+            "value": 20.0,
+            "value_min": 20.0,
+            "value_max": 20.0,
+            "operator": "=",
+            "is_range": false
+          }
+        }
+      ],
+      "recommended_storage_conditions": {
+        "storage_temperature_min_c": -1.0,
+        "storage_temperature_max_c": 4.0,
+        "relative_humidity_min_percent": 90.0,
+        "relative_humidity_max_percent": 95.0,
+        "approximate_shelf_life_days": 120.0
+      },
+      "emap_tolerances": {
+        "target_o2_min_percent": 1.5,
+        "target_o2_max_percent": 2.5,
+        "target_co2_min_percent": 1.0,
+        "target_co2_max_percent": 2.0,
+        "min_o2_fermentation_limit_percent": 1.0,
+        "max_co2_injury_limit_percent": 5.0
+      }
+    },
+    {
+      "commodity_name": "Strawberry",
+      "scientific_name": "Fragaria x ananassa",
+      "respiration_measurements": [
+        {
+          "temperature_c": 0.0,
+          "co2_production_rate_min_mg_kg_h": 12.0,
+          "co2_production_rate_max_mg_kg_h": 18.0,
+          "o2_consumption_rate_min_mg_kg_h": 8.7,
+          "o2_consumption_rate_max_mg_kg_h": 13.0,
+          "respiratory_quotient_rq_typical": 1.0,
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 12.0,
+            "value": 12.0,
+            "value_min": 12.0,
+            "value_max": 12.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 18.0,
+            "value": 18.0,
+            "value_min": 18.0,
+            "value_max": 18.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_min_mg_kg_h_parsed": {
+            "original_value": 8.7,
+            "value": 8.7,
+            "value_min": 8.7,
+            "value_max": 8.7,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_max_mg_kg_h_parsed": {
+            "original_value": 13.0,
+            "value": 13.0,
+            "value_min": 13.0,
+            "value_max": 13.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "temperature_c_parsed": {
+            "original_value": 0.0,
+            "value": 0.0,
+            "value_min": 0.0,
+            "value_max": 0.0,
+            "operator": "=",
+            "is_range": false
+          }
+        },
+        {
+          "temperature_c": 10.0,
+          "co2_production_rate_min_mg_kg_h": 48.0,
+          "co2_production_rate_max_mg_kg_h": 80.0,
+          "o2_consumption_rate_min_mg_kg_h": 34.8,
+          "o2_consumption_rate_max_mg_kg_h": 58.0,
+          "respiratory_quotient_rq_typical": 1.0,
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 48.0,
+            "value": 48.0,
+            "value_min": 48.0,
+            "value_max": 48.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 80.0,
+            "value": 80.0,
+            "value_min": 80.0,
+            "value_max": 80.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_min_mg_kg_h_parsed": {
+            "original_value": 34.8,
+            "value": 34.8,
+            "value_min": 34.8,
+            "value_max": 34.8,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_max_mg_kg_h_parsed": {
+            "original_value": 58.0,
+            "value": 58.0,
+            "value_min": 58.0,
+            "value_max": 58.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "temperature_c_parsed": {
+            "original_value": 10.0,
+            "value": 10.0,
+            "value_min": 10.0,
+            "value_max": 10.0,
+            "operator": "=",
+            "is_range": false
+          }
+        },
+        {
+          "temperature_c": 20.0,
+          "co2_production_rate_min_mg_kg_h": 150.0,
+          "co2_production_rate_max_mg_kg_h": 250.0,
+          "o2_consumption_rate_min_mg_kg_h": 108.8,
+          "o2_consumption_rate_max_mg_kg_h": 181.3,
+          "respiratory_quotient_rq_typical": 1.0,
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 150.0,
+            "value": 150.0,
+            "value_min": 150.0,
+            "value_max": 150.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 250.0,
+            "value": 250.0,
+            "value_min": 250.0,
+            "value_max": 250.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_min_mg_kg_h_parsed": {
+            "original_value": 108.8,
+            "value": 108.8,
+            "value_min": 108.8,
+            "value_max": 108.8,
+            "operator": "=",
+            "is_range": false
+          },
+          "o2_consumption_rate_max_mg_kg_h_parsed": {
+            "original_value": 181.3,
+            "value": 181.3,
+            "value_min": 181.3,
+            "value_max": 181.3,
+            "operator": "=",
+            "is_range": false
+          },
+          "temperature_c_parsed": {
+            "original_value": 20.0,
+            "value": 20.0,
+            "value_min": 20.0,
+            "value_max": 20.0,
+            "operator": "=",
+            "is_range": false
+          }
+        }
+      ],
+      "recommended_storage_conditions": {
+        "storage_temperature_min_c": 0.0,
+        "storage_temperature_max_c": 0.5,
+        "relative_humidity_min_percent": 90.0,
+        "relative_humidity_max_percent": 95.0,
+        "approximate_shelf_life_days": 7.0
+      },
+      "emap_tolerances": {
+        "target_o2_min_percent": 5.0,
+        "target_o2_max_percent": 10.0,
+        "target_co2_min_percent": 15.0,
+        "target_co2_max_percent": 20.0,
+        "min_o2_fermentation_limit_percent": 2.0,
+        "max_co2_injury_limit_percent": 25.0
+      }
+    },
+    {
+      "commodity_name": "Spinach",
+      "scientific_name": "Spinacia oleracea",
+      "respiration_measurements": [
+        {
+          "temperature_c": 0.0,
+          "co2_production_rate_min_mg_kg_h": 20.0,
+          "co2_production_rate_max_mg_kg_h": 30.0,
+          "respiratory_quotient_rq_typical": 1.0,
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 20.0,
+            "value": 20.0,
+            "value_min": 20.0,
+            "value_max": 20.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 30.0,
+            "value": 30.0,
+            "value_min": 30.0,
+            "value_max": 30.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "temperature_c_parsed": {
+            "original_value": 0.0,
+            "value": 0.0,
+            "value_min": 0.0,
+            "value_max": 0.0,
+            "operator": "=",
+            "is_range": false
+          }
+        },
+        {
+          "temperature_c": 10.0,
+          "co2_production_rate_min_mg_kg_h": 80.0,
+          "co2_production_rate_max_mg_kg_h": 120.0,
+          "respiratory_quotient_rq_typical": 1.0,
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 80.0,
+            "value": 80.0,
+            "value_min": 80.0,
+            "value_max": 80.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 120.0,
+            "value": 120.0,
+            "value_min": 120.0,
+            "value_max": 120.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "temperature_c_parsed": {
+            "original_value": 10.0,
+            "value": 10.0,
+            "value_min": 10.0,
+            "value_max": 10.0,
+            "operator": "=",
+            "is_range": false
+          }
+        },
+        {
+          "temperature_c": 20.0,
+          "co2_production_rate_min_mg_kg_h": 250.0,
+          "co2_production_rate_max_mg_kg_h": 400.0,
+          "respiratory_quotient_rq_typical": 1.0,
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 250.0,
+            "value": 250.0,
+            "value_min": 250.0,
+            "value_max": 250.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 400.0,
+            "value": 400.0,
+            "value_min": 400.0,
+            "value_max": 400.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "temperature_c_parsed": {
+            "original_value": 20.0,
+            "value": 20.0,
+            "value_min": 20.0,
+            "value_max": 20.0,
+            "operator": "=",
+            "is_range": false
+          }
+        }
+      ],
+      "recommended_storage_conditions": {
+        "storage_temperature_min_c": 0.0,
+        "storage_temperature_max_c": 1.0,
+        "relative_humidity_min_percent": 95.0,
+        "relative_humidity_max_percent": 100.0,
+        "approximate_shelf_life_days": 14.0
+      },
+      "emap_tolerances": {
+        "target_o2_min_percent": 7.0,
+        "target_o2_max_percent": 10.0,
+        "target_co2_min_percent": 5.0,
+        "target_co2_max_percent": 10.0,
+        "min_o2_fermentation_limit_percent": 2.0,
+        "max_co2_injury_limit_percent": 15.0
+      }
+    },
+    {
+      "commodity_name": "Tomato",
+      "scientific_name": "Solanum lycopersicum",
+      "respiration_measurements": [
+        {
+          "temperature_c": 12.0,
+          "co2_production_rate_min_mg_kg_h": 15.0,
+          "co2_production_rate_max_mg_kg_h": 25.0,
+          "respiratory_quotient_rq_typical": 1.0,
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 15.0,
+            "value": 15.0,
+            "value_min": 15.0,
+            "value_max": 15.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 25.0,
+            "value": 25.0,
+            "value_min": 25.0,
+            "value_max": 25.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "temperature_c_parsed": {
+            "original_value": 12.0,
+            "value": 12.0,
+            "value_min": 12.0,
+            "value_max": 12.0,
+            "operator": "=",
+            "is_range": false
+          }
+        },
+        {
+          "temperature_c": 20.0,
+          "co2_production_rate_min_mg_kg_h": 35.0,
+          "co2_production_rate_max_mg_kg_h": 60.0,
+          "respiratory_quotient_rq_typical": 1.0,
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 35.0,
+            "value": 35.0,
+            "value_min": 35.0,
+            "value_max": 35.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 60.0,
+            "value": 60.0,
+            "value_min": 60.0,
+            "value_max": 60.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "temperature_c_parsed": {
+            "original_value": 20.0,
+            "value": 20.0,
+            "value_min": 20.0,
+            "value_max": 20.0,
+            "operator": "=",
+            "is_range": false
+          }
+        }
+      ],
+      "recommended_storage_conditions": {
+        "storage_temperature_min_c": 12.0,
+        "storage_temperature_max_c": 15.0,
+        "relative_humidity_min_percent": 90.0,
+        "relative_humidity_max_percent": 95.0,
+        "approximate_shelf_life_days": 21.0
+      },
+      "emap_tolerances": {
+        "target_o2_min_percent": 3.0,
+        "target_o2_max_percent": 5.0,
+        "target_co2_min_percent": 2.0,
+        "target_co2_max_percent": 3.0,
+        "min_o2_fermentation_limit_percent": 2.0,
+        "max_co2_injury_limit_percent": 5.0
+      }
+    }
+  ]
+}

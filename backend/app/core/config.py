@@ -4,3 +4,14 @@ APP_DESCRIPTION = (
     "Phase 1: Project Foundation + Input Validation. "
     "Material recommendation, optimization, and AI features are not yet implemented."
 )
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class Settings:
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@127.0.0.1:5432/food_packaging_db")
+    TEST_DATABASE_URL: str = os.getenv("TEST_DATABASE_URL", "sqlite:///:memory:")
+
+settings = Settings()

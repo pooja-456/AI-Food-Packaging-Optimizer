@@ -1,0 +1,94 @@
+{
+  "source_metadata": {
+    "source_name": "PolyID Polymer Property Database",
+    "institution": "PolyID Informatics Repository & QSAR Modeling Suite",
+    "url": "https://polyid.org/",
+    "snapshot_date": "2026-09-25",
+    "license": "Research License / CC BY 4.0",
+    "governance_rule": "CRITICAL: Experimental observations and QSAR predicted values are stored in strictly isolated arrays and MUST NOT be merged, averaged, or blended."
+  },
+  "experimental_observations": [
+    {
+      "polyid_exp_id": "EXP-POLYID-001",
+      "polymer_name": "Polylactic Acid (PLA Film Specimen)",
+      "polymer_smiles": "CC(O)C(=O)O",
+      "measured_thickness_um": 30.0,
+      "density_g_cm3": 1.24,
+      "glass_transition_temp_tg_c": 58.0,
+      "melting_temp_tm_c": 165.0,
+      "experimental_otr": {
+        "value": 750.0,
+        "unit": "cc/m2-day-atm",
+        "test_temperature_c": 23.0,
+        "test_rh_percent": 0.0,
+        "test_standard": "ASTM D3985",
+        "laboratory_reference": "PolyID Exp-Lab Run #1042"
+      },
+      "experimental_wvtr": {
+        "value": 24.5,
+        "unit": "g/m2-day",
+        "test_temperature_c": 38.0,
+        "test_rh_percent": 90.0,
+        "test_standard": "ASTM F1249",
+        "laboratory_reference": "PolyID Exp-Lab Run #1042"
+      }
+    },
+    {
+      "polyid_exp_id": "EXP-POLYID-002",
+      "polymer_name": "Poly(butylene adipate-co-terephthalate) (PBAT Film)",
+      "polymer_smiles": "[PBAT_Monomer_Units]",
+      "measured_thickness_um": 25.0,
+      "density_g_cm3": 1.26,
+      "glass_transition_temp_tg_c": -30.0,
+      "melting_temp_tm_c": 120.0,
+      "experimental_otr": {
+        "value": 1250.0,
+        "unit": "cc/m2-day-atm",
+        "test_temperature_c": 23.0,
+        "test_rh_percent": 0.0,
+        "test_standard": "ASTM D3985",
+        "laboratory_reference": "PolyID Exp-Lab Run #1188"
+      },
+      "experimental_wvtr": {
+        "value": 45.0,
+        "unit": "g/m2-day",
+        "test_temperature_c": 38.0,
+        "test_rh_percent": 90.0,
+        "test_standard": "ASTM F1249",
+        "laboratory_reference": "PolyID Exp-Lab Run #1188"
+      }
+    }
+  ],
+  "predicted_values": [
+    {
+      "polyid_pred_id": "PRED-QSAR-001",
+      "polymer_name": "Polyhydroxyalkanoate (PHA / PHBV 8 mol% HV)",
+      "predicted_property": "OTR",
+      "predicted_value": 320.0,
+      "unit": "cc/m2-day-atm",
+      "reference_thickness_um": 25.0,
+      "prediction_confidence": "MEDIUM",
+      "uncertainty_range_lower": 275.0,
+      "uncertainty_range_upper": 365.0,
+      "qsar_algorithm": "Group_Contribution_v2.4",
+      "model_training_r2": 0.88,
+      "model_doi": "10.1016/j.polymertesting.2023.108112",
+      "warning_flag": "SYNTHETIC_MODEL_PREDICTION_DO_NOT_TREAT_AS_EXPERIMENTAL_EVIDENCE"
+    },
+    {
+      "polyid_pred_id": "PRED-QSAR-002",
+      "polymer_name": "Polyhydroxyalkanoate (PHA / PHBV 8 mol% HV)",
+      "predicted_property": "WVTR",
+      "predicted_value": 18.0,
+      "unit": "g/m2-day",
+      "reference_thickness_um": 25.0,
+      "prediction_confidence": "MEDIUM",
+      "uncertainty_range_lower": 14.0,
+      "uncertainty_range_upper": 22.0,
+      "qsar_algorithm": "Group_Contribution_v2.4",
+      "model_training_r2": 0.84,
+      "model_doi": "10.1016/j.polymertesting.2023.108112",
+      "warning_flag": "SYNTHETIC_MODEL_PREDICTION_DO_NOT_TREAT_AS_EXPERIMENTAL_EVIDENCE"
+    }
+  ]
+}

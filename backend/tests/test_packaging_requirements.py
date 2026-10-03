@@ -35,12 +35,23 @@ def test_end_to_end_respiring_commodity_requirement_envelope() -> None:
     assert envelope.target_shelf_life_days == 14
     assert envelope.storage_temperature_c == 20.0
 
-    # Gas requirements: OTR and CO2TR are CALCULATED
-    assert envelope.gas_requirements.status == CalculationStatus.CALCULATED
-    assert envelope.gas_requirements.required_otr_cc_per_pkg_day is not None
-    assert envelope.gas_requirements.required_otr_cc_per_pkg_day.value > 0
-    assert envelope.gas_requirements.required_otr_per_area is not None
-    assert envelope.gas_requirements.ideal_beta_ratio_co2_to_o2 is not None
+    # Without explicit RQ, CO2 evidence cannot be converted to O2, returning UNKNOWN
+    assert envelope.gas_requirements.status == CalculationStatus.UNKNOWN
+    assert envelope.gas_requirements.required_otr_cc_per_pkg_day is None
+
+    # When explicit RQ is supplied, OTR is CALCULATED
+    envelope_with_rq = engine.evaluate_requirements(
+        request=req,
+        inference_profile=inference_profile,
+        product_mass_kg=1.5,
+        package_area_m2=0.08,
+        rq=1.0,
+    )
+    assert envelope_with_rq.gas_requirements.status == CalculationStatus.CALCULATED
+    assert envelope_with_rq.gas_requirements.required_otr_cc_per_pkg_day is not None
+    assert envelope_with_rq.gas_requirements.required_otr_cc_per_pkg_day.value > 0
+    assert envelope_with_rq.gas_requirements.required_otr_per_area is not None
+    assert envelope_with_rq.gas_requirements.ideal_beta_ratio_co2_to_o2 is not None
 
     # Deterioration profile
     assert envelope.deterioration_profile.mechanisms["respiration"].eligible is True
@@ -58,25 +69,32 @@ def test_end_to_end_respiring_commodity_requirement_envelope() -> None:
 
 def test_partial_calculation_when_product_mass_is_missing() -> None:
     req = PackagingRequest(
-        commodity="strawberry",
+        commodity="apple",
         product_form="whole",
         ripeness_stage="ripe",
-        target_shelf_life_days=7,
-        storage_type="chilled",
-        storage_temperature_c=0.0,
-        relative_humidity_percent=95.0,
+        target_shelf_life_days=14,
+        storage_type="ambient",
+        storage_temperature_c=20.0,
+        relative_humidity_percent=65.0,
     )
     inference_profile = infer_commodity_properties(req)
 
     engine = PackagingRequirementEngine()
-    # product_mass_kg is omitted
+    # product_mass_kg is omitted; without RQ, status is UNKNOWN
     envelope = engine.evaluate_requirements(
         request=req,
         inference_profile=inference_profile,
     )
+    assert envelope.gas_requirements.status == CalculationStatus.UNKNOWN
 
-    assert envelope.gas_requirements.status == CalculationStatus.PARTIALLY_CALCULATED
-    assert envelope.gas_requirements.required_otr_cc_per_pkg_day.unit == "cc O2 / (kg product · day)"
+    # With explicit RQ, status is PARTIALLY_CALCULATED because mass is missing
+    envelope_with_rq = engine.evaluate_requirements(
+        request=req,
+        inference_profile=inference_profile,
+        rq=1.0,
+    )
+    assert envelope_with_rq.gas_requirements.status == CalculationStatus.PARTIALLY_CALCULATED
+    assert envelope_with_rq.gas_requirements.required_otr_cc_per_pkg_day.unit == "cc O2 / (kg product · day)"
 
 
 def test_shelf_life_limiting_mechanism_synthesis() -> None:
@@ -114,7 +132,8 @@ def test_shelf_life_limiting_mechanism_synthesis() -> None:
 def test_durian_test_case_requirement_envelope() -> None:
     """
     Validates commodity-neutral processing on the durian validation test case:
-    - Respiration at 20°C is inferred from literature and gas exchange is computed per kg.
+    - Respiration at 20°C is inferred from literature. Without RQ, gas exchange is UNKNOWN.
+    - With explicit RQ, gas exchange is CALCULATED per kg.
     - Unmeasured properties (fat, microbial kinetics) remain UNKNOWN with zero guessing.
     - No durian-specific branches are hit.
     """
@@ -136,7 +155,15 @@ def test_durian_test_case_requirement_envelope() -> None:
     )
 
     assert envelope.commodity == "durian"
-    assert envelope.gas_requirements.status == CalculationStatus.CALCULATED
-    assert envelope.gas_requirements.required_otr_cc_per_pkg_day.value > 0
+    assert envelope.gas_requirements.status == CalculationStatus.UNKNOWN
+
+    envelope_with_rq = engine.evaluate_requirements(
+        request=req,
+        inference_profile=inference_profile,
+        product_mass_kg=3.0,
+        rq=1.0,
+    )
+    assert envelope_with_rq.gas_requirements.status == CalculationStatus.CALCULATED
+    assert envelope_with_rq.gas_requirements.required_otr_cc_per_pkg_day.value > 0
     # Microbial is UNKNOWN without specific organism kinetics
     assert envelope.microbial_requirements.status == CalculationStatus.UNKNOWN

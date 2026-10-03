@@ -59,7 +59,7 @@ class RespirationKineticsModel:
         vm: Optional[float] = None,
         km: Optional[float] = None,
         ki: Optional[float] = None,
-        rq: float = 1.0,
+        rq: Optional[float] = None,
         parameter_sources: Optional[Dict[str, str]] = None,
     ) -> ScientificResult:
         """
@@ -105,7 +105,8 @@ class RespirationKineticsModel:
                 )
 
             r_o2_calculated = (vm * o2_val) / denom
-            assumptions.append(f"Respiration quotient assumed RQ = {rq} based on aerobic carbohydrate metabolism.")
+            rq_val = rq if rq is not None else 1.0
+            assumptions.append(f"Respiration quotient assumed RQ = {rq_val} based on aerobic carbohydrate metabolism.")
 
             trace = make_traceability(
                 model_name=self.MODEL_NAME,
@@ -113,7 +114,7 @@ class RespirationKineticsModel:
                 equation_reference="Peppelenbos & Leven (1996), Postharvest Biol. Technol. 7:27-40",
                 scientific_sources=["Hertog et al. (1998) Postharvest Biol. Technol. 14:335-349"],
                 inputs_used={"o2_percent": o2_percent, "co2_percent": co2_percent, "temperature_c": temperature_c},
-                parameters_used={"Vm": vm, "Km": km, "Ki": ki, "RQ": rq},
+                parameters_used={"Vm": vm, "Km": km, "Ki": ki, "RQ": rq_val},
                 parameter_sources=param_sources,
                 units_used={"r_O2": "mg O2/kg/hr", "Vm": "mg O2/kg/hr", "Km": "% O2", "Ki": "% CO2"},
                 validity_range={"o2_percent": (0.5, 21.0), "co2_percent": (0.0, 20.0)},
@@ -138,31 +139,90 @@ class RespirationKineticsModel:
             raw_unit = inferred_respiration.unit or "mg CO2/kg/hr"
             unc_range = inferred_respiration.uncertainty_range
 
-            # Convert to mg O2/kg/hr using stoichiometric conversion
-            # RQ is defined on molar/volume basis: RQ = (mol CO2) / (mol O2)
-            # Therefore: mol O2 = (mol CO2) / RQ = (mass_CO2 / M_CO2) / RQ
-            # mass_O2 = mol O2 * M_O2 = (mass_CO2 / RQ) * (M_O2 / M_CO2)
-            eq_form_empirical = "r_O2 = (r_CO2_observed / RQ) * (M_O2 / M_CO2)"
+            # Strict RQ check for CO2 -> O2 conversion
             if "CO2" in raw_unit:
+                if rq is None or rq <= 0:
+                    assumptions.append("CO2 respiration rate preserved intact from literature evidence.")
+                    assumptions.append("Conversion from CO2 respiration rate to O2 consumption rate (r_O2) is UNKNOWN because no verified Respiration Quotient (RQ) is provided.")
+
+                    trace = make_traceability(
+                        model_name="EmpiricalEvidenceRespiration",
+                        equation_form="r_O2 = UNKNOWN (CO2 cannot be converted to O2 without verified RQ)",
+                        equation_reference="DV5-C2 Forensic Audit: docs/dv5c2_rq_safety_correction_report.md",
+                        scientific_sources=inferred_respiration.citations,
+                        inputs_used={"inferred_respiration": raw_r, "unit": raw_unit, "temperature_c": temperature_c},
+                        parameters_used={},
+                        parameter_sources={"inferred_respiration": "Phase 3 PropertyInferenceProfile"},
+                        units_used={"r_O2": "mg O2/kg/hr", "r_observed": raw_unit},
+                        assumptions=assumptions,
+                        uncertainty_description="Source uncertainty interval preserved intact.",
+                        uncertainty_interval=unc_range,
+                        failure_or_unknown_reason=(
+                            f"Respiration rate is reported in CO2 ({raw_unit}), "
+                            "but conversion to O2 consumption rate (r_O2) requires an explicitly authorized, "
+                            "commodity-specific Respiration Quotient (RQ), which is absent in the evidence record."
+                        ),
+                        warnings=warnings + [w.message for w in inferred_respiration.warnings] + [
+                            f"CO2 respiration ({raw_r} {raw_unit}) preserved intact; O2 consumption rate calculation is UNKNOWN due to missing RQ."
+                        ],
+                    )
+
+                    return ScientificResult(
+                        status=CalculationStatus.UNKNOWN,
+                        value=None,
+                        unit="mg O2/kg/hr",
+                        uncertainty_range=unc_range,
+                        minimum_value=unc_range[0] if unc_range else None,
+                        maximum_value=unc_range[1] if unc_range else None,
+                        traceability=trace,
+                    )
+
                 if "ml" in raw_unit.lower() or "cc" in raw_unit.lower():
-                    # raw_r is in mL CO2/kg/hr -> mL O2/kg/hr = raw_r / RQ -> mg O2/kg/hr
-                    r_o2_ml = raw_r / rq
-                    r_o2_val = round(ml_o2_to_mg_o2(r_o2_ml), 3)
-                    r_o2_unc = (
-                        round(ml_o2_to_mg_o2(unc_range[0] / rq), 3),
-                        round(ml_o2_to_mg_o2(unc_range[1] / rq), 3),
-                    ) if unc_range else None
-                    eq_form_empirical = "r_O2 = ml_to_mg((r_CO2_ml / RQ))"
+                    # Volumetric CO2 -> O2 requires both verified RQ and gas volume measurement reference conditions
+                    assumptions.append("Volumetric CO2 respiration rate preserved intact from literature evidence.")
+                    assumptions.append("Conversion from volumetric CO2 to O2 consumption rate (r_O2) is UNKNOWN because gas volume measurement reference conditions are absent.")
+
+                    trace = make_traceability(
+                        model_name="EmpiricalEvidenceRespiration",
+                        equation_form="r_O2 = UNKNOWN (Volumetric CO2 reference conditions absent)",
+                        equation_reference="DV5 Forensic Audit: docs/dv5_co2_o2_conversion_basis_audit.md",
+                        scientific_sources=inferred_respiration.citations,
+                        inputs_used={"inferred_respiration": raw_r, "unit": raw_unit, "temperature_c": temperature_c},
+                        parameters_used={"RQ": rq},
+                        parameter_sources={"inferred_respiration": "Phase 3 PropertyInferenceProfile"},
+                        units_used={"r_O2": "mg O2/kg/hr", "r_observed": raw_unit},
+                        assumptions=assumptions,
+                        uncertainty_description="Source uncertainty interval preserved intact.",
+                        uncertainty_interval=unc_range,
+                        failure_or_unknown_reason=(
+                            f"Respiration rate is reported in volumetric CO2 ({raw_unit}), "
+                            "but conversion to O2 consumption rate requires verified gas volume measurement reference conditions (STP vs NTP), which are absent in the evidence record."
+                        ),
+                        warnings=warnings + [w.message for w in inferred_respiration.warnings] + [
+                            f"Volumetric CO2 respiration ({raw_r} {raw_unit}) preserved intact; O2 consumption rate calculation is UNKNOWN."
+                        ],
+                    )
+
+                    return ScientificResult(
+                        status=CalculationStatus.UNKNOWN,
+                        value=None,
+                        unit="mg O2/kg/hr",
+                        uncertainty_range=unc_range,
+                        minimum_value=unc_range[0] if unc_range else None,
+                        maximum_value=unc_range[1] if unc_range else None,
+                        traceability=trace,
+                    )
                 else:
-                    # raw_r is in mg CO2/kg/hr
+                    # raw_r is in mg CO2/kg/hr and explicit rq is provided
                     conversion_factor = (MOLAR_MASS_O2_G_MOL / MOLAR_MASS_CO2_G_MOL) / rq
                     r_o2_val = round(raw_r * conversion_factor, 3)
                     r_o2_unc = (
                         round(unc_range[0] * conversion_factor, 3),
                         round(unc_range[1] * conversion_factor, 3),
                     ) if unc_range else None
+                    eq_form_empirical = "r_O2 = (r_CO2_observed / RQ) * (M_O2 / M_CO2)"
             elif "ml" in raw_unit.lower() or "cc" in raw_unit.lower():
-                # raw_r is in mL O2/kg/hr
+                # raw_r is in mL O2/kg/hr (direct O2 volume)
                 r_o2_val = round(ml_o2_to_mg_o2(raw_r), 3)
                 r_o2_unc = (
                     round(ml_o2_to_mg_o2(unc_range[0]), 3),
@@ -170,12 +230,14 @@ class RespirationKineticsModel:
                 ) if unc_range else None
                 eq_form_empirical = "r_O2 = ml_o2_to_mg_o2(r_O2_ml)"
             else:
+                # raw_r is in mg O2/kg/hr (direct O2 mass)
                 r_o2_val = round(raw_r, 3)
                 r_o2_unc = unc_range
                 eq_form_empirical = "r_O2 = r_O2_observed"
 
             assumptions.append("Direct empirical respiration rate from verified literature evidence profile.")
-            assumptions.append(f"Respiration quotient assumed RQ = {rq} based on carbohydrate oxidation stoichiometry.")
+            if "CO2" in raw_unit and rq is not None:
+                assumptions.append(f"Respiration quotient explicitly supplied: RQ = {rq}.")
 
             trace = make_traceability(
                 model_name="EmpiricalEvidenceRespiration",

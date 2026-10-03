@@ -1,0 +1,25 @@
+from backend.app.models.evidence import (
+    Source,
+    EvidenceRecord,
+    ValidationResult,
+    FoodCommodity,
+    FoodObservation,
+    RespirationObservation,
+    PostharvestStorageLimits,
+    PostharvestGasTolerances,
+    PackagingMaterial,
+    MaterialBarrierObservation,
+    MicrobialOrganism,
+    MicrobialCardinalParameters,
+    MicrobialGrowthKinetics,
+    MicrobialGasInhibitionResponse,
+    DataTransformation,
+)
+from backend.app.models.feedback import (
+    PackagingFeedbackRecord,
+    ModelUpdateCandidate,
+    ObservationOrigin,
+    ValidationStatus,
+    ComparisonStatus,
+    ModelUpdateStatus,
+)

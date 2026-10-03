@@ -1,0 +1,267 @@
+{
+  "source_metadata": {
+    "source_name": "Indian Food Composition Tables (IFCT 2017)",
+    "institution": "ICMR - National Institute of Nutrition (NIN), Hyderabad, India",
+    "url": "https://www.ifct2017.com/",
+    "snapshot_date": "2026-09-25",
+    "dataset_type": "National Food Composition Database (528 Indian Foods)",
+    "license": "ICMR-NIN Institutional Research Reference / Open Academic Use"
+  },
+  "records": [
+    {
+      "ifct_code": "A005",
+      "commodity_name": "Alphonso Mango",
+      "indian_name": "Alphonso Aam",
+      "scientific_name": "Mangifera indica L.",
+      "food_category": "Fruits and Fruit Products",
+      "processing_state": "RAW",
+      "origin_region": "Ratnagiri/Konkan, Maharashtra, India",
+      "proximate_composition": {
+        "moisture_percent": 83.2,
+        "total_lipid_fat_percent": 0.4,
+        "protein_percent": 0.7,
+        "ash_percent": 0.5,
+        "carbohydrate_by_difference_percent": 14.9,
+        "total_sugars_percent": 11.5,
+        "fiber_dietary_percent": 1.8,
+        "moisture_percent_parsed": {
+          "original_value": 83.2,
+          "value": 83.2,
+          "value_min": 83.2,
+          "value_max": 83.2,
+          "operator": "=",
+          "is_range": false
+        }
+      },
+      "physicochemical_properties": {
+        "ph_typical": 4.2,
+        "titratable_acidity_percent": 0.45,
+        "water_activity_aw": 0.98
+      },
+      "food_name": null
+    },
+    {
+      "ifct_code": "A005-FC",
+      "commodity_name": "Alphonso Mango (Fresh-Cut)",
+      "indian_name": "Cut Alphonso Slices",
+      "scientific_name": "Mangifera indica L.",
+      "food_category": "Fresh-Cut Fruits",
+      "processing_state": "FRESH_CUT",
+      "origin_region": "Maharashtra, India",
+      "proximate_composition": {
+        "moisture_percent": 83.2,
+        "total_lipid_fat_percent": 0.4,
+        "protein_percent": 0.7,
+        "ash_percent": 0.5,
+        "carbohydrate_by_difference_percent": 14.9,
+        "total_sugars_percent": 11.5,
+        "fiber_dietary_percent": 1.8,
+        "moisture_percent_parsed": {
+          "original_value": 83.2,
+          "value": 83.2,
+          "value_min": 83.2,
+          "value_max": 83.2,
+          "operator": "=",
+          "is_range": false
+        }
+      },
+      "physicochemical_properties": {
+        "ph_typical": 4.1,
+        "titratable_acidity_percent": 0.48,
+        "water_activity_aw": 0.98
+      },
+      "food_name": null
+    },
+    {
+      "ifct_code": "A006",
+      "commodity_name": "Kesar Mango",
+      "indian_name": "Gir Kesar Aam",
+      "scientific_name": "Mangifera indica L.",
+      "food_category": "Fruits and Fruit Products",
+      "processing_state": "RAW",
+      "origin_region": "Junagadh/Gir, Gujarat, India",
+      "proximate_composition": {
+        "moisture_percent": 82.5,
+        "total_lipid_fat_percent": 0.3,
+        "protein_percent": 0.8,
+        "ash_percent": 0.5,
+        "carbohydrate_by_difference_percent": 15.6,
+        "total_sugars_percent": 12.1,
+        "fiber_dietary_percent": 1.7,
+        "moisture_percent_parsed": {
+          "original_value": 82.5,
+          "value": 82.5,
+          "value_min": 82.5,
+          "value_max": 82.5,
+          "operator": "=",
+          "is_range": false
+        }
+      },
+      "physicochemical_properties": {
+        "ph_typical": 4.35,
+        "titratable_acidity_percent": 0.38,
+        "water_activity_aw": 0.98
+      },
+      "food_name": null
+    },
+    {
+      "ifct_code": "A012",
+      "commodity_name": "Guava",
+      "indian_name": "Amrood",
+      "scientific_name": "Psidium guajava L.",
+      "food_category": "Fruits and Fruit Products",
+      "processing_state": "RAW",
+      "origin_region": "Allahabad/Uttar Pradesh, India",
+      "proximate_composition": {
+        "moisture_percent": 85.3,
+        "total_lipid_fat_percent": 0.2,
+        "protein_percent": 0.9,
+        "ash_percent": 0.7,
+        "carbohydrate_by_difference_percent": 12.2,
+        "total_sugars_percent": 6.8,
+        "fiber_dietary_percent": 5.2,
+        "moisture_percent_parsed": {
+          "original_value": 85.3,
+          "value": 85.3,
+          "value_min": 85.3,
+          "value_max": 85.3,
+          "operator": "=",
+          "is_range": false
+        }
+      },
+      "physicochemical_properties": {
+        "ph_typical": 4.8,
+        "titratable_acidity_percent": 0.32,
+        "water_activity_aw": 0.98
+      },
+      "food_name": null
+    },
+    {
+      "ifct_code": "B008",
+      "commodity_name": "Okra",
+      "indian_name": "Bhindi",
+      "scientific_name": "Abelmoschus esculentus L.",
+      "food_category": "Vegetables and Vegetable Products",
+      "processing_state": "RAW",
+      "origin_region": "Pan-India",
+      "proximate_composition": {
+        "moisture_percent": 89.6,
+        "total_lipid_fat_percent": 0.2,
+        "protein_percent": 1.9,
+        "ash_percent": 0.8,
+        "carbohydrate_by_difference_percent": 6.4,
+        "total_sugars_percent": 1.2,
+        "fiber_dietary_percent": 3.6,
+        "moisture_percent_parsed": {
+          "original_value": 89.6,
+          "value": 89.6,
+          "value_min": 89.6,
+          "value_max": 89.6,
+          "operator": "=",
+          "is_range": false
+        }
+      },
+      "physicochemical_properties": {
+        "ph_typical": 6.3,
+        "titratable_acidity_percent": 0.12,
+        "water_activity_aw": 0.99
+      },
+      "food_name": null
+    },
+    {
+      "ifct_code": "A021",
+      "commodity_name": "Papaya",
+      "indian_name": "Papita",
+      "scientific_name": "Carica papaya L.",
+      "food_category": "Fruits and Fruit Products",
+      "processing_state": "RAW",
+      "origin_region": "Andhra Pradesh/Karnataka, India",
+      "proximate_composition": {
+        "moisture_percent": 88.8,
+        "total_lipid_fat_percent": 0.1,
+        "protein_percent": 0.6,
+        "ash_percent": 0.5,
+        "carbohydrate_by_difference_percent": 9.8,
+        "total_sugars_percent": 7.1,
+        "fiber_dietary_percent": 1.8,
+        "moisture_percent_parsed": {
+          "original_value": 88.8,
+          "value": 88.8,
+          "value_min": 88.8,
+          "value_max": 88.8,
+          "operator": "=",
+          "is_range": false
+        }
+      },
+      "physicochemical_properties": {
+        "ph_typical": 5.4,
+        "titratable_acidity_percent": 0.15,
+        "water_activity_aw": 0.99
+      },
+      "food_name": null
+    },
+    {
+      "ifct_code": "C001",
+      "commodity_name": "Basmati Rice",
+      "indian_name": "Basmati Chawal",
+      "scientific_name": "Oryza sativa L.",
+      "food_category": "Cereals and Cereal Products",
+      "processing_state": "RAW",
+      "origin_region": "Punjab/Haryana, GI Region, India",
+      "proximate_composition": {
+        "moisture_percent": 12.1,
+        "total_lipid_fat_percent": 0.5,
+        "protein_percent": 7.9,
+        "ash_percent": 0.6,
+        "carbohydrate_by_difference_percent": 78.2,
+        "total_sugars_percent": 0.1,
+        "fiber_dietary_percent": 1.4,
+        "moisture_percent_parsed": {
+          "original_value": 12.1,
+          "value": 12.1,
+          "value_min": 12.1,
+          "value_max": 12.1,
+          "operator": "=",
+          "is_range": false
+        }
+      },
+      "physicochemical_properties": {
+        "ph_typical": 6.5,
+        "water_activity_aw": 0.62
+      },
+      "food_name": null
+    },
+    {
+      "ifct_code": "D004",
+      "commodity_name": "Paneer",
+      "indian_name": "Indian Cottage Cheese",
+      "scientific_name": "N/A",
+      "food_category": "Dairy Products",
+      "processing_state": "PROCESSED",
+      "origin_region": "Pan-India",
+      "proximate_composition": {
+        "moisture_percent": 54.0,
+        "total_lipid_fat_percent": 23.5,
+        "protein_percent": 18.3,
+        "ash_percent": 2.1,
+        "carbohydrate_by_difference_percent": 2.1,
+        "total_sugars_percent": 1.5,
+        "fiber_dietary_percent": 0.0,
+        "moisture_percent_parsed": {
+          "original_value": 54.0,
+          "value": 54.0,
+          "value_min": 54.0,
+          "value_max": 54.0,
+          "operator": "=",
+          "is_range": false
+        }
+      },
+      "physicochemical_properties": {
+        "ph_typical": 5.7,
+        "titratable_acidity_percent": 0.25,
+        "water_activity_aw": 0.96
+      },
+      "food_name": null
+    }
+  ]
+}

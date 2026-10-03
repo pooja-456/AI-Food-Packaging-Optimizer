@@ -1,0 +1,268 @@
+{
+  "source_metadata": {
+    "source_name": "UC Davis Postharvest Technology Center - Produce Facts",
+    "institution": "University of California, Davis - Department of Plant Sciences",
+    "url": "https://postharvest.ucdavis.edu/Commodity_Resources/Fact_Sheets/",
+    "snapshot_date": "2026-09-25",
+    "license": "University of California Educational / Scientific Research Use"
+  },
+  "records": [
+    {
+      "commodity_name": "Broccoli",
+      "scientific_name": "Brassica oleracea var. italica",
+      "respiration_profile": [
+        {
+          "temperature_c": 0.0,
+          "co2_production_rate_min_mg_kg_h": 20.0,
+          "co2_production_rate_max_mg_kg_h": 25.0,
+          "temperature_c_parsed": {
+            "original_value": 0.0,
+            "value": 0.0,
+            "value_min": 0.0,
+            "value_max": 0.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 20.0,
+            "value": 20.0,
+            "value_min": 20.0,
+            "value_max": 20.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 25.0,
+            "value": 25.0,
+            "value_min": 25.0,
+            "value_max": 25.0,
+            "operator": "=",
+            "is_range": false
+          }
+        },
+        {
+          "temperature_c": 10.0,
+          "co2_production_rate_min_mg_kg_h": 70.0,
+          "co2_production_rate_max_mg_kg_h": 90.0,
+          "temperature_c_parsed": {
+            "original_value": 10.0,
+            "value": 10.0,
+            "value_min": 10.0,
+            "value_max": 10.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 70.0,
+            "value": 70.0,
+            "value_min": 70.0,
+            "value_max": 70.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 90.0,
+            "value": 90.0,
+            "value_min": 90.0,
+            "value_max": 90.0,
+            "operator": "=",
+            "is_range": false
+          }
+        },
+        {
+          "temperature_c": 20.0,
+          "co2_production_rate_min_mg_kg_h": 200.0,
+          "co2_production_rate_max_mg_kg_h": 300.0,
+          "temperature_c_parsed": {
+            "original_value": 20.0,
+            "value": 20.0,
+            "value_min": 20.0,
+            "value_max": 20.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 200.0,
+            "value": 200.0,
+            "value_min": 200.0,
+            "value_max": 200.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 300.0,
+            "value": 300.0,
+            "value_min": 300.0,
+            "value_max": 300.0,
+            "operator": "=",
+            "is_range": false
+          }
+        }
+      ],
+      "physiological_limits": {
+        "optimum_temperature_c": 0.0,
+        "optimum_rh_percent": 98.0,
+        "chilling_sensitivity": "low",
+        "chilling_threshold_c": 0.0,
+        "ethylene_sensitivity": "extremely_high",
+        "emap_o2_min_percent": 1.0,
+        "emap_o2_max_percent": 2.0,
+        "emap_co2_min_percent": 5.0,
+        "emap_co2_max_percent": 10.0,
+        "co2_injury_threshold_percent": 15.0
+      }
+    },
+    {
+      "commodity_name": "Banana",
+      "scientific_name": "Musa acuminata",
+      "respiration_profile": [
+        {
+          "temperature_c": 13.0,
+          "co2_production_rate_min_mg_kg_h": 15.0,
+          "co2_production_rate_max_mg_kg_h": 30.0,
+          "temperature_c_parsed": {
+            "original_value": 13.0,
+            "value": 13.0,
+            "value_min": 13.0,
+            "value_max": 13.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 15.0,
+            "value": 15.0,
+            "value_min": 15.0,
+            "value_max": 15.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 30.0,
+            "value": 30.0,
+            "value_min": 30.0,
+            "value_max": 30.0,
+            "operator": "=",
+            "is_range": false
+          }
+        },
+        {
+          "temperature_c": 20.0,
+          "co2_production_rate_min_mg_kg_h": 60.0,
+          "co2_production_rate_max_mg_kg_h": 120.0,
+          "temperature_c_parsed": {
+            "original_value": 20.0,
+            "value": 20.0,
+            "value_min": 20.0,
+            "value_max": 20.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 60.0,
+            "value": 60.0,
+            "value_min": 60.0,
+            "value_max": 60.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 120.0,
+            "value": 120.0,
+            "value_min": 120.0,
+            "value_max": 120.0,
+            "operator": "=",
+            "is_range": false
+          }
+        }
+      ],
+      "physiological_limits": {
+        "optimum_temperature_c": 13.5,
+        "optimum_rh_percent": 90.0,
+        "chilling_sensitivity": "high",
+        "chilling_threshold_c": 13.0,
+        "ethylene_sensitivity": "high",
+        "emap_o2_min_percent": 2.0,
+        "emap_o2_max_percent": 5.0,
+        "emap_co2_min_percent": 2.0,
+        "emap_co2_max_percent": 5.0,
+        "co2_injury_threshold_percent": 7.0
+      }
+    },
+    {
+      "commodity_name": "Avocado",
+      "scientific_name": "Persea americana",
+      "respiration_profile": [
+        {
+          "temperature_c": 5.0,
+          "co2_production_rate_min_mg_kg_h": 10.0,
+          "co2_production_rate_max_mg_kg_h": 25.0,
+          "temperature_c_parsed": {
+            "original_value": 5.0,
+            "value": 5.0,
+            "value_min": 5.0,
+            "value_max": 5.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 10.0,
+            "value": 10.0,
+            "value_min": 10.0,
+            "value_max": 10.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 25.0,
+            "value": 25.0,
+            "value_min": 25.0,
+            "value_max": 25.0,
+            "operator": "=",
+            "is_range": false
+          }
+        },
+        {
+          "temperature_c": 20.0,
+          "co2_production_rate_min_mg_kg_h": 80.0,
+          "co2_production_rate_max_mg_kg_h": 150.0,
+          "temperature_c_parsed": {
+            "original_value": 20.0,
+            "value": 20.0,
+            "value_min": 20.0,
+            "value_max": 20.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_min_mg_kg_h_parsed": {
+            "original_value": 80.0,
+            "value": 80.0,
+            "value_min": 80.0,
+            "value_max": 80.0,
+            "operator": "=",
+            "is_range": false
+          },
+          "co2_production_rate_max_mg_kg_h_parsed": {
+            "original_value": 150.0,
+            "value": 150.0,
+            "value_min": 150.0,
+            "value_max": 150.0,
+            "operator": "=",
+            "is_range": false
+          }
+        }
+      ],
+      "physiological_limits": {
+        "optimum_temperature_c": 5.0,
+        "optimum_rh_percent": 90.0,
+        "chilling_sensitivity": "moderate",
+        "chilling_threshold_c": 5.0,
+        "ethylene_sensitivity": "high",
+        "emap_o2_min_percent": 2.0,
+        "emap_o2_max_percent": 5.0,
+        "emap_co2_min_percent": 3.0,
+        "emap_co2_max_percent": 10.0,
+        "co2_injury_threshold_percent": 12.0
+      }
+    }
+  ]
+}

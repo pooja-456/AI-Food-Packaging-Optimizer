@@ -33,6 +33,11 @@ class PackagingRequest(BaseModel):
     ph: Optional[float] = None
     respiration_rate: Optional[float] = None
 
+    # --- Optional package geometry / product mass fields ---
+    package_surface_area_m2: Optional[float] = None
+    package_headspace_volume_cm3: Optional[float] = None
+    product_mass_kg: Optional[float] = None
+
     # ------------------------------------------------------------------
     # Validators
     # ------------------------------------------------------------------

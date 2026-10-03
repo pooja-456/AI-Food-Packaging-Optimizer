@@ -1,0 +1,2984 @@
+{
+  "usda_fdc": {
+    "dataset_name": "usda_fdc",
+    "path": "C:\\Users\\itsme\\OneDrive\\Documents\\PROJECTS 2026\\uni projects\\AI-Food-Packaging-Optimizer\\data\\raw\\food\\usda_fdc\\usda_fdc_sample_foundation.json",
+    "file_size_bytes": 4112,
+    "record_count": 6,
+    "total_fields": 14,
+    "top_level_keys": [
+      "source_metadata",
+      "records"
+    ],
+    "fields": {
+      "fdc_id": {
+        "dtype": "int",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 6,
+        "sample_values": [
+          "171688",
+          "167762",
+          "175167",
+          "199964",
+          "170457"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 167762,
+          "max": 199964,
+          "mean": 176409.3333,
+          "median": 172553.0,
+          "std": 10784.336
+        }
+      },
+      "commodity_name": {
+        "dtype": "str",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 6,
+        "sample_values": [
+          "Apple",
+          "Strawberry",
+          "Atlantic Salmon",
+          "Spinach",
+          "Tomato"
+        ],
+        "numerical_stats": null
+      },
+      "scientific_name": {
+        "dtype": "str",
+        "non_null_count": 5,
+        "null_count": 1,
+        "null_pct": 16.67,
+        "unique_count": 5,
+        "sample_values": [
+          "Malus domestica",
+          "Fragaria x ananassa",
+          "Salmo salar",
+          "Spinacia oleracea",
+          "Solanum lycopersicum"
+        ],
+        "numerical_stats": null
+      },
+      "food_category": {
+        "dtype": "str",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "Fruits and Fruit Juices",
+          "Fruits and Fruit Juices",
+          "Finfish and Shellfish Products",
+          "Vegetables and Vegetable Products",
+          "Vegetables and Vegetable Products"
+        ],
+        "numerical_stats": null
+      },
+      "processing_state": {
+        "dtype": "str",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "raw",
+          "raw",
+          "raw",
+          "raw",
+          "raw"
+        ],
+        "numerical_stats": null
+      },
+      "proximate_composition.moisture_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 6,
+        "sample_values": [
+          "85.56",
+          "90.95",
+          "68.5",
+          "91.4",
+          "94.52"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 36.75,
+          "max": 94.52,
+          "mean": 77.9467,
+          "median": 88.255,
+          "std": 20.286
+        }
+      },
+      "proximate_composition.total_lipid_fat_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 6,
+        "sample_values": [
+          "0.17",
+          "0.3",
+          "13.42",
+          "0.39",
+          "0.2"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 0.17,
+          "max": 33.14,
+          "mean": 7.9367,
+          "median": 0.345,
+          "std": 12.2524
+        }
+      },
+      "proximate_composition.protein_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 6,
+        "sample_values": [
+          "0.26",
+          "0.67",
+          "20.42",
+          "2.86",
+          "0.88"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 0.26,
+          "max": 24.9,
+          "mean": 8.3317,
+          "median": 1.87,
+          "std": 10.2466
+        }
+      },
+      "proximate_composition.ash_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 6,
+        "sample_values": [
+          "0.19",
+          "0.4",
+          "1.22",
+          "1.72",
+          "0.5"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 0.19,
+          "max": 3.93,
+          "mean": 1.3267,
+          "median": 0.86,
+          "std": 1.2766
+        }
+      },
+      "proximate_composition.carbohydrate_by_difference_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 6,
+        "sample_values": [
+          "13.81",
+          "7.68",
+          "0.0",
+          "3.63",
+          "3.89"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 0.0,
+          "max": 13.81,
+          "mean": 5.0483,
+          "median": 3.76,
+          "std": 4.5959
+        }
+      },
+      "proximate_composition.total_sugars_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 6,
+        "sample_values": [
+          "10.39",
+          "4.89",
+          "0.0",
+          "0.42",
+          "2.63"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 0.0,
+          "max": 10.39,
+          "mean": 3.1417,
+          "median": 1.575,
+          "std": 3.6517
+        }
+      },
+      "proximate_composition.fiber_dietary_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "2.4",
+          "2.0",
+          "0.0",
+          "2.2",
+          "1.2"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 0.0,
+          "max": 2.4,
+          "mean": 1.3,
+          "median": 1.6,
+          "std": 0.9916
+        }
+      },
+      "physicochemical_properties.ph_typical": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 6,
+        "sample_values": [
+          "3.7",
+          "3.4",
+          "6.2",
+          "6.8",
+          "4.3"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 3.4,
+          "max": 6.8,
+          "mean": 4.9333,
+          "median": 4.75,
+          "std": 1.2539
+        }
+      },
+      "physicochemical_properties.water_activity_aw": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "0.98",
+          "0.99",
+          "0.98",
+          "0.99",
+          "0.99"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 0.95,
+          "max": 0.99,
+          "mean": 0.98,
+          "median": 0.985,
+          "std": 0.0141
+        }
+      }
+    }
+  },
+  "india_ifct": {
+    "dataset_name": "india_ifct",
+    "path": "C:\\Users\\itsme\\OneDrive\\Documents\\PROJECTS 2026\\uni projects\\AI-Food-Packaging-Optimizer\\data\\raw\\food\\india_ifct\\india_ifct_2017_composition.json",
+    "file_size_bytes": 6462,
+    "record_count": 8,
+    "total_fields": 17,
+    "top_level_keys": [
+      "source_metadata",
+      "records"
+    ],
+    "fields": {
+      "ifct_code": {
+        "dtype": "str",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          "A005",
+          "A005-FC",
+          "A006",
+          "A012",
+          "B008"
+        ],
+        "numerical_stats": null
+      },
+      "commodity_name": {
+        "dtype": "str",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          "Alphonso Mango",
+          "Alphonso Mango (Fresh-Cut)",
+          "Kesar Mango",
+          "Guava",
+          "Okra"
+        ],
+        "numerical_stats": null
+      },
+      "indian_name": {
+        "dtype": "str",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          "Alphonso Aam",
+          "Cut Alphonso Slices",
+          "Gir Kesar Aam",
+          "Amrood",
+          "Bhindi"
+        ],
+        "numerical_stats": null
+      },
+      "scientific_name": {
+        "dtype": "str",
+        "non_null_count": 7,
+        "null_count": 1,
+        "null_pct": 12.5,
+        "unique_count": 5,
+        "sample_values": [
+          "Mangifera indica L.",
+          "Mangifera indica L.",
+          "Mangifera indica L.",
+          "Psidium guajava L.",
+          "Abelmoschus esculentus L."
+        ],
+        "numerical_stats": null
+      },
+      "food_category": {
+        "dtype": "str",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "Fruits and Fruit Products",
+          "Fresh-Cut Fruits",
+          "Fruits and Fruit Products",
+          "Fruits and Fruit Products",
+          "Vegetables and Vegetable Products"
+        ],
+        "numerical_stats": null
+      },
+      "processing_state": {
+        "dtype": "str",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "raw",
+          "fresh_cut",
+          "raw",
+          "raw",
+          "raw"
+        ],
+        "numerical_stats": null
+      },
+      "origin_region": {
+        "dtype": "str",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 7,
+        "sample_values": [
+          "Ratnagiri/Konkan, Maharashtra, India",
+          "Maharashtra, India",
+          "Junagadh/Gir, Gujarat, India",
+          "Allahabad/Uttar Pradesh, India",
+          "Pan-India"
+        ],
+        "numerical_stats": null
+      },
+      "proximate_composition.moisture_percent": {
+        "dtype": "float",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 7,
+        "sample_values": [
+          "83.2",
+          "83.2",
+          "82.5",
+          "85.3",
+          "89.6"
+        ],
+        "numerical_stats": {
+          "count": 8,
+          "min": 12.1,
+          "max": 89.6,
+          "mean": 72.3375,
+          "median": 83.2,
+          "std": 25.1026
+        }
+      },
+      "proximate_composition.total_lipid_fat_percent": {
+        "dtype": "float",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 6,
+        "sample_values": [
+          "0.4",
+          "0.4",
+          "0.3",
+          "0.2",
+          "0.2"
+        ],
+        "numerical_stats": {
+          "count": 8,
+          "min": 0.1,
+          "max": 23.5,
+          "mean": 3.2,
+          "median": 0.35,
+          "std": 7.6737
+        }
+      },
+      "proximate_composition.protein_percent": {
+        "dtype": "float",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 7,
+        "sample_values": [
+          "0.7",
+          "0.7",
+          "0.8",
+          "0.9",
+          "1.9"
+        ],
+        "numerical_stats": {
+          "count": 8,
+          "min": 0.6,
+          "max": 18.3,
+          "mean": 3.975,
+          "median": 0.85,
+          "std": 5.8874
+        }
+      },
+      "proximate_composition.ash_percent": {
+        "dtype": "float",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "0.5",
+          "0.5",
+          "0.5",
+          "0.7",
+          "0.8"
+        ],
+        "numerical_stats": {
+          "count": 8,
+          "min": 0.5,
+          "max": 2.1,
+          "mean": 0.775,
+          "median": 0.55,
+          "std": 0.5117
+        }
+      },
+      "proximate_composition.carbohydrate_by_difference_percent": {
+        "dtype": "float",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 7,
+        "sample_values": [
+          "14.9",
+          "14.9",
+          "15.6",
+          "12.2",
+          "6.4"
+        ],
+        "numerical_stats": {
+          "count": 8,
+          "min": 2.1,
+          "max": 78.2,
+          "mean": 19.2625,
+          "median": 13.55,
+          "std": 22.7061
+        }
+      },
+      "proximate_composition.total_sugars_percent": {
+        "dtype": "float",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 7,
+        "sample_values": [
+          "11.5",
+          "11.5",
+          "12.1",
+          "6.8",
+          "1.2"
+        ],
+        "numerical_stats": {
+          "count": 8,
+          "min": 0.1,
+          "max": 12.1,
+          "mean": 6.475,
+          "median": 6.95,
+          "std": 4.6885
+        }
+      },
+      "proximate_composition.fiber_dietary_percent": {
+        "dtype": "float",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 6,
+        "sample_values": [
+          "1.8",
+          "1.8",
+          "1.7",
+          "5.2",
+          "3.6"
+        ],
+        "numerical_stats": {
+          "count": 8,
+          "min": 0.0,
+          "max": 5.2,
+          "mean": 2.1625,
+          "median": 1.8,
+          "std": 1.4645
+        }
+      },
+      "physicochemical_properties.ph_typical": {
+        "dtype": "float",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          "4.2",
+          "4.1",
+          "4.35",
+          "4.8",
+          "6.3"
+        ],
+        "numerical_stats": {
+          "count": 8,
+          "min": 4.1,
+          "max": 6.5,
+          "mean": 5.1688,
+          "median": 5.1,
+          "std": 0.8856
+        }
+      },
+      "physicochemical_properties.titratable_acidity_percent": {
+        "dtype": "float",
+        "non_null_count": 7,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 7,
+        "sample_values": [
+          "0.45",
+          "0.48",
+          "0.38",
+          "0.32",
+          "0.12"
+        ],
+        "numerical_stats": {
+          "count": 7,
+          "min": 0.12,
+          "max": 0.48,
+          "mean": 0.3071,
+          "median": 0.32,
+          "std": 0.1302
+        }
+      },
+      "physicochemical_properties.water_activity_aw": {
+        "dtype": "float",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "0.98",
+          "0.98",
+          "0.98",
+          "0.98",
+          "0.99"
+        ],
+        "numerical_stats": {
+          "count": 8,
+          "min": 0.62,
+          "max": 0.99,
+          "mean": 0.935,
+          "median": 0.98,
+          "std": 0.1194
+        }
+      }
+    }
+  },
+  "usda_handbook_66": {
+    "dataset_name": "usda_handbook_66",
+    "path": "C:\\Users\\itsme\\OneDrive\\Documents\\PROJECTS 2026\\uni projects\\AI-Food-Packaging-Optimizer\\data\\raw\\postharvest\\usda\\usda_handbook_66_respiration.json",
+    "file_size_bytes": 6064,
+    "record_count": 4,
+    "total_fields": 14,
+    "top_level_keys": [
+      "source_metadata",
+      "records"
+    ],
+    "fields": {
+      "commodity_name": {
+        "dtype": "str",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "Apple",
+          "Strawberry",
+          "Spinach",
+          "Tomato"
+        ],
+        "numerical_stats": null
+      },
+      "scientific_name": {
+        "dtype": "str",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "Malus domestica",
+          "Fragaria x ananassa",
+          "Spinacia oleracea",
+          "Solanum lycopersicum"
+        ],
+        "numerical_stats": null
+      },
+      "respiration_measurements": {
+        "dtype": "list",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 0,
+        "sample_values": [],
+        "numerical_stats": null
+      },
+      "recommended_storage_conditions.storage_temperature_min_c": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "-1.0",
+          "0.0",
+          "0.0",
+          "12.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": -1.0,
+          "max": 12.0,
+          "mean": 2.75,
+          "median": 0.0,
+          "std": 5.3561
+        }
+      },
+      "recommended_storage_conditions.storage_temperature_max_c": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "4.0",
+          "0.5",
+          "1.0",
+          "15.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 0.5,
+          "max": 15.0,
+          "mean": 5.125,
+          "median": 2.5,
+          "std": 5.8564
+        }
+      },
+      "recommended_storage_conditions.relative_humidity_min_percent": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "90.0",
+          "90.0",
+          "95.0",
+          "90.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 90.0,
+          "max": 95.0,
+          "mean": 91.25,
+          "median": 90.0,
+          "std": 2.1651
+        }
+      },
+      "recommended_storage_conditions.relative_humidity_max_percent": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "95.0",
+          "95.0",
+          "100.0",
+          "95.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 95.0,
+          "max": 100.0,
+          "mean": 96.25,
+          "median": 95.0,
+          "std": 2.1651
+        }
+      },
+      "recommended_storage_conditions.approximate_shelf_life_days": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "120.0",
+          "7.0",
+          "14.0",
+          "21.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 7.0,
+          "max": 120.0,
+          "mean": 40.5,
+          "median": 17.5,
+          "std": 46.1655
+        }
+      },
+      "emap_tolerances.target_o2_min_percent": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "1.5",
+          "5.0",
+          "7.0",
+          "3.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 1.5,
+          "max": 7.0,
+          "mean": 4.125,
+          "median": 4.0,
+          "std": 2.0729
+        }
+      },
+      "emap_tolerances.target_o2_max_percent": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "2.5",
+          "10.0",
+          "10.0",
+          "5.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 2.5,
+          "max": 10.0,
+          "mean": 6.875,
+          "median": 7.5,
+          "std": 3.2476
+        }
+      },
+      "emap_tolerances.target_co2_min_percent": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "1.0",
+          "15.0",
+          "5.0",
+          "2.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 1.0,
+          "max": 15.0,
+          "mean": 5.75,
+          "median": 3.5,
+          "std": 5.5396
+        }
+      },
+      "emap_tolerances.target_co2_max_percent": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "2.0",
+          "20.0",
+          "10.0",
+          "3.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 2.0,
+          "max": 20.0,
+          "mean": 8.75,
+          "median": 6.5,
+          "std": 7.1894
+        }
+      },
+      "emap_tolerances.min_o2_fermentation_limit_percent": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "1.0",
+          "2.0",
+          "2.0",
+          "2.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.75,
+          "median": 2.0,
+          "std": 0.433
+        }
+      },
+      "emap_tolerances.max_co2_injury_limit_percent": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "5.0",
+          "25.0",
+          "15.0",
+          "5.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 5.0,
+          "max": 25.0,
+          "mean": 12.5,
+          "median": 10.0,
+          "std": 8.2916
+        }
+      }
+    }
+  },
+  "uc_davis": {
+    "dataset_name": "uc_davis",
+    "path": "C:\\Users\\itsme\\OneDrive\\Documents\\PROJECTS 2026\\uni projects\\AI-Food-Packaging-Optimizer\\data\\raw\\postharvest\\uc_davis\\uc_davis_produce_facts.json",
+    "file_size_bytes": 3183,
+    "record_count": 3,
+    "total_fields": 13,
+    "top_level_keys": [
+      "source_metadata",
+      "records"
+    ],
+    "fields": {
+      "commodity_name": {
+        "dtype": "str",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "Broccoli",
+          "Banana",
+          "Avocado"
+        ],
+        "numerical_stats": null
+      },
+      "scientific_name": {
+        "dtype": "str",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "Brassica oleracea var. italica",
+          "Musa acuminata",
+          "Persea americana"
+        ],
+        "numerical_stats": null
+      },
+      "respiration_profile": {
+        "dtype": "list",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 0,
+        "sample_values": [],
+        "numerical_stats": null
+      },
+      "physiological_limits.optimum_temperature_c": {
+        "dtype": "float",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "0.0",
+          "13.5",
+          "5.0"
+        ],
+        "numerical_stats": {
+          "count": 3,
+          "min": 0.0,
+          "max": 13.5,
+          "mean": 6.1667,
+          "median": 5.0,
+          "std": 5.5728
+        }
+      },
+      "physiological_limits.optimum_rh_percent": {
+        "dtype": "float",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "98.0",
+          "90.0",
+          "90.0"
+        ],
+        "numerical_stats": {
+          "count": 3,
+          "min": 90.0,
+          "max": 98.0,
+          "mean": 92.6667,
+          "median": 90.0,
+          "std": 3.7712
+        }
+      },
+      "physiological_limits.chilling_sensitivity": {
+        "dtype": "str",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "low",
+          "high",
+          "moderate"
+        ],
+        "numerical_stats": null
+      },
+      "physiological_limits.chilling_threshold_c": {
+        "dtype": "float",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "0.0",
+          "13.0",
+          "5.0"
+        ],
+        "numerical_stats": {
+          "count": 3,
+          "min": 0.0,
+          "max": 13.0,
+          "mean": 6.0,
+          "median": 5.0,
+          "std": 5.3541
+        }
+      },
+      "physiological_limits.ethylene_sensitivity": {
+        "dtype": "str",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "extremely_high",
+          "high",
+          "high"
+        ],
+        "numerical_stats": null
+      },
+      "physiological_limits.emap_o2_min_percent": {
+        "dtype": "float",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "1.0",
+          "2.0",
+          "2.0"
+        ],
+        "numerical_stats": {
+          "count": 3,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.6667,
+          "median": 2.0,
+          "std": 0.4714
+        }
+      },
+      "physiological_limits.emap_o2_max_percent": {
+        "dtype": "float",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "2.0",
+          "5.0",
+          "5.0"
+        ],
+        "numerical_stats": {
+          "count": 3,
+          "min": 2.0,
+          "max": 5.0,
+          "mean": 4.0,
+          "median": 5.0,
+          "std": 1.4142
+        }
+      },
+      "physiological_limits.emap_co2_min_percent": {
+        "dtype": "float",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "5.0",
+          "2.0",
+          "3.0"
+        ],
+        "numerical_stats": {
+          "count": 3,
+          "min": 2.0,
+          "max": 5.0,
+          "mean": 3.3333,
+          "median": 3.0,
+          "std": 1.2472
+        }
+      },
+      "physiological_limits.emap_co2_max_percent": {
+        "dtype": "float",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "10.0",
+          "5.0",
+          "10.0"
+        ],
+        "numerical_stats": {
+          "count": 3,
+          "min": 5.0,
+          "max": 10.0,
+          "mean": 8.3333,
+          "median": 10.0,
+          "std": 2.357
+        }
+      },
+      "physiological_limits.co2_injury_threshold_percent": {
+        "dtype": "float",
+        "non_null_count": 3,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "15.0",
+          "7.0",
+          "12.0"
+        ],
+        "numerical_stats": {
+          "count": 3,
+          "min": 7.0,
+          "max": 15.0,
+          "mean": 11.3333,
+          "median": 12.0,
+          "std": 3.2998
+        }
+      }
+    }
+  },
+  "indian_postharvest": {
+    "dataset_name": "indian_postharvest",
+    "path": "C:\\Users\\itsme\\OneDrive\\Documents\\PROJECTS 2026\\uni projects\\AI-Food-Packaging-Optimizer\\data\\raw\\postharvest\\india\\icar_iifpt_indian_postharvest.json",
+    "file_size_bytes": 10806,
+    "record_count": 8,
+    "total_fields": 33,
+    "top_level_keys": [
+      "source_metadata",
+      "records"
+    ],
+    "fields": {
+      "commodity_id": {
+        "dtype": "str",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          "IND-POST-001",
+          "IND-POST-001-FC",
+          "IND-POST-002",
+          "IND-POST-003",
+          "IND-POST-004"
+        ],
+        "numerical_stats": null
+      },
+      "commodity_name": {
+        "dtype": "str",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          "Alphonso Mango",
+          "Alphonso Mango (Fresh-Cut)",
+          "Kesar Mango",
+          "Guava",
+          "Okra"
+        ],
+        "numerical_stats": null
+      },
+      "indian_vernacular_name": {
+        "dtype": "str",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          "Alphonso Aam",
+          "Cut Alphonso Slices",
+          "Gir Kesar Aam",
+          "Amrood",
+          "Bhindi"
+        ],
+        "numerical_stats": null
+      },
+      "scientific_name": {
+        "dtype": "str",
+        "non_null_count": 7,
+        "null_count": 1,
+        "null_pct": 12.5,
+        "unique_count": 6,
+        "sample_values": [
+          "Mangifera indica L. cv. Alphonso",
+          "Mangifera indica L. cv. Alphonso",
+          "Mangifera indica L. cv. Kesar",
+          "Psidium guajava L. cv. Allahabad Safeda",
+          "Abelmoschus esculentus L."
+        ],
+        "numerical_stats": null
+      },
+      "origin_region": {
+        "dtype": "str",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 7,
+        "sample_values": [
+          "Ratnagiri/Konkan, Maharashtra, India",
+          "Maharashtra, India",
+          "Junagadh/Gir, Gujarat, India",
+          "Uttar Pradesh / Madhya Pradesh, India",
+          "Pan-India"
+        ],
+        "numerical_stats": null
+      },
+      "processing_state": {
+        "dtype": "str",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "raw",
+          "fresh_cut",
+          "raw",
+          "raw",
+          "raw"
+        ],
+        "numerical_stats": null
+      },
+      "respiration_kinetics": {
+        "dtype": "list",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 0,
+        "sample_values": [],
+        "numerical_stats": null
+      },
+      "postharvest_storage_limits.optimum_temperature_c": {
+        "dtype": "float",
+        "non_null_count": 8,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 7,
+        "sample_values": [
+          "12.5",
+          "5.0",
+          "12.0",
+          "9.0",
+          "8.0"
+        ],
+        "numerical_stats": {
+          "count": 8,
+          "min": 4.0,
+          "max": 25.0,
+          "mean": 10.9375,
+          "median": 10.5,
+          "std": 6.1055
+        }
+      },
+      "postharvest_storage_limits.chilling_injury_threshold_c": {
+        "dtype": "float",
+        "non_null_count": 7,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "10.0",
+          "3.0",
+          "10.0",
+          "7.0",
+          "7.0"
+        ],
+        "numerical_stats": {
+          "count": 7,
+          "min": 0.0,
+          "max": 10.0,
+          "mean": 6.7143,
+          "median": 7.0,
+          "std": 3.614
+        }
+      },
+      "postharvest_storage_limits.optimum_rh_percent": {
+        "dtype": "float",
+        "non_null_count": 7,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "88.0",
+          "95.0",
+          "88.0",
+          "92.0",
+          "95.0"
+        ],
+        "numerical_stats": {
+          "count": 7,
+          "min": 85.0,
+          "max": 95.0,
+          "mean": 90.1429,
+          "median": 88.0,
+          "std": 3.6027
+        }
+      },
+      "postharvest_storage_limits.ambient_shelf_life_days": {
+        "dtype": "float",
+        "non_null_count": 7,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 7,
+        "sample_values": [
+          "7.0",
+          "1.5",
+          "8.0",
+          "4.0",
+          "3.0"
+        ],
+        "numerical_stats": {
+          "count": 7,
+          "min": 1.0,
+          "max": 8.0,
+          "mean": 4.2143,
+          "median": 4.0,
+          "std": 2.4474
+        }
+      },
+      "postharvest_storage_limits.map_shelf_life_days": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "21.0",
+          "12.0",
+          "25.0",
+          "18.0",
+          "12.0"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 12.0,
+          "max": 25.0,
+          "mean": 18.0,
+          "median": 19.0,
+          "std": 4.7258
+        }
+      },
+      "emap_gas_tolerances.target_o2_min_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "3.0",
+          "3.0",
+          "3.0",
+          "3.0",
+          "3.0"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "median": 3.0,
+          "std": 0.0
+        }
+      },
+      "emap_gas_tolerances.target_o2_max_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "5.0",
+          "5.0",
+          "5.0",
+          "5.0",
+          "5.0"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 5.0,
+          "max": 5.0,
+          "mean": 5.0,
+          "median": 5.0,
+          "std": 0.0
+        }
+      },
+      "emap_gas_tolerances.target_co2_min_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "5.0",
+          "6.0",
+          "4.0",
+          "5.0",
+          "4.0"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 4.0,
+          "max": 6.0,
+          "mean": 4.8333,
+          "median": 5.0,
+          "std": 0.6872
+        }
+      },
+      "emap_gas_tolerances.target_co2_max_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "8.0",
+          "10.0",
+          "7.0",
+          "10.0",
+          "10.0"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 7.0,
+          "max": 10.0,
+          "mean": 8.8333,
+          "median": 9.0,
+          "std": 1.2134
+        }
+      },
+      "emap_gas_tolerances.min_o2_fermentation_limit_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "2.0",
+          "1.5",
+          "2.0",
+          "2.0",
+          "2.0"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 1.5,
+          "max": 2.0,
+          "mean": 1.9167,
+          "median": 2.0,
+          "std": 0.1863
+        }
+      },
+      "emap_gas_tolerances.max_co2_injury_limit_percent": {
+        "dtype": "float",
+        "non_null_count": 6,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "10.0",
+          "12.0",
+          "10.0",
+          "15.0",
+          "12.0"
+        ],
+        "numerical_stats": {
+          "count": 6,
+          "min": 10.0,
+          "max": 15.0,
+          "mean": 11.5,
+          "median": 11.0,
+          "std": 1.8028
+        }
+      },
+      "postharvest_storage_limits.air_refrigerated_shelf_life_days": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "6.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 6.0,
+          "max": 6.0,
+          "mean": 6.0,
+          "median": 6.0,
+          "std": 0.0
+        }
+      },
+      "postharvest_storage_limits.map_refrigerated_shelf_life_days": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "30.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 30.0,
+          "max": 30.0,
+          "mean": 30.0,
+          "median": 30.0,
+          "std": 0.0
+        }
+      },
+      "map_packaging_requirements.recommended_gas_mix.co2_percent": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "40.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 40.0,
+          "max": 40.0,
+          "mean": 40.0,
+          "median": 40.0,
+          "std": 0.0
+        }
+      },
+      "map_packaging_requirements.recommended_gas_mix.n2_percent": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "60.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 60.0,
+          "max": 60.0,
+          "mean": 60.0,
+          "median": 60.0,
+          "std": 0.0
+        }
+      },
+      "map_packaging_requirements.recommended_gas_mix.o2_percent": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "0.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        }
+      },
+      "map_packaging_requirements.target_headspace_ratio": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "2.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0,
+          "std": 0.0
+        }
+      },
+      "map_packaging_requirements.spoilage_drivers": {
+        "dtype": "list",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 0,
+        "sample_values": [],
+        "numerical_stats": null
+      },
+      "map_packaging_requirements.maximum_allowable_wvtr_g_m2_day": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "2.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0,
+          "std": 0.0
+        }
+      },
+      "map_packaging_requirements.maximum_allowable_otr_cc_m2_day_atm": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "20.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 20.0,
+          "max": 20.0,
+          "mean": 20.0,
+          "median": 20.0,
+          "std": 0.0
+        }
+      },
+      "postharvest_storage_limits.critical_moisture_content_percent": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "13.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 13.0,
+          "max": 13.0,
+          "mean": 13.0,
+          "median": 13.0,
+          "std": 0.0
+        }
+      },
+      "postharvest_storage_limits.equilibrium_rh_percent": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "65.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 65.0,
+          "max": 65.0,
+          "mean": 65.0,
+          "median": 65.0,
+          "std": 0.0
+        }
+      },
+      "postharvest_storage_limits.ambient_shelf_life_months": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "24.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 24.0,
+          "max": 24.0,
+          "mean": 24.0,
+          "median": 24.0,
+          "std": 0.0
+        }
+      },
+      "hermetic_storage_requirements.insect_disinfestation_co2_target_percent": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "35.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 35.0,
+          "max": 35.0,
+          "mean": 35.0,
+          "median": 35.0,
+          "std": 0.0
+        }
+      },
+      "hermetic_storage_requirements.insect_disinfestation_o2_max_percent": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "2.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0,
+          "std": 0.0
+        }
+      },
+      "hermetic_storage_requirements.maximum_allowable_wvtr_g_m2_day": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "1.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0
+        }
+      }
+    }
+  },
+  "cirad_wur": {
+    "dataset_name": "cirad_wur",
+    "path": "C:\\Users\\itsme\\OneDrive\\Documents\\PROJECTS 2026\\uni projects\\AI-Food-Packaging-Optimizer\\data\\raw\\materials\\cirad_wur\\cirad_wur_packaging_dataset.json",
+    "file_size_bytes": 6781,
+    "record_count": 5,
+    "total_fields": 11,
+    "top_level_keys": [
+      "source_metadata",
+      "materials"
+    ],
+    "fields": {
+      "material_id": {
+        "dtype": "str",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "MAT-RAW-LDPE-50UM",
+          "MAT-RAW-HDPE-40UM",
+          "MAT-RAW-BOPP-30UM",
+          "MAT-RAW-BOPET-12UM",
+          "MAT-RAW-BOPA-15UM"
+        ],
+        "numerical_stats": null
+      },
+      "material_name": {
+        "dtype": "str",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "Low-Density Polyethylene (LDPE 50 \u00b5m)",
+          "High-Density Polyethylene (HDPE 40 \u00b5m)",
+          "Biaxially Oriented Polypropylene (BOPP 30 \u00b5m)",
+          "Biaxially Oriented Polyethylene Terephthalate (BOPET 12 \u00b5m)",
+          "Biaxially Oriented Polyamide 6 (BOPA 15 \u00b5m)"
+        ],
+        "numerical_stats": null
+      },
+      "polymer_code": {
+        "dtype": "str",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "LDPE",
+          "HDPE",
+          "BOPP",
+          "BOPET",
+          "BOPA"
+        ],
+        "numerical_stats": null
+      },
+      "structure_type": {
+        "dtype": "str",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "monolayer",
+          "monolayer",
+          "monolayer",
+          "monolayer",
+          "monolayer"
+        ],
+        "numerical_stats": null
+      },
+      "measured_thickness_um": {
+        "dtype": "float",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "50.0",
+          "40.0",
+          "30.0",
+          "12.0",
+          "15.0"
+        ],
+        "numerical_stats": {
+          "count": 5,
+          "min": 12.0,
+          "max": 50.0,
+          "mean": 29.4,
+          "median": 30.0,
+          "std": 14.472
+        }
+      },
+      "density_g_cm3": {
+        "dtype": "float",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "0.92",
+          "0.95",
+          "0.9",
+          "1.4",
+          "1.14"
+        ],
+        "numerical_stats": {
+          "count": 5,
+          "min": 0.9,
+          "max": 1.4,
+          "mean": 1.062,
+          "median": 0.95,
+          "std": 0.1894
+        }
+      },
+      "barrier_measurements": {
+        "dtype": "list",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 0,
+        "sample_values": [],
+        "numerical_stats": null
+      },
+      "sustainability_profile.recyclable": {
+        "dtype": "bool",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "True",
+          "True",
+          "True",
+          "True",
+          "True"
+        ],
+        "numerical_stats": null
+      },
+      "sustainability_profile.recycling_code": {
+        "dtype": "str",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "LDPE-04",
+          "HDPE-02",
+          "PP-05",
+          "PET-01",
+          "OTHER-07"
+        ],
+        "numerical_stats": null
+      },
+      "sustainability_profile.bio_based": {
+        "dtype": "bool",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "False",
+          "False",
+          "False",
+          "False",
+          "False"
+        ],
+        "numerical_stats": null
+      },
+      "sustainability_profile.compostable": {
+        "dtype": "bool",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "False",
+          "False",
+          "False",
+          "False",
+          "False"
+        ],
+        "numerical_stats": null
+      }
+    }
+  },
+  "polyid": {
+    "dataset_name": "polyid",
+    "path": "C:\\Users\\itsme\\OneDrive\\Documents\\PROJECTS 2026\\uni projects\\AI-Food-Packaging-Optimizer\\data\\raw\\materials\\polyid\\polyid_experimental_vs_predicted.json",
+    "file_size_bytes": 3379,
+    "record_count": 4,
+    "total_fields": 32,
+    "top_level_keys": [
+      "source_metadata",
+      "experimental_observations",
+      "predicted_values"
+    ],
+    "fields": {
+      "polyid_exp_id": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "EXP-POLYID-001",
+          "EXP-POLYID-002"
+        ],
+        "numerical_stats": null
+      },
+      "polymer_name": {
+        "dtype": "str",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "Polylactic Acid (PLA Film Specimen)",
+          "Poly(butylene adipate-co-terephthalate) (PBAT Film)",
+          "Polyhydroxyalkanoate (PHA / PHBV 8 mol% HV)",
+          "Polyhydroxyalkanoate (PHA / PHBV 8 mol% HV)"
+        ],
+        "numerical_stats": null
+      },
+      "polymer_smiles": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "CC(O)C(=O)O",
+          "[PBAT_Monomer_Units]"
+        ],
+        "numerical_stats": null
+      },
+      "measured_thickness_um": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "30.0",
+          "25.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 25.0,
+          "max": 30.0,
+          "mean": 27.5,
+          "median": 27.5,
+          "std": 2.5
+        }
+      },
+      "density_g_cm3": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "1.24",
+          "1.26"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 1.24,
+          "max": 1.26,
+          "mean": 1.25,
+          "median": 1.25,
+          "std": 0.01
+        }
+      },
+      "glass_transition_temp_tg_c": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "58.0",
+          "-30.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": -30.0,
+          "max": 58.0,
+          "mean": 14.0,
+          "median": 14.0,
+          "std": 44.0
+        }
+      },
+      "melting_temp_tm_c": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "165.0",
+          "120.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 120.0,
+          "max": 165.0,
+          "mean": 142.5,
+          "median": 142.5,
+          "std": 22.5
+        }
+      },
+      "experimental_otr.value": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "750.0",
+          "1250.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 750.0,
+          "max": 1250.0,
+          "mean": 1000.0,
+          "median": 1000.0,
+          "std": 250.0
+        }
+      },
+      "experimental_otr.unit": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "cc/m2-day-atm",
+          "cc/m2-day-atm"
+        ],
+        "numerical_stats": null
+      },
+      "experimental_otr.test_temperature_c": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "23.0",
+          "23.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 23.0,
+          "max": 23.0,
+          "mean": 23.0,
+          "median": 23.0,
+          "std": 0.0
+        }
+      },
+      "experimental_otr.test_rh_percent": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "0.0",
+          "0.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        }
+      },
+      "experimental_otr.test_standard": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "ASTM D3985",
+          "ASTM D3985"
+        ],
+        "numerical_stats": null
+      },
+      "experimental_otr.laboratory_reference": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "PolyID Exp-Lab Run #1042",
+          "PolyID Exp-Lab Run #1188"
+        ],
+        "numerical_stats": null
+      },
+      "experimental_wvtr.value": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "24.5",
+          "45.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 24.5,
+          "max": 45.0,
+          "mean": 34.75,
+          "median": 34.75,
+          "std": 10.25
+        }
+      },
+      "experimental_wvtr.unit": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "g/m2-day",
+          "g/m2-day"
+        ],
+        "numerical_stats": null
+      },
+      "experimental_wvtr.test_temperature_c": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "38.0",
+          "38.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 38.0,
+          "max": 38.0,
+          "mean": 38.0,
+          "median": 38.0,
+          "std": 0.0
+        }
+      },
+      "experimental_wvtr.test_rh_percent": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "90.0",
+          "90.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 90.0,
+          "max": 90.0,
+          "mean": 90.0,
+          "median": 90.0,
+          "std": 0.0
+        }
+      },
+      "experimental_wvtr.test_standard": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "ASTM F1249",
+          "ASTM F1249"
+        ],
+        "numerical_stats": null
+      },
+      "experimental_wvtr.laboratory_reference": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "PolyID Exp-Lab Run #1042",
+          "PolyID Exp-Lab Run #1188"
+        ],
+        "numerical_stats": null
+      },
+      "record_subset": {
+        "dtype": "str",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "experimental_observations",
+          "experimental_observations",
+          "predicted_values",
+          "predicted_values"
+        ],
+        "numerical_stats": null
+      },
+      "polyid_pred_id": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "PRED-QSAR-001",
+          "PRED-QSAR-002"
+        ],
+        "numerical_stats": null
+      },
+      "predicted_property": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "OTR",
+          "WVTR"
+        ],
+        "numerical_stats": null
+      },
+      "predicted_value": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "320.0",
+          "18.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 18.0,
+          "max": 320.0,
+          "mean": 169.0,
+          "median": 169.0,
+          "std": 151.0
+        }
+      },
+      "unit": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "cc/m2-day-atm",
+          "g/m2-day"
+        ],
+        "numerical_stats": null
+      },
+      "reference_thickness_um": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "25.0",
+          "25.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 25.0,
+          "max": 25.0,
+          "mean": 25.0,
+          "median": 25.0,
+          "std": 0.0
+        }
+      },
+      "prediction_confidence": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "MEDIUM",
+          "MEDIUM"
+        ],
+        "numerical_stats": null
+      },
+      "uncertainty_range_lower": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "275.0",
+          "14.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 14.0,
+          "max": 275.0,
+          "mean": 144.5,
+          "median": 144.5,
+          "std": 130.5
+        }
+      },
+      "uncertainty_range_upper": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "365.0",
+          "22.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 22.0,
+          "max": 365.0,
+          "mean": 193.5,
+          "median": 193.5,
+          "std": 171.5
+        }
+      },
+      "qsar_algorithm": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "Group_Contribution_v2.4",
+          "Group_Contribution_v2.4"
+        ],
+        "numerical_stats": null
+      },
+      "model_training_r2": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "0.88",
+          "0.84"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 0.84,
+          "max": 0.88,
+          "mean": 0.86,
+          "median": 0.86,
+          "std": 0.02
+        }
+      },
+      "model_doi": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "10.1016/j.polymertesting.2023.108112",
+          "10.1016/j.polymertesting.2023.108112"
+        ],
+        "numerical_stats": null
+      },
+      "warning_flag": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "SYNTHETIC_MODEL_PREDICTION_DO_NOT_TREAT_AS_EXPERIMENTAL_EVIDENCE",
+          "SYNTHETIC_MODEL_PREDICTION_DO_NOT_TREAT_AS_EXPERIMENTAL_EVIDENCE"
+        ],
+        "numerical_stats": null
+      }
+    }
+  },
+  "manufacturer_tds": {
+    "dataset_name": "manufacturer_tds",
+    "path": "C:\\Users\\itsme\\OneDrive\\Documents\\PROJECTS 2026\\uni projects\\AI-Food-Packaging-Optimizer\\data\\raw\\materials\\manufacturer\\manufacturer_tds_datasheets.json",
+    "file_size_bytes": 5851,
+    "record_count": 4,
+    "total_fields": 17,
+    "top_level_keys": [
+      "source_metadata",
+      "datasheets"
+    ],
+    "fields": {
+      "datasheet_id": {
+        "dtype": "str",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "TDS-KURARAY-EVAL-F101B",
+          "TDS-KURARAY-EVAL-E105B",
+          "TDS-NATUREWORKS-INGEO-4032D",
+          "TDS-AMCOR-LAMINATE-70UM"
+        ],
+        "numerical_stats": null
+      },
+      "manufacturer": {
+        "dtype": "str",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "Kuraray Co., Ltd.",
+          "Kuraray Co., Ltd.",
+          "NatureWorks LLC",
+          "Amcor Flexibles"
+        ],
+        "numerical_stats": null
+      },
+      "brand_grade": {
+        "dtype": "str",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "EVAL F101B",
+          "EVAL E105B",
+          "Ingeo Biopolymer 4032D",
+          "High-Barrier MAP Laminate PET/EVOH/PE"
+        ],
+        "numerical_stats": null
+      },
+      "polymer_type": {
+        "dtype": "str",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "Ethylene Vinyl Alcohol Copolymer (EVOH)",
+          "Ethylene Vinyl Alcohol Copolymer (EVOH)",
+          "Polylactic Acid (PLA)",
+          "Multilayer Laminate (PET 12 \u00b5m / EVOH 10 \u00b5m / PE 48 \u00b5m)"
+        ],
+        "numerical_stats": null
+      },
+      "ethylene_content_mol_percent": {
+        "dtype": "float",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "32.0",
+          "44.0"
+        ],
+        "numerical_stats": {
+          "count": 2,
+          "min": 32.0,
+          "max": 44.0,
+          "mean": 38.0,
+          "median": 38.0,
+          "std": 6.0
+        }
+      },
+      "structure_type": {
+        "dtype": "str",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "monolayer",
+          "monolayer",
+          "monolayer",
+          "multilayer"
+        ],
+        "numerical_stats": null
+      },
+      "nominal_thickness_um": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "15.0",
+          "15.0",
+          "30.0",
+          "70.0"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 15.0,
+          "max": 70.0,
+          "mean": 32.5,
+          "median": 22.5,
+          "std": 22.5
+        }
+      },
+      "density_g_cm3": {
+        "dtype": "float",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "1.19",
+          "1.14",
+          "1.24",
+          "1.15"
+        ],
+        "numerical_stats": {
+          "count": 4,
+          "min": 1.14,
+          "max": 1.24,
+          "mean": 1.18,
+          "median": 1.17,
+          "std": 0.0394
+        }
+      },
+      "barrier_profiles": {
+        "dtype": "list",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 0,
+        "sample_values": [],
+        "numerical_stats": null
+      },
+      "sustainability_profile.recyclable": {
+        "dtype": "bool",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "True",
+          "True",
+          "True",
+          "False"
+        ],
+        "numerical_stats": null
+      },
+      "sustainability_profile.recycling_category": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "Co-extruded barrier component",
+          "Co-extruded barrier component"
+        ],
+        "numerical_stats": null
+      },
+      "sustainability_profile.bio_based": {
+        "dtype": "bool",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "False",
+          "False",
+          "True",
+          "False"
+        ],
+        "numerical_stats": null
+      },
+      "sustainability_profile.compostable": {
+        "dtype": "bool",
+        "non_null_count": 4,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "False",
+          "False",
+          "True",
+          "False"
+        ],
+        "numerical_stats": null
+      },
+      "sustainability_profile.recycling_code": {
+        "dtype": "str",
+        "non_null_count": 2,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "PLA-07",
+          "OTHER-07"
+        ],
+        "numerical_stats": null
+      },
+      "sustainability_profile.bio_based_content_percent": {
+        "dtype": "float",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "100.0"
+        ],
+        "numerical_stats": {
+          "count": 1,
+          "min": 100.0,
+          "max": 100.0,
+          "mean": 100.0,
+          "median": 100.0,
+          "std": 0.0
+        }
+      },
+      "sustainability_profile.composting_standards": {
+        "dtype": "list",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 0,
+        "sample_values": [],
+        "numerical_stats": null
+      },
+      "layer_sequence": {
+        "dtype": "list",
+        "non_null_count": 1,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 0,
+        "sample_values": [],
+        "numerical_stats": null
+      }
+    }
+  },
+  "combase": {
+    "dataset_name": "combase",
+    "path": "C:\\Users\\itsme\\OneDrive\\Documents\\PROJECTS 2026\\uni projects\\AI-Food-Packaging-Optimizer\\data\\raw\\microbial\\combase\\combase_microbial_kinetics.json",
+    "file_size_bytes": 5231,
+    "record_count": 5,
+    "total_fields": 14,
+    "top_level_keys": [
+      "source_metadata",
+      "records"
+    ],
+    "fields": {
+      "combase_id": {
+        "dtype": "str",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "CB-ORG-001",
+          "CB-ORG-002",
+          "CB-ORG-003",
+          "CB-ORG-004",
+          "CB-ORG-005"
+        ],
+        "numerical_stats": null
+      },
+      "organism_name": {
+        "dtype": "str",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "Listeria monocytogenes",
+          "Pseudomonas fluorescens",
+          "Botrytis cinerea",
+          "Salmonella enterica",
+          "Aspergillus flavus"
+        ],
+        "numerical_stats": null
+      },
+      "organism_type": {
+        "dtype": "str",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "Psychrotrophic Pathogenic Bacteria",
+          "Psychrotrophic Spoilage Bacteria",
+          "Fungal Spoilage Mold (Gray Mold)",
+          "Mesophilic Foodborne Pathogenic Bacteria",
+          "Mycotoxigenic Fungal Mold"
+        ],
+        "numerical_stats": null
+      },
+      "cardinal_parameters.temperature_min_c": {
+        "dtype": "float",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "-0.4",
+          "0.0",
+          "0.0",
+          "5.2",
+          "12.0"
+        ],
+        "numerical_stats": {
+          "count": 5,
+          "min": -0.4,
+          "max": 12.0,
+          "mean": 3.36,
+          "median": 0.0,
+          "std": 4.7907
+        }
+      },
+      "cardinal_parameters.temperature_opt_c": {
+        "dtype": "float",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "37.0",
+          "28.0",
+          "22.0",
+          "37.0",
+          "33.0"
+        ],
+        "numerical_stats": {
+          "count": 5,
+          "min": 22.0,
+          "max": 37.0,
+          "mean": 31.4,
+          "median": 33.0,
+          "std": 5.748
+        }
+      },
+      "cardinal_parameters.temperature_max_c": {
+        "dtype": "float",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "45.0",
+          "35.0",
+          "30.0",
+          "47.0",
+          "42.0"
+        ],
+        "numerical_stats": {
+          "count": 5,
+          "min": 30.0,
+          "max": 47.0,
+          "mean": 39.8,
+          "median": 42.0,
+          "std": 6.3687
+        }
+      },
+      "cardinal_parameters.water_activity_aw_min": {
+        "dtype": "float",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "0.92",
+          "0.97",
+          "0.93",
+          "0.94",
+          "0.8"
+        ],
+        "numerical_stats": {
+          "count": 5,
+          "min": 0.8,
+          "max": 0.97,
+          "mean": 0.912,
+          "median": 0.93,
+          "std": 0.0584
+        }
+      },
+      "cardinal_parameters.ph_min": {
+        "dtype": "float",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "4.39",
+          "5.0",
+          "3.0",
+          "3.8",
+          "3.5"
+        ],
+        "numerical_stats": {
+          "count": 5,
+          "min": 3.0,
+          "max": 5.0,
+          "mean": 3.938,
+          "median": 3.8,
+          "std": 0.6961
+        }
+      },
+      "cardinal_parameters.ph_opt": {
+        "dtype": "float",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 3,
+        "sample_values": [
+          "7.0",
+          "7.0",
+          "5.5",
+          "7.0",
+          "6.0"
+        ],
+        "numerical_stats": {
+          "count": 5,
+          "min": 5.5,
+          "max": 7.0,
+          "mean": 6.5,
+          "median": 7.0,
+          "std": 0.6325
+        }
+      },
+      "cardinal_parameters.ph_max": {
+        "dtype": "float",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "9.4",
+          "9.0",
+          "8.0",
+          "9.5",
+          "8.0"
+        ],
+        "numerical_stats": {
+          "count": 5,
+          "min": 8.0,
+          "max": 9.5,
+          "mean": 8.78,
+          "median": 9.0,
+          "std": 0.6585
+        }
+      },
+      "growth_kinetics": {
+        "dtype": "list",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 0,
+        "sample_values": [],
+        "numerical_stats": null
+      },
+      "gas_inhibition_responses.co2_sensitivity": {
+        "dtype": "str",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 2,
+        "sample_values": [
+          "moderate",
+          "high",
+          "high",
+          "moderate",
+          "high"
+        ],
+        "numerical_stats": null
+      },
+      "gas_inhibition_responses.minimum_co2_inhibition_percent": {
+        "dtype": "float",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 4,
+        "sample_values": [
+          "20.0",
+          "20.0",
+          "10.0",
+          "30.0",
+          "25.0"
+        ],
+        "numerical_stats": {
+          "count": 5,
+          "min": 10.0,
+          "max": 30.0,
+          "mean": 21.0,
+          "median": 20.0,
+          "std": 6.6332
+        }
+      },
+      "gas_inhibition_responses.notes": {
+        "dtype": "str",
+        "non_null_count": 5,
+        "null_count": 0,
+        "null_pct": 0.0,
+        "unique_count": 5,
+        "sample_values": [
+          "Facultative anaerobe; growth retarded by high CO2 (40-60%) combined with refrigeration.",
+          "Strict aerobe; primary spoilage organism in fresh produce/meat; strongly inhibited by CO2 > 20% and O2 < 1%.",
+          "Primary postharvest fungal pathogen in berries/grapes; inhibited by elevated CO2 (10-15%).",
+          "Mesophilic pathogen; growth arrested at T < 5.2\u00b0C.",
+          "Aflatoxin producer in stored grains/nuts; controlled by hermetic sealed storage maintaining low O2 (<2%) or aw < 0.70."
+        ],
+        "numerical_stats": null
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "usda_fdc": {
+    "dataset": "usda_fdc",
+    "total_records": 6,
+    "valid_records": 6,
+    "records_with_warnings": 0,
+    "invalid_records": 0
+  },
+  "india_ifct": {
+    "dataset": "india_ifct",
+    "total_records": 8,
+    "valid_records": 8,
+    "records_with_warnings": 0,
+    "invalid_records": 0
+  },
+  "usda_handbook_66": {
+    "dataset": "usda_handbook_66",
+    "total_records": 4,
+    "valid_records": 4,
+    "records_with_warnings": 0,
+    "invalid_records": 0
+  },
+  "uc_davis": {
+    "dataset": "uc_davis",
+    "total_records": 3,
+    "valid_records": 3,
+    "records_with_warnings": 0,
+    "invalid_records": 0
+  },
+  "indian_postharvest": {
+    "dataset": "indian_postharvest",
+    "total_records": 8,
+    "valid_records": 8,
+    "records_with_warnings": 0,
+    "invalid_records": 0
+  },
+  "cirad_wur": {
+    "dataset": "cirad_wur",
+    "total_records": 5,
+    "valid_records": 5,
+    "records_with_warnings": 0,
+    "invalid_records": 0
+  },
+  "polyid": {
+    "dataset": "polyid",
+    "total_records": 4,
+    "valid_records": 4,
+    "records_with_warnings": 0,
+    "invalid_records": 0
+  },
+  "manufacturer_tds": {
+    "dataset": "manufacturer_tds",
+    "total_records": 4,
+    "valid_records": 4,
+    "records_with_warnings": 0,
+    "invalid_records": 0
+  },
+  "combase": {
+    "dataset": "combase",
+    "total_records": 5,
+    "valid_records": 5,
+    "records_with_warnings": 0,
+    "invalid_records": 0
+  }
+}
