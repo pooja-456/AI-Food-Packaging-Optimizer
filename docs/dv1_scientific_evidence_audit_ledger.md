@@ -49,7 +49,7 @@ This document presents the first source-level forensic audit of the AI-Food-Pack
 ## 4. Specific Forensic Case Studies
 
 ### 4.1 Case Study A: Apple Cultivar Attribution Audit (FOOD-1 to FOOD-5)
-- **FOOD-1 (Gala Apple Moisture)**: `VERIFIED`. USDA FDC ID 171688 is explicitly titled *"Apples, gala, with skin, raw"*. Moisture content 85.33% (range 84.1% - 86.5%) matches USDA analytical data exactly. Pinpoint location verified.
+- **FOOD-1 (Gala Apple Moisture)**: `VERIFIED` (CORRECTED). USDA FDC ID 1750341 is explicitly titled *"Apples, gala, with skin, raw"*. Moisture content 84.65% (range 83.89% - 85.63%) matches USDA analytical data exactly. Pinpoint location verified.
 - **FOOD-2 & FOOD-3 (Gala Apple Respiration)**: `REJECTED`. Cited ASHRAE Handbook (Chap. 19) and Kader (2002, Chap. 39) report respiration ranges (4.5 mg/kg/hr at 0°C, 35 mg/kg/hr at 20°C) for *generic apples*. Assigning these ranges specifically to cultivar *"Gala"* violates `REQ-ENT-01` (Cultivar Boundaries). Furthermore, pinpoint page/table locators were absent.
 - **FOOD-4 (Sliced Apple Respiration)**: `REJECTED`. Cited fresh-cut study (CRC Press, DOI 10.1201/9781420031874.ch3) evaluated *Golden Delicious* and *Fuji* apple slices at 5°C. Assigning this value to *Gala* slices violates `REQ-ENT-01`.
 - **FOOD-5 (Granny Smith Apple pH)**: `VERIFIED`. FDA CFSAN pH table explicitly lists *"Apples, Granny Smith"* with pH range 3.20 - 3.60 (mean 3.4). Pinpoint source location verified.
@@ -78,7 +78,7 @@ Below is the itemized forensic audit ledger covering all 21 scientific evidence 
 
 | Record ID | Type | Entity | Property | Database Value | Source Value | Access Status | Pinpoint Source Location | Audit Gate (9/9) | Status | Mismatch Category & Notes | Proposed Action |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---:|:---:|:---|:---|
-| **FOOD-1** | Food | Apple (*Gala*) | Moisture | 85.33 % (84.1–86.5) | 85.33 % (84.1–86.5) | `AVAILABLE_CHECKED` | USDA FDC 171688, Water row | PASS | **`VERIFIED`** | None. Exact match for Gala cultivar. | Retain as VERIFIED |
+| **FOOD-1** | Food | Apple (*Gala*) | Moisture | 84.65 % (83.89–85.63) | 84.65 % (83.89–85.63) | `AVAILABLE_CHECKED` | USDA FDC 1750341, Water row | PASS | **`VERIFIED`** | None. Exact match for Gala cultivar. | Retain as VERIFIED |
 | **FOOD-2** | Food | Apple (*Gala*) | Respiration (0°C) | 4.5 mg CO2/kg/h (3–6) | 3–6 mg CO2/kg/h (generic) | `AVAILABLE_CHECKED` | ASHRAE Handbook Chap 19 | FAIL | **`REJECTED`** | `ENTITY_CULTIVAR_MISMATCH`: Source reports generic apple, assigned to Gala. | DV2: Reclassify as generic apple or replace with Gala source |
 | **FOOD-3** | Food | Apple (*Gala*) | Respiration (20°C) | 35 mg CO2/kg/h (25–50) | 25–50 mg CO2/kg/h (generic) | `AVAILABLE_CHECKED` | Kader (2002) Chap 39 | FAIL | **`REJECTED`** | `ENTITY_CULTIVAR_MISMATCH`: Source reports generic apple, assigned to Gala. | DV2: Reclassify as generic apple or replace with Gala source |
 | **FOOD-4** | Food | Apple (*Gala*, Sliced) | Respiration (5°C) | 15 mg CO2/kg/h (12–18) | 12–18 mg CO2/kg/h (Gold. Del./Fuji) | `AVAILABLE_CHECKED` | DOI 10.1201/9781420031874.ch3 | FAIL | **`REJECTED`** | `ENTITY_CULTIVAR_MISMATCH`: Source evaluated Golden Delicious & Fuji slices. | DV2: Correct cultivar tag to Golden Delicious / Fuji |

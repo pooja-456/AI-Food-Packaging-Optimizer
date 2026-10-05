@@ -225,7 +225,7 @@ PINPOINT CITATION EXAMPLES:
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │ VALID PINPOINT CITATIONS:                                                              │
 │ - "Fonseca et al. (2002), Table 2, row 'Cut Mango', p. 145"                             │
-│ - "USDA FoodData Central FDC ID 171688, Nutrient 'Water', Row 1"                      │
+│ - "USDA FoodData Central FDC ID 1750341, Nutrient 'Water', Row 1"                      │
 │ - "Kuraray EVAL F101B Technical Datasheet (2021), Section 'Barrier Properties', p. 2" │
 │ - "ComBase Record ID CB-2004-LIS-012, Data Table 1"                                    │
 ├────────────────────────────────────────────────────────────────────────────────────────┤

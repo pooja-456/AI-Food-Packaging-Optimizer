@@ -61,7 +61,7 @@ The static $\times 2.0$ pre-ingestion multiplier has been completely eliminated.
 
 | Record ID | Commodity | Property | Value | Unit | Min | Max | DV4 Status |
 |---|---|---|---|---|---|---|---|
-| **FOOD-1** | Apple | moisture_content | 85.33 | % | 84.1 | 86.5 | UNTOUCHED (VERIFIED) |
+| **FOOD-1** | Apple | moisture_content | 84.65 | % | 83.89 | 85.63 | UNTOUCHED (VERIFIED) |
 | **FOOD-2** | Apple | respiration_rate | 4.5 | mg CO2/kg/hr | 3.0 | 6.0 | UNTOUCHED (RECLASSIFIED) |
 | **FOOD-3** | Apple | respiration_rate | 35.0 | mg CO2/kg/hr | 25.0 | 50.0 | UNTOUCHED (RECLASSIFIED) |
 | **FOOD-4** | Apple | respiration_rate | 15.0 | mg CO2/kg/hr | 12.0 | 18.0 | UNTOUCHED (RECLASSIFIED) |

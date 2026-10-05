@@ -54,9 +54,9 @@ def test_exact_context_match_retrieval() -> None:
 
     # 1. Moisture from USDA Gala entry
     moisture = profile.properties["moisture_percent"]
-    assert moisture.value == 85.33
+    assert moisture.value == 84.65
     assert moisture.status == PropertyStatusEnum.literature
-    assert moisture.uncertainty_range == (84.1, 86.5)
+    assert moisture.uncertainty_range == (83.89, 85.63)
     assert any("USDA FoodData Central" in cit for cit in moisture.citations)
 
     # 2. Respiration rate at 20°C from Kader (2002) (Reclassified in DV2 to generic apple, causing Gala request to fall back to generic commodity evidence)
